@@ -32,6 +32,7 @@ class VclState(TypedDict, total=False):
     answer: str
     decisions: list
     declined: bool
+    out_of_domain: bool
     llm_mode: str
 
 
@@ -42,7 +43,13 @@ def build_graph(toolbox: Toolbox, audit: AuditEmitter):
         intent = toolbox.parse(state["query"])
         audit.emit("semantic_layer", "parse_intent",
                    input={"query": state["query"]}, output={"intent": intent})
-        return {"intent": intent}
+        return {"intent": intent, "out_of_domain": intent.get("in_domain") is False}
+
+    def out_of_domain(state: VclState) -> VclState:
+        msg = ("I can only answer questions about suppliers, contracts, consent and "
+               "data-residency risk. Try, e.g., the pre-filled example.")
+        audit.emit("agent", "out_of_domain", output={"answer": msg})
+        return {"answer": msg, "decisions": []}
 
     def policy_precheck(state: VclState) -> VclState:
         intent = state["intent"]
@@ -93,7 +100,8 @@ def build_graph(toolbox: Toolbox, audit: AuditEmitter):
     def synth(state: VclState) -> VclState:
         f = state["filtered"]
         limit = state["intent"].get("limit") or 5
-        answer, mode = synthesize(state["query"], f["allowed"], f["masked"], f["excluded"], limit)
+        answer, mode = synthesize(state["query"], state["intent"],
+                                  f["allowed"], f["masked"], f["excluded"], limit)
         audit.emit("response", "synthesise_response",
                    input={"allowed": len(f["allowed"]), "masked": len(f["masked"]),
                           "excluded": len(f["excluded"]), "llm_mode": mode},
@@ -107,6 +115,7 @@ def build_graph(toolbox: Toolbox, audit: AuditEmitter):
 
     g = StateGraph(VclState)
     g.add_node("parse_intent", parse_intent)
+    g.add_node("out_of_domain", out_of_domain)
     g.add_node("policy_precheck", policy_precheck)
     g.add_node("decline", decline)
     g.add_node("plan", plan)
@@ -116,7 +125,10 @@ def build_graph(toolbox: Toolbox, audit: AuditEmitter):
     g.add_node("final_audit", final_audit)
 
     g.add_edge(START, "parse_intent")
-    g.add_edge("parse_intent", "policy_precheck")
+    g.add_conditional_edges("parse_intent",
+                            lambda s: "out_of_domain" if s.get("out_of_domain") else "policy_precheck",
+                            {"out_of_domain": "out_of_domain", "policy_precheck": "policy_precheck"})
+    g.add_edge("out_of_domain", END)
     g.add_conditional_edges("policy_precheck", lambda s: "decline" if s.get("declined") else "plan",
                             {"decline": "decline", "plan": "plan"})
     g.add_edge("decline", END)

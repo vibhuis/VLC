@@ -38,7 +38,7 @@ trail** that maps to EU AI Act Articles 9/12/13 and the NIST AI RMF.
 ```bash
 # 1. Configure (optional — works without a key, see note below)
 cp .env.example .env
-#   then edit .env and paste your ANTHROPIC_API_KEY
+#   pick a model with VCL_LLM_MODEL and paste the matching provider key
 
 # 2. Bring up the whole stack
 docker compose up --build        # first run pulls images; allow a few minutes
@@ -55,11 +55,13 @@ Then in the browser:
    graph query → per-row policy filter → synthesis → final audit event.
 4. Click **Export compliance report (PDF)** to download the regulator-addressable report.
 
-> **No Anthropic API key?** The demo still runs. With a key, Claude
-> (`claude-sonnet-4-6`) synthesises the natural-language answer; without one, a
-> deterministic fallback synthesiser produces the same governed result. The entire
+> **Bring your own LLM.** The agent uses [LiteLLM](https://docs.litellm.ai), so you pick
+> the model with `VCL_LLM_MODEL` and supply the matching provider key — Anthropic
+> (`claude-sonnet-4-6`, default), OpenAI (`gpt-4o`), Google (`gemini/…`), Groq, a local
+> `ollama/…` model, etc. The LLM both *understands* the question and *writes* the answer.
+> **No key at all?** The demo still runs end-to-end via a deterministic fallback; the
 > governance path (semantic → graph → policy → trace) is identical either way. See
-> [DECISIONS.md](DECISIONS.md) D5.
+> [DECISIONS.md](DECISIONS.md) D5/D9.
 
 ---
 

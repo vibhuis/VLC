@@ -95,6 +95,7 @@ class FixtureToolbox(Toolbox):
     def graph_query(self, intent: dict) -> list[dict]:
         geo = intent.get("geo")
         want_pii = intent.get("contains_pii")
+        want_secrets = intent.get("contains_secrets")
         end_before = intent.get("end_before")
         rows: list[dict] = []
         for c in self.data["contracts"]:
@@ -102,6 +103,8 @@ class FixtureToolbox(Toolbox):
             if geo is not None and s["geo"] != geo:
                 continue
             if want_pii is not None and bool(c["contains_pii"]) != bool(want_pii):
+                continue
+            if want_secrets is not None and bool(c["contains_secrets"]) != bool(want_secrets):
                 continue
             if end_before is not None and c["end_date"] > end_before:
                 continue

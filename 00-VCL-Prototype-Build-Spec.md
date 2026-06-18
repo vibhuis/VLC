@@ -1,7 +1,7 @@
 # VCL Reference Implementation — Build Specification
 
 **Project codename:** `vcl-ref-impl`
-**Author of spec:** Vibhuraja Bhutani · Softweb Solutions (Avnet)
+**Author of spec:** Vibhuraja Bhutani
 **Date:** 8 June 2026
 **Intended builder:** Claude Code (autonomous coding agent)
 **Companion paper:** *The Verifiable Context Layer*, Zenodo DOI `10.5281/zenodo.20599942`

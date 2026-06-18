@@ -11,6 +11,7 @@ from pydantic import BaseModel
 
 from .config import settings
 from .graph import run_query
+from .llm import llm_ready
 from .tools.live import LiveToolbox
 
 app = FastAPI(title="VCL Agent Runtime", version="0.1.0")
@@ -45,7 +46,7 @@ class QueryResponse(BaseModel):
 
 @app.get("/healthz")
 def healthz() -> dict:
-    return {"status": "ok", "llm_enabled": settings.llm_enabled}
+    return {"status": "ok", "llm_model": settings.llm_model, "llm_ready": llm_ready()}
 
 
 @app.post("/query", response_model=QueryResponse)

@@ -51,6 +51,9 @@ def parse_intent(query: str) -> dict:
     if re.search(r"\bpii\b|personal data|personally identifiable", q):
         intent["contains_pii"] = True
 
+    if re.search(r"secret|confidential", q):
+        intent["contains_secrets"] = True
+
     if re.search(r"valid.*consent|gdpr consent|consent.*valid", q):
         intent["require_valid_consent"] = True
 
@@ -63,6 +66,13 @@ def parse_intent(query: str) -> dict:
         word = {"three": 3, "five": 5, "ten": 10}.get(m.group(1))
         intent["limit"] = word if word else int(m.group(1))
 
+    # in_domain: did we recognise any supplier/contract signal? Lets the pipeline reply
+    # gracefully to off-topic questions instead of mis-running them.
+    signals = any(intent.get(k) is not None for k in
+                  ("geo", "end_before", "contains_pii", "contains_secrets",
+                   "require_valid_consent", "limit"))
+    intent["in_domain"] = bool(signals) or bool(
+        re.search(r"supplier|contract|vendor|consent|clause", q))
     return intent
 
 

@@ -87,8 +87,12 @@ services:
     ports:
       - "8000:8000"
     environment:
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       VCL_LLM_MODEL: ${VCL_LLM_MODEL:-claude-sonnet-4-6}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
       VCL_SEMANTIC_URL: http://semantic-layer:4000
       VCL_GRAPH_BOLT_URI: bolt://context-graph:7687
       VCL_GRAPH_USER: neo4j

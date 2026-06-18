@@ -46,15 +46,15 @@ which is simpler and removes a network hop. The context-graph service therefore 
 single Neo4j container (custom image that self-seeds on start), keeping the six-service
 count.
 
-## D5 — Deterministic fallback synthesiser when `ANTHROPIC_API_KEY` is absent
+## D5 — Deterministic fallback when no LLM provider key is configured
 **Spec ref:** §3 (Claude as LLM), §1.3 (clone-and-run) · **Date:** 2026-06-18
 
-Claude (`claude-sonnet-4-6`) is the LLM backbone when `ANTHROPIC_API_KEY` is set. To
-keep the open-source demo and the test suite runnable by a reviewer **without** an API
-key, the response-synthesis node falls back to a deterministic, template-based
-synthesiser that produces the same structured answer from the policy-filtered rows. The
-governance path (semantic → graph → policy → trace) is identical in both modes; only
-the natural-language phrasing of the final answer differs. This makes success
+An LLM (default `claude-sonnet-4-6`) drives both *understanding* (question → governed
+intent) and *synthesis* (final answer) when a provider key is set. To keep the
+open-source demo and the test suite runnable **without** any key, both fall back to
+deterministic logic (regex intent parser + template synthesiser) that produces the same
+governed result. The governance path (semantic → graph → policy → trace) is identical in
+every mode; only the natural-language understanding/phrasing differs. This makes success
 criterion §1.3 ("clone, run, see an answer") hold for everyone.
 
 ## D6 — PDF compliance report uses ReportLab
@@ -77,6 +77,17 @@ agent-runtime package) used for local `uv run pytest`. Both are kept in sync.
 The spec gives the feedback loop an interface (`GET /trace/{trace_id}`) but no port.
 Port **8200** is assigned (avoids the other services' ports) and recorded in
 `.env.example` and `docker-compose.yml`.
+
+## D9 — Provider-agnostic LLM via LiteLLM (user chooses the model)
+**Spec ref:** §3 (Claude as LLM; "optional OPENAI_API_KEY for cross-LLM comparison") · **Date:** 2026-06-18
+
+Rather than bind directly to one vendor SDK, the agent calls the LLM through **LiteLLM**,
+a unified gateway. The model is selected with `VCL_LLM_MODEL` and the user supplies the
+matching provider key (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`,
+`GROQ_API_KEY`, … or a local `ollama/` model with no key). The default remains
+`claude-sonnet-4-6` (spec §3). This honours the spec's cross-LLM intent and lets a
+public-repo user run the demo on whatever model they have access to. The deterministic
+fallback (D5) still applies when no key is set.
 
 ---
 

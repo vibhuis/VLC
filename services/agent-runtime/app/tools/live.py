@@ -7,7 +7,8 @@ from __future__ import annotations
 import httpx
 
 from ..config import settings
-from .base import Toolbox
+from ..llm import llm_parse_intent
+from .base import Toolbox, parse_intent
 
 # The verified worked-use-case query: WHERE binds to the main MATCH (not the OPTIONAL
 # MATCH) so the contract filters actually apply. [verified against the seeded graph]
@@ -15,6 +16,7 @@ GRAPH_QUERY = """
 MATCH (c:Contract)-[:BELONGS_TO]->(s:Supplier)-[:OPERATES_IN]->(r:Region)
 WHERE ($geo IS NULL OR r.geo = $geo)
   AND ($contains_pii IS NULL OR c.contains_pii = $contains_pii)
+  AND ($contains_secrets IS NULL OR c.contains_secrets = $contains_secrets)
   AND ($end_before IS NULL OR c.end_date <= date($end_before))
 OPTIONAL MATCH (s)-[:HAS_CONSENT]->(cn:Consent)
 RETURN s.id AS supplier_id, s.name AS name, s.region AS region, s.geo AS geo,
@@ -33,6 +35,17 @@ class LiveToolbox(Toolbox):
             settings.graph_bolt_uri, auth=(settings.graph_user, settings.graph_password)
         )
         self._http = httpx.Client(timeout=15.0)
+
+    # ---- semantic layer (parse) ----
+    def parse(self, query: str) -> dict:
+        """LLM-driven understanding when a provider key is set; regex fallback otherwise."""
+        intent = llm_parse_intent(query) or parse_intent(query)
+        # Reconcile: EU/EMEA/GDPR always implies EU residency scope.
+        if intent.get("geo") == "EMEA" and not intent.get("residency_scope"):
+            intent["residency_scope"] = "EU"
+        intent.setdefault("in_domain", True)
+        intent.setdefault("rank_by", "value_usd")
+        return intent
 
     # ---- policy engine (OPA) ----
     def _decide(self, rule: str, payload: dict) -> dict:
@@ -61,6 +74,7 @@ class LiveToolbox(Toolbox):
         params = {
             "geo": intent.get("geo"),
             "contains_pii": intent.get("contains_pii"),
+            "contains_secrets": intent.get("contains_secrets"),
             "end_before": intent.get("end_before"),
         }
         with self._driver.session() as session:
