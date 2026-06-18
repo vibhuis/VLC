@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Env / secrets
+.env
+*.local
+
+# Data artifacts (generated; regenerate with data/synthetic/generate.py)
+data/audit.sqlite
+data/audit.sqlite-*
+
+# Node / Cube
+node_modules/
+.cubestore/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Build tooling fetched locally (not committed)
+bin/opa

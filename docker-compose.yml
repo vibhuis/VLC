@@ -1,0 +1,126 @@
+# VCL Reference Implementation — single-command stack bring-up.
+# Implements Figure 3 of the companion paper (Zenodo DOI 10.5281/zenodo.20599942):
+# five VCL components (semantic layer, context graph, policy engine, agent runtime,
+# feedback loop) plus a Streamlit demo UI.
+#
+#   docker compose up --build      # bring everything up
+#   open http://localhost:8501     # the demo UI
+
+name: vcl-ref-impl
+
+services:
+  # 1. Semantic layer — Cube.dev over the synthetic data (embedded DuckDB). [spec §5.1]
+  semantic-layer:
+    build: ./services/semantic-layer
+    image: vcl/semantic-layer
+    ports:
+      - "4000:4000"
+    environment:
+      CUBEJS_DEV_MODE: "true"
+      CUBEJS_DB_TYPE: duckdb
+      CUBEJS_DB_DUCKDB_DATABASE_PATH: ":memory:"
+      CUBEJS_API_SECRET: vcl-demo-secret
+      CUBEJS_TELEMETRY: "false"
+      VCL_DATA_DIR: /data
+    volumes:
+      - ./data/synthetic:/data:ro
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:4000/readyz || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  # 2. Context graph — Neo4j Community, self-seeds on first start. [spec §5.2]
+  context-graph:
+    build: ./services/context-graph
+    image: vcl/context-graph
+    ports:
+      - "7474:7474"   # browser
+      - "7687:7687"   # bolt
+    environment:
+      NEO4J_AUTH: neo4j/vcldemopassword
+      NEO4J_PLUGINS: '[]'
+      NEO4J_server_memory_heap_max__size: 512m
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 20s
+
+  # 3. Policy engine — Open Policy Agent serving vcl.rego. [spec §5.3]
+  policy-engine:
+    build: ./services/policy-engine
+    image: vcl/policy-engine
+    ports:
+      - "8181:8181"
+    healthcheck:
+      test: ["CMD", "/opa", "version"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+
+  # 4. Feedback loop — OTel-shaped trace store (FastAPI + SQLite). [spec §5.5]
+  feedback-loop:
+    build: ./services/feedback-loop
+    image: vcl/feedback-loop
+    ports:
+      - "8200:8200"
+    environment:
+      VCL_AUDIT_DB: /data/audit.sqlite
+    volumes:
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request,sys; urllib.request.urlopen('http://localhost:8200/healthz'); \" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+
+  # 5. Agent runtime — LangGraph + FastAPI, Claude as the LLM backbone. [spec §5.4]
+  agent-runtime:
+    build: ./services/agent-runtime
+    image: vcl/agent-runtime
+    ports:
+      - "8000:8000"
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      VCL_LLM_MODEL: ${VCL_LLM_MODEL:-claude-sonnet-4-6}
+      VCL_SEMANTIC_URL: http://semantic-layer:4000
+      VCL_GRAPH_BOLT_URI: bolt://context-graph:7687
+      VCL_GRAPH_USER: neo4j
+      VCL_GRAPH_PASSWORD: vcldemopassword
+      VCL_POLICY_URL: http://policy-engine:8181
+      VCL_FEEDBACK_URL: http://feedback-loop:8200
+      VCL_DEMO_USER: ${VCL_DEMO_USER:-demo-analyst}
+      VCL_DEMO_PURPOSE: ${VCL_DEMO_PURPOSE:-supplier_risk_review}
+    depends_on:
+      semantic-layer:
+        condition: service_healthy
+      context-graph:
+        condition: service_healthy
+      policy-engine:
+        condition: service_healthy
+      feedback-loop:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 15s
+
+  # 6. UI — Streamlit demo surface. [spec §5.6]
+  ui:
+    build: ./services/ui
+    image: vcl/ui
+    ports:
+      - "8501:8501"
+    environment:
+      VCL_AGENT_URL: http://agent-runtime:8000
+      VCL_FEEDBACK_URL: http://feedback-loop:8200
+    depends_on:
+      agent-runtime:
+        condition: service_healthy
