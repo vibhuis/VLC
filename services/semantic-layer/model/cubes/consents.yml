@@ -1,0 +1,25 @@
+# Consent cube. [spec §5.1]
+cubes:
+  - name: consents
+    sql: >
+      SELECT * FROM read_csv_auto('/data/consents.csv', header=true)
+    dimensions:
+      - name: id
+        sql: id
+        type: string
+        primary_key: true
+      - name: supplier_id
+        sql: supplier_id
+        type: string
+      - name: granted_at
+        sql: granted_at
+        type: time
+      - name: scope
+        sql: scope
+        type: string
+      - name: retention_until
+        sql: retention_until
+        type: time
+    measures:
+      - name: count
+        type: count

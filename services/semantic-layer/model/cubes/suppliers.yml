@@ -1,0 +1,38 @@
+# Supplier cube — reads the synthetic CSV via DuckDB. [spec §5.1]
+cubes:
+  - name: suppliers
+    sql: >
+      SELECT * FROM read_csv_auto('/data/suppliers.csv', header=true)
+    joins:
+      - name: contracts
+        relationship: one_to_many
+        sql: "{CUBE}.id = {contracts}.supplier_id"
+      - name: consents
+        relationship: one_to_many
+        sql: "{CUBE}.id = {consents}.supplier_id"
+    dimensions:
+      - name: id
+        sql: id
+        type: string
+        primary_key: true
+      - name: name
+        sql: name
+        type: string
+      - name: region
+        sql: region
+        type: string
+      - name: geo
+        sql: geo
+        type: string
+      - name: data_residency
+        sql: data_residency
+        type: string
+      - name: gdpr_consent_status
+        sql: gdpr_consent_status
+        type: string
+      - name: risk_tier
+        sql: risk_tier
+        type: string
+    measures:
+      - name: count
+        type: count

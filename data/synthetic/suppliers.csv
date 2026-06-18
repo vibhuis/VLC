@@ -1,0 +1,31 @@
+id,name,region,geo,data_residency,gdpr_consent_status,risk_tier
+SUP-001,Helvetia Pharma AG,EMEA-West,EMEA,EU,valid,high
+SUP-002,Nordic DataWorks AB,EMEA-North,EMEA,EU,valid,high
+SUP-003,Britannia Logistics Ltd,UK,EMEA,EU,valid,medium
+SUP-004,Rhein Components GmbH,EMEA-West,EMEA,EU,valid,medium
+SUP-005,Iberia Analytics SL,EMEA-West,EMEA,EU,valid,critical
+SUP-006,Baltic Cloud OU,EMEA-North,EMEA,EU,expired,high
+SUP-007,Gallia Secure SAS,EMEA-West,EMEA,EU,expired,critical
+SUP-008,Albion Offshore Data Ltd,UK,EMEA,US,valid,high
+SUP-009,Acme Networks,APAC,APAC,APAC,valid,critical
+SUP-010,Orion Systems,UK,EMEA,EU,valid,critical
+SUP-011,Vertex Systems,EMEA-West,EMEA,EU,valid,medium
+SUP-012,Summit Partners,US-West,AMER,US,valid,critical
+SUP-013,Cobalt Industries,UK,EMEA,EU,valid,high
+SUP-014,Delta Group,US-East,AMER,US,expired,high
+SUP-015,Pioneer Industries,UK,EMEA,EU,valid,low
+SUP-016,Meridian Networks,UK,EMEA,EU,valid,critical
+SUP-017,Aurora Group,EMEA-West,EMEA,EU,valid,medium
+SUP-018,Quantum Solutions,US-West,AMER,US,expired,low
+SUP-019,Cedar Networks,APAC,APAC,APAC,valid,critical
+SUP-020,Horizon Systems,US-East,AMER,US,valid,critical
+SUP-021,Atlas Solutions,US-East,AMER,US,valid,high
+SUP-022,Lumen Industries,US-West,AMER,US,valid,low
+SUP-023,Pacific Industries,US-East,AMER,US,valid,high
+SUP-024,Granite Industries,EMEA-North,EMEA,EU,valid,low
+SUP-025,Sierra Partners,US-East,AMER,US,valid,high
+SUP-026,Nimbus Networks,US-West,AMER,US,expired,critical
+SUP-027,Pinnacle Partners,EMEA-North,EMEA,EU,expired,low
+SUP-028,Beacon Networks,EMEA-West,EMEA,EU,valid,high
+SUP-029,Forge Systems,US-East,AMER,US,valid,medium
+SUP-030,Harbor Partners,US-East,AMER,US,valid,critical

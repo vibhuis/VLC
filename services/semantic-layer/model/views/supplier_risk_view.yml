@@ -1,0 +1,31 @@
+# Pre-defined view joining suppliers, contracts and consents — the single governed
+# entry point the agent's semantic_layer.query tool targets. [spec §5.1]
+views:
+  - name: supplier_risk_view
+    description: >
+      Supplier risk surface: each supplier with its contract terms and the consent
+      governing its data subjects. Backs the worked-use-case query (paper §5).
+    cubes:
+      - join_path: suppliers
+        includes:
+          - id
+          - name
+          - region
+          - geo
+          - data_residency
+          - gdpr_consent_status
+          - risk_tier
+      - join_path: suppliers.contracts
+        prefix: true
+        includes:
+          - id
+          - end_date
+          - value_usd
+          - contains_pii
+          - contains_secrets
+          - total_value_usd
+      - join_path: suppliers.consents
+        prefix: true
+        includes:
+          - retention_until
+          - scope

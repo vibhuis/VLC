@@ -1,0 +1,2226 @@
+{
+  "as_of": "2026-06-18",
+  "suppliers": [
+    {
+      "id": "SUP-001",
+      "name": "Helvetia Pharma AG",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-002",
+      "name": "Nordic DataWorks AB",
+      "region": "EMEA-North",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-003",
+      "name": "Britannia Logistics Ltd",
+      "region": "UK",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "medium"
+    },
+    {
+      "id": "SUP-004",
+      "name": "Rhein Components GmbH",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "medium"
+    },
+    {
+      "id": "SUP-005",
+      "name": "Iberia Analytics SL",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-006",
+      "name": "Baltic Cloud OU",
+      "region": "EMEA-North",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "expired",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-007",
+      "name": "Gallia Secure SAS",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "expired",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-008",
+      "name": "Albion Offshore Data Ltd",
+      "region": "UK",
+      "geo": "EMEA",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-009",
+      "name": "Acme Networks",
+      "region": "APAC",
+      "geo": "APAC",
+      "data_residency": "APAC",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-010",
+      "name": "Orion Systems",
+      "region": "UK",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-011",
+      "name": "Vertex Systems",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "medium"
+    },
+    {
+      "id": "SUP-012",
+      "name": "Summit Partners",
+      "region": "US-West",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-013",
+      "name": "Cobalt Industries",
+      "region": "UK",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-014",
+      "name": "Delta Group",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "expired",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-015",
+      "name": "Pioneer Industries",
+      "region": "UK",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "low"
+    },
+    {
+      "id": "SUP-016",
+      "name": "Meridian Networks",
+      "region": "UK",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-017",
+      "name": "Aurora Group",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "medium"
+    },
+    {
+      "id": "SUP-018",
+      "name": "Quantum Solutions",
+      "region": "US-West",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "expired",
+      "risk_tier": "low"
+    },
+    {
+      "id": "SUP-019",
+      "name": "Cedar Networks",
+      "region": "APAC",
+      "geo": "APAC",
+      "data_residency": "APAC",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-020",
+      "name": "Horizon Systems",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-021",
+      "name": "Atlas Solutions",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-022",
+      "name": "Lumen Industries",
+      "region": "US-West",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "low"
+    },
+    {
+      "id": "SUP-023",
+      "name": "Pacific Industries",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-024",
+      "name": "Granite Industries",
+      "region": "EMEA-North",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "low"
+    },
+    {
+      "id": "SUP-025",
+      "name": "Sierra Partners",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-026",
+      "name": "Nimbus Networks",
+      "region": "US-West",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "expired",
+      "risk_tier": "critical"
+    },
+    {
+      "id": "SUP-027",
+      "name": "Pinnacle Partners",
+      "region": "EMEA-North",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "expired",
+      "risk_tier": "low"
+    },
+    {
+      "id": "SUP-028",
+      "name": "Beacon Networks",
+      "region": "EMEA-West",
+      "geo": "EMEA",
+      "data_residency": "EU",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "high"
+    },
+    {
+      "id": "SUP-029",
+      "name": "Forge Systems",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "medium"
+    },
+    {
+      "id": "SUP-030",
+      "name": "Harbor Partners",
+      "region": "US-East",
+      "geo": "AMER",
+      "data_residency": "US",
+      "gdpr_consent_status": "valid",
+      "risk_tier": "critical"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "CON-001",
+      "supplier_id": "SUP-001",
+      "start_date": "2024-12-12",
+      "end_date": "2026-06-30",
+      "value_usd": 9800000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-002",
+      "supplier_id": "SUP-002",
+      "start_date": "2024-11-29",
+      "end_date": "2026-09-15",
+      "value_usd": 7400000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-003",
+      "supplier_id": "SUP-003",
+      "start_date": "2024-04-14",
+      "end_date": "2026-03-01",
+      "value_usd": 6100000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-004",
+      "supplier_id": "SUP-004",
+      "start_date": "2024-05-14",
+      "end_date": "2026-11-20",
+      "value_usd": 5250000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-005",
+      "supplier_id": "SUP-005",
+      "start_date": "2023-11-03",
+      "end_date": "2026-08-10",
+      "value_usd": 4900000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-006",
+      "supplier_id": "SUP-006",
+      "start_date": "2024-10-17",
+      "end_date": "2026-05-05",
+      "value_usd": 8300000,
+      "contains_pii": true,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-007",
+      "supplier_id": "SUP-007",
+      "start_date": "2024-02-17",
+      "end_date": "2026-07-07",
+      "value_usd": 6750000,
+      "contains_pii": true,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-008",
+      "supplier_id": "SUP-008",
+      "start_date": "2025-01-03",
+      "end_date": "2026-04-04",
+      "value_usd": 7900000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-009",
+      "supplier_id": "SUP-009",
+      "start_date": "2026-11-28",
+      "end_date": "2028-03-07",
+      "value_usd": 2600000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-010",
+      "supplier_id": "SUP-009",
+      "start_date": "2025-04-27",
+      "end_date": "2027-05-13",
+      "value_usd": 4900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-011",
+      "supplier_id": "SUP-009",
+      "start_date": "2028-03-08",
+      "end_date": "2029-09-02",
+      "value_usd": 1900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-012",
+      "supplier_id": "SUP-009",
+      "start_date": "2026-06-23",
+      "end_date": "2028-12-31",
+      "value_usd": 2600000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-013",
+      "supplier_id": "SUP-010",
+      "start_date": "2025-09-19",
+      "end_date": "2028-09-17",
+      "value_usd": 9300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-014",
+      "supplier_id": "SUP-010",
+      "start_date": "2025-07-08",
+      "end_date": "2028-04-01",
+      "value_usd": 3500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-015",
+      "supplier_id": "SUP-010",
+      "start_date": "2024-02-18",
+      "end_date": "2026-08-12",
+      "value_usd": 2500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-016",
+      "supplier_id": "SUP-010",
+      "start_date": "2026-03-10",
+      "end_date": "2027-10-14",
+      "value_usd": 4900000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-017",
+      "supplier_id": "SUP-010",
+      "start_date": "2024-02-20",
+      "end_date": "2027-02-07",
+      "value_usd": 5800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-018",
+      "supplier_id": "SUP-011",
+      "start_date": "2026-03-17",
+      "end_date": "2028-10-04",
+      "value_usd": 7400000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-019",
+      "supplier_id": "SUP-011",
+      "start_date": "2025-05-27",
+      "end_date": "2028-02-15",
+      "value_usd": 8000000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-020",
+      "supplier_id": "SUP-011",
+      "start_date": "2025-04-03",
+      "end_date": "2026-10-05",
+      "value_usd": 8300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-021",
+      "supplier_id": "SUP-012",
+      "start_date": "2029-01-23",
+      "end_date": "2030-03-30",
+      "value_usd": 2800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-022",
+      "supplier_id": "SUP-012",
+      "start_date": "2026-02-13",
+      "end_date": "2027-06-28",
+      "value_usd": 5200000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-023",
+      "supplier_id": "SUP-012",
+      "start_date": "2027-05-03",
+      "end_date": "2029-11-09",
+      "value_usd": 200000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-024",
+      "supplier_id": "SUP-012",
+      "start_date": "2025-03-30",
+      "end_date": "2026-08-02",
+      "value_usd": 8700000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-025",
+      "supplier_id": "SUP-012",
+      "start_date": "2025-03-07",
+      "end_date": "2026-08-21",
+      "value_usd": 2300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-026",
+      "supplier_id": "SUP-013",
+      "start_date": "2025-03-18",
+      "end_date": "2027-01-19",
+      "value_usd": 6200000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-027",
+      "supplier_id": "SUP-013",
+      "start_date": "2026-01-17",
+      "end_date": "2028-06-30",
+      "value_usd": 9000000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-028",
+      "supplier_id": "SUP-013",
+      "start_date": "2024-02-13",
+      "end_date": "2026-10-11",
+      "value_usd": 5600000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-029",
+      "supplier_id": "SUP-013",
+      "start_date": "2026-04-29",
+      "end_date": "2028-07-09",
+      "value_usd": 8500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-030",
+      "supplier_id": "SUP-014",
+      "start_date": "2026-11-14",
+      "end_date": "2028-02-17",
+      "value_usd": 300000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-031",
+      "supplier_id": "SUP-014",
+      "start_date": "2027-04-05",
+      "end_date": "2030-02-06",
+      "value_usd": 5900000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-032",
+      "supplier_id": "SUP-014",
+      "start_date": "2026-02-02",
+      "end_date": "2028-04-07",
+      "value_usd": 2500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-033",
+      "supplier_id": "SUP-014",
+      "start_date": "2024-12-23",
+      "end_date": "2026-11-18",
+      "value_usd": 5300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-034",
+      "supplier_id": "SUP-015",
+      "start_date": "2024-10-09",
+      "end_date": "2027-01-13",
+      "value_usd": 4700000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-035",
+      "supplier_id": "SUP-015",
+      "start_date": "2027-04-30",
+      "end_date": "2030-02-14",
+      "value_usd": 1300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-036",
+      "supplier_id": "SUP-015",
+      "start_date": "2026-11-30",
+      "end_date": "2028-08-18",
+      "value_usd": 7100000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-037",
+      "supplier_id": "SUP-015",
+      "start_date": "2026-02-19",
+      "end_date": "2027-11-11",
+      "value_usd": 2700000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-038",
+      "supplier_id": "SUP-015",
+      "start_date": "2026-10-20",
+      "end_date": "2028-01-22",
+      "value_usd": 6100000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-039",
+      "supplier_id": "SUP-016",
+      "start_date": "2028-04-15",
+      "end_date": "2030-02-05",
+      "value_usd": 5600000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-040",
+      "supplier_id": "SUP-016",
+      "start_date": "2025-06-01",
+      "end_date": "2027-06-16",
+      "value_usd": 7700000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-041",
+      "supplier_id": "SUP-016",
+      "start_date": "2027-11-07",
+      "end_date": "2030-02-10",
+      "value_usd": 300000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-042",
+      "supplier_id": "SUP-016",
+      "start_date": "2027-08-03",
+      "end_date": "2029-04-10",
+      "value_usd": 5100000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-043",
+      "supplier_id": "SUP-016",
+      "start_date": "2026-06-20",
+      "end_date": "2029-05-02",
+      "value_usd": 3200000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-044",
+      "supplier_id": "SUP-017",
+      "start_date": "2028-05-24",
+      "end_date": "2029-11-17",
+      "value_usd": 4100000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-045",
+      "supplier_id": "SUP-017",
+      "start_date": "2024-10-04",
+      "end_date": "2027-09-15",
+      "value_usd": 4700000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-046",
+      "supplier_id": "SUP-017",
+      "start_date": "2027-06-26",
+      "end_date": "2030-02-11",
+      "value_usd": 7800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-047",
+      "supplier_id": "SUP-017",
+      "start_date": "2027-07-05",
+      "end_date": "2028-10-31",
+      "value_usd": 3300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-048",
+      "supplier_id": "SUP-018",
+      "start_date": "2025-10-21",
+      "end_date": "2028-06-18",
+      "value_usd": 4800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-049",
+      "supplier_id": "SUP-018",
+      "start_date": "2026-06-02",
+      "end_date": "2029-04-09",
+      "value_usd": 4700000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-050",
+      "supplier_id": "SUP-018",
+      "start_date": "2027-07-03",
+      "end_date": "2029-03-20",
+      "value_usd": 1700000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-051",
+      "supplier_id": "SUP-018",
+      "start_date": "2026-05-30",
+      "end_date": "2028-03-09",
+      "value_usd": 4400000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-052",
+      "supplier_id": "SUP-019",
+      "start_date": "2028-08-19",
+      "end_date": "2029-10-06",
+      "value_usd": 9000000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-053",
+      "supplier_id": "SUP-019",
+      "start_date": "2025-04-24",
+      "end_date": "2026-10-06",
+      "value_usd": 6900000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-054",
+      "supplier_id": "SUP-020",
+      "start_date": "2026-09-25",
+      "end_date": "2029-05-08",
+      "value_usd": 8200000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-055",
+      "supplier_id": "SUP-020",
+      "start_date": "2029-01-04",
+      "end_date": "2030-04-18",
+      "value_usd": 1000000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-056",
+      "supplier_id": "SUP-020",
+      "start_date": "2024-07-18",
+      "end_date": "2027-04-08",
+      "value_usd": 3900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-057",
+      "supplier_id": "SUP-021",
+      "start_date": "2025-07-29",
+      "end_date": "2028-07-25",
+      "value_usd": 1700000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-058",
+      "supplier_id": "SUP-021",
+      "start_date": "2026-11-02",
+      "end_date": "2029-01-09",
+      "value_usd": 500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-059",
+      "supplier_id": "SUP-022",
+      "start_date": "2026-05-09",
+      "end_date": "2029-01-12",
+      "value_usd": 5300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-060",
+      "supplier_id": "SUP-022",
+      "start_date": "2024-08-14",
+      "end_date": "2027-02-28",
+      "value_usd": 4100000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-061",
+      "supplier_id": "SUP-022",
+      "start_date": "2026-07-01",
+      "end_date": "2028-02-13",
+      "value_usd": 3300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-062",
+      "supplier_id": "SUP-022",
+      "start_date": "2027-01-07",
+      "end_date": "2028-07-20",
+      "value_usd": 1900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-063",
+      "supplier_id": "SUP-023",
+      "start_date": "2025-08-13",
+      "end_date": "2028-04-10",
+      "value_usd": 8600000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-064",
+      "supplier_id": "SUP-023",
+      "start_date": "2024-11-14",
+      "end_date": "2027-09-04",
+      "value_usd": 7000000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-065",
+      "supplier_id": "SUP-024",
+      "start_date": "2025-02-11",
+      "end_date": "2027-08-19",
+      "value_usd": 2900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-066",
+      "supplier_id": "SUP-024",
+      "start_date": "2024-11-30",
+      "end_date": "2027-06-23",
+      "value_usd": 4400000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-067",
+      "supplier_id": "SUP-024",
+      "start_date": "2025-04-18",
+      "end_date": "2027-08-07",
+      "value_usd": 3500000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-068",
+      "supplier_id": "SUP-025",
+      "start_date": "2025-02-15",
+      "end_date": "2027-02-23",
+      "value_usd": 6900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-069",
+      "supplier_id": "SUP-025",
+      "start_date": "2026-10-13",
+      "end_date": "2028-02-04",
+      "value_usd": 6200000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-070",
+      "supplier_id": "SUP-025",
+      "start_date": "2027-07-14",
+      "end_date": "2028-11-25",
+      "value_usd": 7000000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-071",
+      "supplier_id": "SUP-025",
+      "start_date": "2025-10-11",
+      "end_date": "2027-10-10",
+      "value_usd": 4300000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-072",
+      "supplier_id": "SUP-025",
+      "start_date": "2024-06-15",
+      "end_date": "2027-06-14",
+      "value_usd": 3600000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-073",
+      "supplier_id": "SUP-026",
+      "start_date": "2026-09-16",
+      "end_date": "2028-10-12",
+      "value_usd": 7300000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-074",
+      "supplier_id": "SUP-026",
+      "start_date": "2028-08-06",
+      "end_date": "2029-11-17",
+      "value_usd": 8900000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-075",
+      "supplier_id": "SUP-026",
+      "start_date": "2025-08-19",
+      "end_date": "2028-06-25",
+      "value_usd": 7400000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-076",
+      "supplier_id": "SUP-027",
+      "start_date": "2027-11-26",
+      "end_date": "2029-10-26",
+      "value_usd": 6800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-077",
+      "supplier_id": "SUP-027",
+      "start_date": "2028-02-20",
+      "end_date": "2029-05-26",
+      "value_usd": 6600000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-078",
+      "supplier_id": "SUP-027",
+      "start_date": "2026-11-23",
+      "end_date": "2028-11-05",
+      "value_usd": 800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-079",
+      "supplier_id": "SUP-028",
+      "start_date": "2025-09-22",
+      "end_date": "2027-01-31",
+      "value_usd": 6600000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-080",
+      "supplier_id": "SUP-028",
+      "start_date": "2028-07-06",
+      "end_date": "2029-08-14",
+      "value_usd": 3000000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-081",
+      "supplier_id": "SUP-028",
+      "start_date": "2027-10-12",
+      "end_date": "2029-03-08",
+      "value_usd": 3500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-082",
+      "supplier_id": "SUP-028",
+      "start_date": "2026-04-03",
+      "end_date": "2027-09-09",
+      "value_usd": 9100000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-083",
+      "supplier_id": "SUP-029",
+      "start_date": "2024-08-20",
+      "end_date": "2026-12-24",
+      "value_usd": 8500000,
+      "contains_pii": true,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-084",
+      "supplier_id": "SUP-029",
+      "start_date": "2026-01-18",
+      "end_date": "2028-06-09",
+      "value_usd": 3500000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-085",
+      "supplier_id": "SUP-029",
+      "start_date": "2026-11-30",
+      "end_date": "2028-01-14",
+      "value_usd": 500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-086",
+      "supplier_id": "SUP-029",
+      "start_date": "2025-06-13",
+      "end_date": "2027-05-24",
+      "value_usd": 6800000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-087",
+      "supplier_id": "SUP-030",
+      "start_date": "2024-07-29",
+      "end_date": "2027-03-28",
+      "value_usd": 500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-088",
+      "supplier_id": "SUP-030",
+      "start_date": "2026-06-23",
+      "end_date": "2028-10-31",
+      "value_usd": 1500000,
+      "contains_pii": false,
+      "contains_secrets": false
+    },
+    {
+      "id": "CON-089",
+      "supplier_id": "SUP-030",
+      "start_date": "2027-01-21",
+      "end_date": "2028-02-18",
+      "value_usd": 9500000,
+      "contains_pii": false,
+      "contains_secrets": true
+    },
+    {
+      "id": "CON-090",
+      "supplier_id": "SUP-030",
+      "start_date": "2026-01-21",
+      "end_date": "2027-11-21",
+      "value_usd": 7900000,
+      "contains_pii": true,
+      "contains_secrets": false
+    }
+  ],
+  "contract_clauses": [
+    {
+      "id": "CLA-001",
+      "contract_id": "CON-001",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-002",
+      "contract_id": "CON-001",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-003",
+      "contract_id": "CON-002",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-004",
+      "contract_id": "CON-002",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-005",
+      "contract_id": "CON-003",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-006",
+      "contract_id": "CON-003",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-007",
+      "contract_id": "CON-004",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-008",
+      "contract_id": "CON-004",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-009",
+      "contract_id": "CON-005",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-010",
+      "contract_id": "CON-005",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-011",
+      "contract_id": "CON-006",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-012",
+      "contract_id": "CON-006",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-013",
+      "contract_id": "CON-006",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-014",
+      "contract_id": "CON-007",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-015",
+      "contract_id": "CON-007",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-016",
+      "contract_id": "CON-007",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-017",
+      "contract_id": "CON-008",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-018",
+      "contract_id": "CON-008",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-019",
+      "contract_id": "CON-009",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-020",
+      "contract_id": "CON-010",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-021",
+      "contract_id": "CON-011",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-022",
+      "contract_id": "CON-012",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-023",
+      "contract_id": "CON-013",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-024",
+      "contract_id": "CON-014",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-025",
+      "contract_id": "CON-015",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-026",
+      "contract_id": "CON-016",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-027",
+      "contract_id": "CON-016",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-028",
+      "contract_id": "CON-017",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-029",
+      "contract_id": "CON-018",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-030",
+      "contract_id": "CON-018",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-031",
+      "contract_id": "CON-019",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-032",
+      "contract_id": "CON-020",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-033",
+      "contract_id": "CON-021",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-034",
+      "contract_id": "CON-022",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-035",
+      "contract_id": "CON-023",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-036",
+      "contract_id": "CON-024",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-037",
+      "contract_id": "CON-025",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-038",
+      "contract_id": "CON-026",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-039",
+      "contract_id": "CON-027",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-040",
+      "contract_id": "CON-028",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-041",
+      "contract_id": "CON-029",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-042",
+      "contract_id": "CON-030",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-043",
+      "contract_id": "CON-030",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-044",
+      "contract_id": "CON-031",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-045",
+      "contract_id": "CON-031",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-046",
+      "contract_id": "CON-032",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-047",
+      "contract_id": "CON-033",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-048",
+      "contract_id": "CON-034",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-049",
+      "contract_id": "CON-035",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-050",
+      "contract_id": "CON-036",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-051",
+      "contract_id": "CON-037",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-052",
+      "contract_id": "CON-037",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-053",
+      "contract_id": "CON-038",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-054",
+      "contract_id": "CON-039",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-055",
+      "contract_id": "CON-039",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-056",
+      "contract_id": "CON-040",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-057",
+      "contract_id": "CON-040",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-058",
+      "contract_id": "CON-041",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-059",
+      "contract_id": "CON-041",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-060",
+      "contract_id": "CON-042",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-061",
+      "contract_id": "CON-043",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-062",
+      "contract_id": "CON-043",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-063",
+      "contract_id": "CON-044",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-064",
+      "contract_id": "CON-044",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-065",
+      "contract_id": "CON-045",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-066",
+      "contract_id": "CON-045",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-067",
+      "contract_id": "CON-046",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-068",
+      "contract_id": "CON-047",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-069",
+      "contract_id": "CON-048",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-070",
+      "contract_id": "CON-049",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-071",
+      "contract_id": "CON-049",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-072",
+      "contract_id": "CON-050",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-073",
+      "contract_id": "CON-050",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-074",
+      "contract_id": "CON-051",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-075",
+      "contract_id": "CON-051",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-076",
+      "contract_id": "CON-052",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-077",
+      "contract_id": "CON-052",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-078",
+      "contract_id": "CON-053",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-079",
+      "contract_id": "CON-053",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-080",
+      "contract_id": "CON-054",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-081",
+      "contract_id": "CON-055",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-082",
+      "contract_id": "CON-056",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-083",
+      "contract_id": "CON-057",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-084",
+      "contract_id": "CON-058",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-085",
+      "contract_id": "CON-059",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-086",
+      "contract_id": "CON-060",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-087",
+      "contract_id": "CON-061",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-088",
+      "contract_id": "CON-062",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-089",
+      "contract_id": "CON-063",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-090",
+      "contract_id": "CON-064",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-091",
+      "contract_id": "CON-065",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-092",
+      "contract_id": "CON-066",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-093",
+      "contract_id": "CON-066",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-094",
+      "contract_id": "CON-067",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-095",
+      "contract_id": "CON-067",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-096",
+      "contract_id": "CON-068",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-097",
+      "contract_id": "CON-069",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-098",
+      "contract_id": "CON-070",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-099",
+      "contract_id": "CON-071",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-100",
+      "contract_id": "CON-071",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-101",
+      "contract_id": "CON-072",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-102",
+      "contract_id": "CON-072",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-103",
+      "contract_id": "CON-073",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-104",
+      "contract_id": "CON-074",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-105",
+      "contract_id": "CON-075",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-106",
+      "contract_id": "CON-075",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-107",
+      "contract_id": "CON-076",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-108",
+      "contract_id": "CON-077",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-109",
+      "contract_id": "CON-078",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-110",
+      "contract_id": "CON-079",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-111",
+      "contract_id": "CON-080",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-112",
+      "contract_id": "CON-081",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-113",
+      "contract_id": "CON-082",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-114",
+      "contract_id": "CON-083",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-115",
+      "contract_id": "CON-083",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-116",
+      "contract_id": "CON-084",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-117",
+      "contract_id": "CON-084",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-118",
+      "contract_id": "CON-085",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-119",
+      "contract_id": "CON-086",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-120",
+      "contract_id": "CON-087",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-121",
+      "contract_id": "CON-088",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-122",
+      "contract_id": "CON-089",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-123",
+      "contract_id": "CON-089",
+      "clause_type": "secret",
+      "text": "CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted)."
+    },
+    {
+      "id": "CLA-124",
+      "contract_id": "CON-090",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-125",
+      "contract_id": "CON-090",
+      "clause_type": "pii",
+      "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    }
+  ],
+  "consents": [
+    {
+      "id": "CNS-001",
+      "supplier_id": "SUP-001",
+      "granted_at": "2025-03-31",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-03-31"
+    },
+    {
+      "id": "CNS-002",
+      "supplier_id": "SUP-002",
+      "granted_at": "2024-12-31",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2026-12-31"
+    },
+    {
+      "id": "CNS-003",
+      "supplier_id": "SUP-003",
+      "granted_at": "2025-09-08",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-09-08"
+    },
+    {
+      "id": "CNS-004",
+      "supplier_id": "SUP-004",
+      "granted_at": "2025-12-17",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-12-17"
+    },
+    {
+      "id": "CNS-005",
+      "supplier_id": "SUP-005",
+      "granted_at": "2025-08-07",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-08-07"
+    },
+    {
+      "id": "CNS-006",
+      "supplier_id": "SUP-006",
+      "granted_at": "2024-03-26",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2026-03-26"
+    },
+    {
+      "id": "CNS-007",
+      "supplier_id": "SUP-007",
+      "granted_at": "2023-06-22",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2025-06-21"
+    },
+    {
+      "id": "CNS-008",
+      "supplier_id": "SUP-008",
+      "granted_at": "2026-04-13",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2028-04-12"
+    },
+    {
+      "id": "CNS-009",
+      "supplier_id": "SUP-009",
+      "granted_at": "2025-08-13",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-08-13"
+    },
+    {
+      "id": "CNS-010",
+      "supplier_id": "SUP-010",
+      "granted_at": "2026-04-26",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2028-04-25"
+    },
+    {
+      "id": "CNS-011",
+      "supplier_id": "SUP-011",
+      "granted_at": "2025-07-07",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-07-07"
+    },
+    {
+      "id": "CNS-012",
+      "supplier_id": "SUP-012",
+      "granted_at": "2025-06-03",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-06-03"
+    },
+    {
+      "id": "CNS-013",
+      "supplier_id": "SUP-013",
+      "granted_at": "2026-01-13",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2028-01-13"
+    },
+    {
+      "id": "CNS-014",
+      "supplier_id": "SUP-014",
+      "granted_at": "2024-03-23",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2026-03-23"
+    },
+    {
+      "id": "CNS-015",
+      "supplier_id": "SUP-015",
+      "granted_at": "2025-07-02",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-07-02"
+    },
+    {
+      "id": "CNS-016",
+      "supplier_id": "SUP-016",
+      "granted_at": "2026-05-26",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2028-05-25"
+    },
+    {
+      "id": "CNS-017",
+      "supplier_id": "SUP-017",
+      "granted_at": "2025-08-02",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-08-02"
+    },
+    {
+      "id": "CNS-018",
+      "supplier_id": "SUP-018",
+      "granted_at": "2023-10-07",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2025-10-06"
+    },
+    {
+      "id": "CNS-019",
+      "supplier_id": "SUP-019",
+      "granted_at": "2025-11-05",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-11-05"
+    },
+    {
+      "id": "CNS-020",
+      "supplier_id": "SUP-020",
+      "granted_at": "2025-06-16",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-06-16"
+    },
+    {
+      "id": "CNS-021",
+      "supplier_id": "SUP-021",
+      "granted_at": "2025-09-19",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-09-19"
+    },
+    {
+      "id": "CNS-022",
+      "supplier_id": "SUP-022",
+      "granted_at": "2025-03-25",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-03-25"
+    },
+    {
+      "id": "CNS-023",
+      "supplier_id": "SUP-023",
+      "granted_at": "2026-01-11",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2028-01-11"
+    },
+    {
+      "id": "CNS-024",
+      "supplier_id": "SUP-024",
+      "granted_at": "2025-07-20",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-07-20"
+    },
+    {
+      "id": "CNS-025",
+      "supplier_id": "SUP-025",
+      "granted_at": "2025-03-02",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-03-02"
+    },
+    {
+      "id": "CNS-026",
+      "supplier_id": "SUP-026",
+      "granted_at": "2024-02-09",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2026-02-08"
+    },
+    {
+      "id": "CNS-027",
+      "supplier_id": "SUP-027",
+      "granted_at": "2024-01-10",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2026-01-09"
+    },
+    {
+      "id": "CNS-028",
+      "supplier_id": "SUP-028",
+      "granted_at": "2025-02-25",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-02-25"
+    },
+    {
+      "id": "CNS-029",
+      "supplier_id": "SUP-029",
+      "granted_at": "2025-02-09",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-02-09"
+    },
+    {
+      "id": "CNS-030",
+      "supplier_id": "SUP-030",
+      "granted_at": "2025-10-14",
+      "scope": "supplier_pii_processing",
+      "retention_until": "2027-10-14"
+    }
+  ],
+  "persons": [
+    {
+      "id": "PER-001",
+      "supplier_id": "SUP-001",
+      "name": "Data Subject 1"
+    },
+    {
+      "id": "PER-002",
+      "supplier_id": "SUP-002",
+      "name": "Data Subject 2"
+    },
+    {
+      "id": "PER-003",
+      "supplier_id": "SUP-003",
+      "name": "Data Subject 3"
+    },
+    {
+      "id": "PER-004",
+      "supplier_id": "SUP-004",
+      "name": "Data Subject 4"
+    },
+    {
+      "id": "PER-005",
+      "supplier_id": "SUP-005",
+      "name": "Data Subject 5"
+    },
+    {
+      "id": "PER-006",
+      "supplier_id": "SUP-006",
+      "name": "Data Subject 6"
+    },
+    {
+      "id": "PER-007",
+      "supplier_id": "SUP-007",
+      "name": "Data Subject 7"
+    },
+    {
+      "id": "PER-008",
+      "supplier_id": "SUP-008",
+      "name": "Data Subject 8"
+    },
+    {
+      "id": "PER-009",
+      "supplier_id": "SUP-009",
+      "name": "Data Subject 9"
+    },
+    {
+      "id": "PER-010",
+      "supplier_id": "SUP-010",
+      "name": "Data Subject 10"
+    },
+    {
+      "id": "PER-011",
+      "supplier_id": "SUP-011",
+      "name": "Data Subject 11"
+    },
+    {
+      "id": "PER-012",
+      "supplier_id": "SUP-012",
+      "name": "Data Subject 12"
+    },
+    {
+      "id": "PER-013",
+      "supplier_id": "SUP-013",
+      "name": "Data Subject 13"
+    },
+    {
+      "id": "PER-014",
+      "supplier_id": "SUP-014",
+      "name": "Data Subject 14"
+    },
+    {
+      "id": "PER-015",
+      "supplier_id": "SUP-015",
+      "name": "Data Subject 15"
+    },
+    {
+      "id": "PER-016",
+      "supplier_id": "SUP-016",
+      "name": "Data Subject 16"
+    },
+    {
+      "id": "PER-017",
+      "supplier_id": "SUP-017",
+      "name": "Data Subject 17"
+    },
+    {
+      "id": "PER-018",
+      "supplier_id": "SUP-018",
+      "name": "Data Subject 18"
+    },
+    {
+      "id": "PER-019",
+      "supplier_id": "SUP-019",
+      "name": "Data Subject 19"
+    },
+    {
+      "id": "PER-020",
+      "supplier_id": "SUP-020",
+      "name": "Data Subject 20"
+    },
+    {
+      "id": "PER-021",
+      "supplier_id": "SUP-021",
+      "name": "Data Subject 21"
+    },
+    {
+      "id": "PER-022",
+      "supplier_id": "SUP-022",
+      "name": "Data Subject 22"
+    },
+    {
+      "id": "PER-023",
+      "supplier_id": "SUP-023",
+      "name": "Data Subject 23"
+    },
+    {
+      "id": "PER-024",
+      "supplier_id": "SUP-024",
+      "name": "Data Subject 24"
+    },
+    {
+      "id": "PER-025",
+      "supplier_id": "SUP-025",
+      "name": "Data Subject 25"
+    },
+    {
+      "id": "PER-026",
+      "supplier_id": "SUP-026",
+      "name": "Data Subject 26"
+    },
+    {
+      "id": "PER-027",
+      "supplier_id": "SUP-027",
+      "name": "Data Subject 27"
+    },
+    {
+      "id": "PER-028",
+      "supplier_id": "SUP-028",
+      "name": "Data Subject 28"
+    },
+    {
+      "id": "PER-029",
+      "supplier_id": "SUP-029",
+      "name": "Data Subject 29"
+    },
+    {
+      "id": "PER-030",
+      "supplier_id": "SUP-030",
+      "name": "Data Subject 30"
+    }
+  ],
+  "policy_decisions": [
+    {
+      "id": "PDC-001",
+      "policy": "allow_pii_field_access",
+      "outcome": "mask",
+      "contract_id": "CON-006",
+      "reason": "consent expired"
+    },
+    {
+      "id": "PDC-002",
+      "policy": "allow_pii_field_access",
+      "outcome": "mask",
+      "contract_id": "CON-007",
+      "reason": "consent expired"
+    },
+    {
+      "id": "PDC-003",
+      "policy": "require_residency_match",
+      "outcome": "deny",
+      "contract_id": "CON-008",
+      "reason": "data hosted outside EU"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+id,contract_id,clause_type,text
+CLA-001,CON-001,standard,Standard master services agreement terms and conditions apply.
+CLA-002,CON-001,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-003,CON-002,standard,Standard master services agreement terms and conditions apply.
+CLA-004,CON-002,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-005,CON-003,standard,Standard master services agreement terms and conditions apply.
+CLA-006,CON-003,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-007,CON-004,standard,Standard master services agreement terms and conditions apply.
+CLA-008,CON-004,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-009,CON-005,standard,Standard master services agreement terms and conditions apply.
+CLA-010,CON-005,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-011,CON-006,standard,Standard master services agreement terms and conditions apply.
+CLA-012,CON-006,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-013,CON-006,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-014,CON-007,standard,Standard master services agreement terms and conditions apply.
+CLA-015,CON-007,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-016,CON-007,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-017,CON-008,standard,Standard master services agreement terms and conditions apply.
+CLA-018,CON-008,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-019,CON-009,standard,Standard master services agreement terms and conditions apply.
+CLA-020,CON-010,standard,Standard master services agreement terms and conditions apply.
+CLA-021,CON-011,standard,Standard master services agreement terms and conditions apply.
+CLA-022,CON-012,standard,Standard master services agreement terms and conditions apply.
+CLA-023,CON-013,standard,Standard master services agreement terms and conditions apply.
+CLA-024,CON-014,standard,Standard master services agreement terms and conditions apply.
+CLA-025,CON-015,standard,Standard master services agreement terms and conditions apply.
+CLA-026,CON-016,standard,Standard master services agreement terms and conditions apply.
+CLA-027,CON-016,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-028,CON-017,standard,Standard master services agreement terms and conditions apply.
+CLA-029,CON-018,standard,Standard master services agreement terms and conditions apply.
+CLA-030,CON-018,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-031,CON-019,standard,Standard master services agreement terms and conditions apply.
+CLA-032,CON-020,standard,Standard master services agreement terms and conditions apply.
+CLA-033,CON-021,standard,Standard master services agreement terms and conditions apply.
+CLA-034,CON-022,standard,Standard master services agreement terms and conditions apply.
+CLA-035,CON-023,standard,Standard master services agreement terms and conditions apply.
+CLA-036,CON-024,standard,Standard master services agreement terms and conditions apply.
+CLA-037,CON-025,standard,Standard master services agreement terms and conditions apply.
+CLA-038,CON-026,standard,Standard master services agreement terms and conditions apply.
+CLA-039,CON-027,standard,Standard master services agreement terms and conditions apply.
+CLA-040,CON-028,standard,Standard master services agreement terms and conditions apply.
+CLA-041,CON-029,standard,Standard master services agreement terms and conditions apply.
+CLA-042,CON-030,standard,Standard master services agreement terms and conditions apply.
+CLA-043,CON-030,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-044,CON-031,standard,Standard master services agreement terms and conditions apply.
+CLA-045,CON-031,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-046,CON-032,standard,Standard master services agreement terms and conditions apply.
+CLA-047,CON-033,standard,Standard master services agreement terms and conditions apply.
+CLA-048,CON-034,standard,Standard master services agreement terms and conditions apply.
+CLA-049,CON-035,standard,Standard master services agreement terms and conditions apply.
+CLA-050,CON-036,standard,Standard master services agreement terms and conditions apply.
+CLA-051,CON-037,standard,Standard master services agreement terms and conditions apply.
+CLA-052,CON-037,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-053,CON-038,standard,Standard master services agreement terms and conditions apply.
+CLA-054,CON-039,standard,Standard master services agreement terms and conditions apply.
+CLA-055,CON-039,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-056,CON-040,standard,Standard master services agreement terms and conditions apply.
+CLA-057,CON-040,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-058,CON-041,standard,Standard master services agreement terms and conditions apply.
+CLA-059,CON-041,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-060,CON-042,standard,Standard master services agreement terms and conditions apply.
+CLA-061,CON-043,standard,Standard master services agreement terms and conditions apply.
+CLA-062,CON-043,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-063,CON-044,standard,Standard master services agreement terms and conditions apply.
+CLA-064,CON-044,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-065,CON-045,standard,Standard master services agreement terms and conditions apply.
+CLA-066,CON-045,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-067,CON-046,standard,Standard master services agreement terms and conditions apply.
+CLA-068,CON-047,standard,Standard master services agreement terms and conditions apply.
+CLA-069,CON-048,standard,Standard master services agreement terms and conditions apply.
+CLA-070,CON-049,standard,Standard master services agreement terms and conditions apply.
+CLA-071,CON-049,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-072,CON-050,standard,Standard master services agreement terms and conditions apply.
+CLA-073,CON-050,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-074,CON-051,standard,Standard master services agreement terms and conditions apply.
+CLA-075,CON-051,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-076,CON-052,standard,Standard master services agreement terms and conditions apply.
+CLA-077,CON-052,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-078,CON-053,standard,Standard master services agreement terms and conditions apply.
+CLA-079,CON-053,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-080,CON-054,standard,Standard master services agreement terms and conditions apply.
+CLA-081,CON-055,standard,Standard master services agreement terms and conditions apply.
+CLA-082,CON-056,standard,Standard master services agreement terms and conditions apply.
+CLA-083,CON-057,standard,Standard master services agreement terms and conditions apply.
+CLA-084,CON-058,standard,Standard master services agreement terms and conditions apply.
+CLA-085,CON-059,standard,Standard master services agreement terms and conditions apply.
+CLA-086,CON-060,standard,Standard master services agreement terms and conditions apply.
+CLA-087,CON-061,standard,Standard master services agreement terms and conditions apply.
+CLA-088,CON-062,standard,Standard master services agreement terms and conditions apply.
+CLA-089,CON-063,standard,Standard master services agreement terms and conditions apply.
+CLA-090,CON-064,standard,Standard master services agreement terms and conditions apply.
+CLA-091,CON-065,standard,Standard master services agreement terms and conditions apply.
+CLA-092,CON-066,standard,Standard master services agreement terms and conditions apply.
+CLA-093,CON-066,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-094,CON-067,standard,Standard master services agreement terms and conditions apply.
+CLA-095,CON-067,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-096,CON-068,standard,Standard master services agreement terms and conditions apply.
+CLA-097,CON-069,standard,Standard master services agreement terms and conditions apply.
+CLA-098,CON-070,standard,Standard master services agreement terms and conditions apply.
+CLA-099,CON-071,standard,Standard master services agreement terms and conditions apply.
+CLA-100,CON-071,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-101,CON-072,standard,Standard master services agreement terms and conditions apply.
+CLA-102,CON-072,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-103,CON-073,standard,Standard master services agreement terms and conditions apply.
+CLA-104,CON-074,standard,Standard master services agreement terms and conditions apply.
+CLA-105,CON-075,standard,Standard master services agreement terms and conditions apply.
+CLA-106,CON-075,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-107,CON-076,standard,Standard master services agreement terms and conditions apply.
+CLA-108,CON-077,standard,Standard master services agreement terms and conditions apply.
+CLA-109,CON-078,standard,Standard master services agreement terms and conditions apply.
+CLA-110,CON-079,standard,Standard master services agreement terms and conditions apply.
+CLA-111,CON-080,standard,Standard master services agreement terms and conditions apply.
+CLA-112,CON-081,standard,Standard master services agreement terms and conditions apply.
+CLA-113,CON-082,standard,Standard master services agreement terms and conditions apply.
+CLA-114,CON-083,standard,Standard master services agreement terms and conditions apply.
+CLA-115,CON-083,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-116,CON-084,standard,Standard master services agreement terms and conditions apply.
+CLA-117,CON-084,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-118,CON-085,standard,Standard master services agreement terms and conditions apply.
+CLA-119,CON-086,standard,Standard master services agreement terms and conditions apply.
+CLA-120,CON-087,standard,Standard master services agreement terms and conditions apply.
+CLA-121,CON-088,standard,Standard master services agreement terms and conditions apply.
+CLA-122,CON-089,standard,Standard master services agreement terms and conditions apply.
+CLA-123,CON-089,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
+CLA-124,CON-090,standard,Standard master services agreement terms and conditions apply.
+CLA-125,CON-090,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."

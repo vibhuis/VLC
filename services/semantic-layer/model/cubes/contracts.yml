@@ -1,0 +1,41 @@
+# Contract cube. [spec §5.1]
+cubes:
+  - name: contracts
+    sql: >
+      SELECT * FROM read_csv_auto('/data/contracts.csv', header=true)
+    joins:
+      - name: contract_clauses
+        relationship: one_to_many
+        sql: "{CUBE}.id = {contract_clauses}.contract_id"
+    dimensions:
+      - name: id
+        sql: id
+        type: string
+        primary_key: true
+      - name: supplier_id
+        sql: supplier_id
+        type: string
+      - name: start_date
+        sql: start_date
+        type: time
+      - name: end_date
+        sql: end_date
+        type: time
+      - name: value_usd
+        sql: value_usd
+        type: number
+      - name: contains_pii
+        sql: contains_pii
+        type: boolean
+      - name: contains_secrets
+        sql: contains_secrets
+        type: boolean
+    measures:
+      - name: count
+        type: count
+      - name: total_value_usd
+        sql: value_usd
+        type: sum
+      - name: avg_value_usd
+        sql: value_usd
+        type: avg
