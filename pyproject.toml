@@ -38,5 +38,6 @@ filterwarnings = ["ignore::DeprecationWarning"]
 line-length = 100
 target-version = "py311"
 
-[tool.setuptools]
-py-modules = []
+[tool.uv]
+# This repo is a collection of services, not an installable package; install only deps.
+package = false
