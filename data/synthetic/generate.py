@@ -22,7 +22,6 @@ from __future__ import annotations
 
 import csv
 import json
-import os
 import random
 from datetime import date, timedelta
 from pathlib import Path

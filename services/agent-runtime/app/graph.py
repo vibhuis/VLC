@@ -12,7 +12,7 @@ against the real stack or deterministic fixtures.
 """
 from __future__ import annotations
 
-from typing import Any, TypedDict
+from typing import TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
