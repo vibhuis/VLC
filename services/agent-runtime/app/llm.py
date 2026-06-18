@@ -2,7 +2,7 @@
 
 Users choose the model with VCL_LLM_MODEL and supply the matching provider key
 (ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY, …); LiteLLM routes by the model
-string. Default is claude-sonnet-4-6. The LLM does two jobs:
+string (default set via VCL_LLM_MODEL). The LLM does two jobs:
 
   • understanding  — turn a free-form question into the governed structured intent
   • synthesis      — write the final analyst answer

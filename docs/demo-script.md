@@ -7,7 +7,7 @@ working, audited answer. Mirrors the success criteria in spec §1.3 and §8.
 
 - Docker Desktop (or any Docker engine + Compose v2) running.
 - An `ANTHROPIC_API_KEY` is **optional** — the demo runs without one (deterministic
-  synthesiser). With a key, Claude writes the answer prose.
+  synthesiser). With a key, the LLM writes the answer prose.
 
 ## 1. Bring up the stack (≈3–4 min first run, then seconds)
 

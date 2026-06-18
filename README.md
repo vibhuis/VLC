@@ -25,7 +25,7 @@ trail** that maps to EU AI Act Articles 9/12/13 and the NIST AI RMF.
 | 1 | Semantic layer | Cube.dev (+ DuckDB) | 4000 | business question → governed query |
 | 2 | Context graph | Neo4j Community | 7474 / 7687 | entity relationships + provenance |
 | 3 | Policy engine | Open Policy Agent | 8181 | enforce 5 written policies per access |
-| 4 | Agent runtime | LangGraph + FastAPI + Claude | 8000 | orchestrate, reason, emit traces |
+| 4 | Agent runtime | LangGraph + FastAPI + LLM | 8000 | orchestrate, reason, emit traces |
 | 5 | Feedback loop | OpenTelemetry-shaped → SQLite | 8200 | persist & replay every decision |
 | — | Demo UI | Streamlit | 8501 | query · response · trace viewer · PDF export |
 

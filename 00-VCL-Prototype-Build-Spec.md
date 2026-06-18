@@ -3,7 +3,7 @@
 **Project codename:** `vcl-ref-impl`
 **Author of spec:** Vibhuraja Bhutani
 **Date:** 8 June 2026
-**Intended builder:** Claude Code (autonomous coding agent)
+**Intended builder:** engineering team
 **Companion paper:** *The Verifiable Context Layer*, Zenodo DOI `10.5281/zenodo.20599942`
 **Target outcome:** A working end-to-end demonstration of the five-component VCL pattern, runnable locally via Docker Compose, that produces a regulator-addressable audit trail for the worked use case in Section 5 of the paper.
 
@@ -63,7 +63,7 @@ The prototype implements Figure 3 of the paper (the VCL reference architecture).
 │  ┌────────────────────────────────────────────────────────────────┐  │
 │  │  Agent Runtime  (FastAPI, port 8000)                            │  │
 │  │  LangGraph-based reasoning loop                                 │  │
-│  │  Anthropic Claude API as the LLM backbone                       │  │
+│  │  an LLM API as the reasoning backbone                       │  │
 │  └────────────────────────────────────────────────────────────────┘  │
 │           │                  │                 │             │        │
 │           ▼                  ▼                 ▼             ▼        │
@@ -82,7 +82,7 @@ The prototype implements Figure 3 of the paper (the VCL reference architecture).
 
 ## 3. Tech Stack
 
-All choices favour **local-first, open-source, fast-to-demo** over production-grade. Claude Code may substitute any component for a better-fit equivalent provided the substitution is justified in a `DECISIONS.md` file in the repo root.
+All choices favour **local-first, open-source, fast-to-demo** over production-grade. The builder may substitute any component for a better-fit equivalent provided the substitution is justified in a `DECISIONS.md` file in the repo root.
 
 | Concern | Chosen tool | Rationale |
 |---|---|---|
@@ -90,7 +90,7 @@ All choices favour **local-first, open-source, fast-to-demo** over production-gr
 | Backend language | **Python 3.11** | Best LLM/agent ecosystem |
 | UI | **Streamlit** | Fastest path to a demo-able UI |
 | Agent framework | **LangGraph** | State-machine agents; good trace exposure |
-| LLM | **Anthropic Claude (Sonnet 4.5+)** via API | Strong reasoning, good function calling |
+| LLM | **An LLM via API** (provider-agnostic) | Strong reasoning, good function calling |
 | Semantic layer | **Cube.dev (open source)** | Simplest deployable semantic layer |
 | Context graph | **Neo4j Community Edition** | Cypher is well-supported; large LLM context |
 | Policy engine | **Open Policy Agent (OPA)** | Industry-standard, Rego policies |
@@ -109,7 +109,7 @@ ANTHROPIC_API_KEY=...
 
 ## 4. Repository Structure
 
-Claude Code: please initialise the repo with exactly this structure:
+Please initialise the repo with exactly this structure:
 
 ```
 vcl-ref-impl/
@@ -202,7 +202,7 @@ vcl-ref-impl/
 - `(:Supplier)-[:HAS_CONSENT]->(:Consent)`
 - `(:PolicyDecision)-[:APPLIED_TO]->(:Contract)`
 
-**Required seed data:** Claude Code should generate ~30 suppliers across 6 regions, ~80 contracts, ~15 of which contain PII clauses, ~10 with expired or missing consent. Mix of EU, US, APAC residency.
+**Required seed data:** The builder should generate ~30 suppliers across 6 regions, ~80 contracts, ~15 of which contain PII clauses, ~10 with expired or missing consent. Mix of EU, US, APAC residency.
 
 **Interface:** Bolt protocol on `:7687`, plus a small REST wrapper for the agent tool to use.
 
@@ -389,7 +389,7 @@ Each phase produces a runnable, demonstrable state. Don't move to phase N+1 unti
 - One-shot demo recording (asciinema or short screen capture)
 - Tag v0.1.0 release
 
-**Total estimate:** 10 working days for one person at LLM-augmented productivity. May compress with Claude Code's parallelism.
+**Total estimate:** 10 working days for one person at LLM-augmented productivity. May compress with parallel execution.
 
 ---
 
@@ -427,9 +427,9 @@ If any of these come up during the build, defer them to v0.2 and add a TODO to `
 
 ---
 
-## 10. Handoff to Claude Code
+## 10. Handoff to the builder
 
-This document is the complete brief. When you hand it to Claude Code, give it the following framing prompt:
+This document is the complete brief. Give the builder the following framing prompt:
 
 > *"Build the VCL Reference Implementation as specified in `00-VCL-Prototype-Build-Spec.md`. Work through Phases 1–8 in order. After each phase, commit, push, and write a one-paragraph status update. Do not skip phases. If you need to deviate from the spec, document the decision in `DECISIONS.md` with rationale before deviating. The companion paper is at https://doi.org/10.5281/zenodo.20599942 — reference Section 5 of the paper for the worked use case and Figure 3 for the architecture diagram."*
 

@@ -80,7 +80,7 @@ services:
       retries: 6
       start_period: 5s
 
-  # 5. Agent runtime — LangGraph + FastAPI, Claude as the LLM backbone. [spec §5.4]
+  # 5. Agent runtime — LangGraph + FastAPI, the configured LLM as the backbone. [spec §5.4]
   agent-runtime:
     build: ./services/agent-runtime
     image: vcl/agent-runtime

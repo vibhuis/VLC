@@ -14,7 +14,7 @@ VCL reference architecture — as six Docker Compose services.
                                            ▼
                               ┌──────────────────────────┐
                               │ Agent runtime · :8000    │   LangGraph state machine
-                              │ FastAPI + LangGraph      │   Claude (claude-sonnet-4-6)
+                              │ FastAPI + LangGraph      │   the configured LLM
                               └──┬─────┬─────┬─────┬──────┘   or deterministic fallback
             semantic_layer.*  │     │     │     │  feedback_loop.emit
                 ┌─────────────┘     │     │     └──────────────┐
