@@ -97,6 +97,13 @@ vcl-ref-impl/
 └── docs/                     architecture · demo-script · EU AI Act mapping
 ```
 
+## Documentation
+
+- [docs/architecture.md](docs/architecture.md) — component map and the governed request flow
+- [docs/demo-script.md](docs/demo-script.md) — exact 10-minute walkthrough (commands + clicks)
+- [docs/eu-ai-act-mapping.md](docs/eu-ai-act-mapping.md) — which trace field satisfies which obligation
+- [DECISIONS.md](DECISIONS.md) — architecture decisions and deviations from the spec
+
 ## Build phases
 
 This repo was built in the eight phases of `00-VCL-Prototype-Build-Spec.md` §7.
