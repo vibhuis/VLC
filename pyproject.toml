@@ -17,6 +17,7 @@ dependencies = [
     "pydantic>=2.6",
     "neo4j>=5.19",
     "litellm>=1.55",
+    "mcp>=1.2",
     "langgraph>=0.2.0",
     "langchain-core>=0.3.0",
 ]

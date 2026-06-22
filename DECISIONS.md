@@ -103,6 +103,20 @@ turns the audit trail from "we logged it" into "we can prove it was not altered"
 paper's verifiability claim, in a laptop-runnable form (no external transparency-log
 service required for the demo; the server holds the HMAC key via `VCL_AUDIT_HMAC_KEY`).
 
+## D11 — MCP at the agent/tool runtime
+**Paper ref:** §2.4, §4.2, §5.2, Table 3 (the runtime "implements MCP [34]") · **Date:** 2026-06-22
+
+The paper specifies the agent/tool runtime as the MCP surface through which agentic
+workloads consume context and invoke enterprise actions. A new **mcp-gateway** service
+(reusing the agent-runtime image, port 9000, Streamable HTTP at `/mcp`) exposes the VCL
+tools — `semantic_query`, `context_graph_query`, `policy_check`, `policy_filter`,
+`feedback_emit` — as MCP tools backed by the same governed components. The agent consumes
+them through an `MCPToolbox` when `VCL_USE_MCP=1`; any external MCP client (MCP Inspector, a
+copilot) can do the same. The default demo path stays in-process (`VCL_USE_MCP=0`) for
+speed and zero extra moving parts, but the MCP surface is always running and the
+`test_mcp_live` suite proves the full worked use case runs end-to-end over MCP. The build
+spec's six-service diagram is kept; the gateway is an additive 5b sharing the agent image.
+
 ---
 
 ## Deferred to v0.2 (out-of-scope per spec §9)

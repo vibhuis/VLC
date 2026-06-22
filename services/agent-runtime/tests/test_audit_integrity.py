@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import os
 import sqlite3
+import uuid
 from pathlib import Path
 
 import httpx
@@ -35,7 +36,7 @@ def _event(trace_id, step, action):
 
 
 def test_chain_valid_then_detects_tamper():
-    trace_id = "test-integrity-trace-001"
+    trace_id = f"test-integrity-{uuid.uuid4()}"  # unique per run → idempotent
     for i in range(1, 4):
         httpx.post(f"{FEEDBACK_URL}/events", json=_event(trace_id, i, f"step{i}"), timeout=5)
 

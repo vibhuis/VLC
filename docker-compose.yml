@@ -99,6 +99,8 @@ services:
       VCL_GRAPH_PASSWORD: vcldemopassword
       VCL_POLICY_URL: http://policy-engine:8181
       VCL_FEEDBACK_URL: http://feedback-loop:8200
+      VCL_MCP_URL: http://mcp-gateway:9000/mcp
+      VCL_USE_MCP: ${VCL_USE_MCP:-0}   # set to 1 to make the agent consume context over MCP
       VCL_DEMO_USER: ${VCL_DEMO_USER:-demo-analyst}
       VCL_DEMO_PURPOSE: ${VCL_DEMO_PURPOSE:-supplier_risk_review}
     depends_on:
@@ -116,6 +118,31 @@ services:
       timeout: 5s
       retries: 12
       start_period: 15s
+
+  # 5b. MCP gateway — exposes the VCL tools over the Model Context Protocol. [paper §4.2]
+  #     Reuses the agent-runtime image; any MCP client (the agent, MCP Inspector, an
+  #     external copilot) consumes governed enterprise context through it.
+  mcp-gateway:
+    build: ./services/agent-runtime
+    image: vcl/agent-runtime
+    command: ["python", "-m", "app.mcp_server"]
+    ports:
+      - "9000:9000"
+    environment:
+      VCL_MCP_PORT: "9000"
+      VCL_SEMANTIC_URL: http://semantic-layer:4000
+      VCL_GRAPH_BOLT_URI: bolt://context-graph:7687
+      VCL_GRAPH_USER: neo4j
+      VCL_GRAPH_PASSWORD: vcldemopassword
+      VCL_POLICY_URL: http://policy-engine:8181
+      VCL_FEEDBACK_URL: http://feedback-loop:8200
+    depends_on:
+      context-graph:
+        condition: service_healthy
+      policy-engine:
+        condition: service_healthy
+      feedback-loop:
+        condition: service_healthy
 
   # 6. UI — Streamlit demo surface. [spec §5.6]
   ui:

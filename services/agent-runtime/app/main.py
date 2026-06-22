@@ -12,17 +12,23 @@ from pydantic import BaseModel
 from .config import settings
 from .graph import run_query
 from .llm import llm_ready
+from .tools.base import Toolbox
 from .tools.live import LiveToolbox
 
 app = FastAPI(title="VCL Agent Runtime", version="0.1.0")
 
-_toolbox: LiveToolbox | None = None
+_toolbox: Toolbox | None = None
 
 
-def get_toolbox() -> LiveToolbox:
+def get_toolbox() -> Toolbox:
+    """Consume context over MCP when VCL_USE_MCP=1, else via in-process clients."""
     global _toolbox
     if _toolbox is None:
-        _toolbox = LiveToolbox()
+        if settings.use_mcp:
+            from .tools.mcp import MCPToolbox
+            _toolbox = MCPToolbox()
+        else:
+            _toolbox = LiveToolbox()
     return _toolbox
 
 
@@ -46,7 +52,8 @@ class QueryResponse(BaseModel):
 
 @app.get("/healthz")
 def healthz() -> dict:
-    return {"status": "ok", "llm_model": settings.llm_model, "llm_ready": llm_ready()}
+    return {"status": "ok", "llm_model": settings.llm_model, "llm_ready": llm_ready(),
+            "runtime": "mcp" if settings.use_mcp else "in-process"}
 
 
 @app.post("/query", response_model=QueryResponse)
