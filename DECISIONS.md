@@ -89,6 +89,20 @@ matching provider key (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`,
 public-repo user run the demo on whatever model they have access to. The deterministic
 fallback (D5) still applies when no key is set.
 
+## D10 — Tamper-evident, PROV-shaped audit log (verifiability)
+**Paper ref:** §6.1 (verifiability is the load-bearing property), §4.2 + Table 3
+(context-graph & feedback-loop primitives: MAIF cryptographic provenance [39],
+PROV-AGENT [40], AAGATE [42]) · **Date:** 2026-06-21
+
+The feedback loop now hash-chains every trace event: `entry_hash = HMAC-SHA256(key,
+prev_hash ++ payload)`, stored per event. `GET /verify/{trace_id}` re-derives the chain and
+reports whether it is intact (and the first broken step if not); `GET /prov/{trace_id}`
+exports the trace as a W3C PROV / PROV-AGENT-shaped document carrying the chain hashes. The
+UI shows an integrity badge and the PDF records the integrity verdict + chain head. This
+turns the audit trail from "we logged it" into "we can prove it was not altered" — the
+paper's verifiability claim, in a laptop-runnable form (no external transparency-log
+service required for the demo; the server holds the HMAC key via `VCL_AUDIT_HMAC_KEY`).
+
 ---
 
 ## Deferred to v0.2 (out-of-scope per spec §9)

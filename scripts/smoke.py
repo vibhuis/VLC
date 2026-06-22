@@ -52,6 +52,8 @@ def main() -> None:
     checks["trace persisted with >=7 steps"] = trace.get("event_count", 0) >= 7
     arts = {a for e in trace["events"] for a in e["regulatory_mapping"]["eu_ai_act_articles"]}
     checks["EU AI Act Art. 12 & 13 mapped"] = {"12", "13"} <= arts
+    checks["audit chain tamper-evident (integrity verified)"] = \
+        trace.get("integrity", {}).get("valid") is True
 
     ok = True
     for name, passed in checks.items():

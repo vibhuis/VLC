@@ -73,13 +73,22 @@ if result:
     # --------------------------------------------------------- trace viewer
     st.divider()
     if st.toggle("Show audit trace", value=False):
+        events = []
         try:
             tr = httpx.get(f"{FEEDBACK_URL}/trace/{result['trace_id']}", timeout=15.0)
             tr.raise_for_status()
-            events = tr.json()["events"]
+            body = tr.json()
+            events = body["events"]
+            integ = body.get("integrity", {})
+            head = body.get("head_hash", "")
+            if integ.get("valid"):
+                st.success(f"🔒 Audit integrity verified — tamper-evident hash chain intact "
+                           f"({integ.get('steps')} links). Head: `{head[:16]}…`")
+            else:
+                st.error(f"⚠️ Audit integrity FAILED — chain broken at step "
+                         f"{integ.get('broken_at_step')}. The trace was altered.")
         except httpx.HTTPError as e:
             st.error(f"Could not load trace: {e}")
-            events = []
 
         st.write(f"**{len(events)} steps** — every decision the system made, in order:")
         for i, e in enumerate(events, 1):
@@ -112,9 +121,11 @@ if result:
         try:
             tr = httpx.get(f"{FEEDBACK_URL}/trace/{result['trace_id']}", timeout=15.0)
             tr.raise_for_status()
-            events = tr.json()["events"]
+            body = tr.json()
+            events = body["events"]
             principal = events[0]["principal"] if events else {}
-            pdf = build_report(result["trace_id"], result["answer"], events, principal)
+            pdf = build_report(result["trace_id"], result["answer"], events, principal,
+                               integrity=body.get("integrity"), head_hash=body.get("head_hash", ""))
             st.download_button("⬇ Download compliance_report.pdf", data=pdf,
                                file_name=f"vcl_compliance_{result['trace_id'][:8]}.pdf",
                                mime="application/pdf")

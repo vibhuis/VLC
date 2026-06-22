@@ -73,3 +73,9 @@ principal, input, output, policy_decisions[], regulatory_mapping{eu_ai_act_artic
 nist_rmf_functions[]}}`, persisted to `data/audit.sqlite` and replayable via
 `GET /trace/{trace_id}`. The regulatory mapping is what makes the trace
 regulator-addressable — see [eu-ai-act-mapping.md](eu-ai-act-mapping.md).
+
+**Tamper-evidence (paper §6.1).** Each event is hash-chained — `entry_hash =
+HMAC-SHA256(key, prev_hash ++ payload)` — so the audit trail is a verifiable transparency
+log (MAIF/PROV-AGENT spirit, refs 39/40). `GET /verify/{trace_id}` re-derives the chain and
+reports whether it is intact; `GET /prov/{trace_id}` exports a W3C PROV / PROV-AGENT-shaped
+document. The UI shows an integrity badge and the PDF records the verdict + chain head.

@@ -32,7 +32,8 @@ OUTCOME_COLOR = {"deny": colors.HexColor("#b00020"), "mask": colors.HexColor("#b
                  "allow": colors.HexColor("#1b6b1b")}
 
 
-def build_report(trace_id: str, answer: str, events: list[dict], principal: dict) -> bytes:
+def build_report(trace_id: str, answer: str, events: list[dict], principal: dict,
+                 integrity: dict | None = None, head_hash: str = "") -> bytes:
     buf = io.BytesIO()
     doc = SimpleDocTemplate(buf, pagesize=A4, title=f"VCL Compliance Report {trace_id}",
                             leftMargin=18 * mm, rightMargin=18 * mm,
@@ -50,11 +51,18 @@ def build_report(trace_id: str, answer: str, events: list[dict], principal: dict
         "Companion paper: Zenodo DOI 10.5281/zenodo.20599942", small))
     story.append(Spacer(1, 6))
 
+    integ = integrity or {}
+    integ_label = ("VERIFIED — tamper-evident hash chain intact"
+                   if integ.get("valid") else
+                   (f"FAILED — chain broken at step {integ.get('broken_at_step')}"
+                    if integ else "not available"))
     meta = [
         ["Trace ID", trace_id],
         ["Generated", datetime.now(timezone.utc).isoformat()],
         ["Principal", f"{principal.get('user', '?')} (purpose: {principal.get('purpose', '?')})"],
         ["Decision steps", str(len(events))],
+        ["Audit integrity", integ_label],
+        ["Chain head (HMAC-SHA256)", head_hash or "—"],
     ]
     t = Table(meta, colWidths=[35 * mm, 140 * mm])
     t.setStyle(TableStyle([
