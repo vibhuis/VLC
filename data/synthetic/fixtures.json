@@ -8,7 +8,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1001",
+      "mes_id": "M-001",
+      "cms_id": "CMS-2026-0001",
+      "delivery_risk_score": 0.3,
+      "delivery_at_risk": false,
+      "contact_name": "Helvetia Procurement Desk",
+      "contact_email": "contact001@helvetia.example",
+      "contact_phone": "+1-555-1001"
     },
     {
       "id": "SUP-002",
@@ -17,7 +25,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1002",
+      "mes_id": "M-002",
+      "cms_id": "CMS-2026-0002",
+      "delivery_risk_score": 0.14,
+      "delivery_at_risk": false,
+      "contact_name": "Nordic Procurement Desk",
+      "contact_email": "contact002@nordic.example",
+      "contact_phone": "+1-555-1002"
     },
     {
       "id": "SUP-003",
@@ -26,7 +42,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "medium"
+      "risk_tier": "medium",
+      "erp_id": "E1003",
+      "mes_id": "M-003",
+      "cms_id": "CMS-2026-0003",
+      "delivery_risk_score": 0.2,
+      "delivery_at_risk": false,
+      "contact_name": "Britannia Procurement Desk",
+      "contact_email": "contact003@britannia.example",
+      "contact_phone": "+1-555-1003"
     },
     {
       "id": "SUP-004",
@@ -35,7 +59,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "medium"
+      "risk_tier": "medium",
+      "erp_id": "E1004",
+      "mes_id": "M-004",
+      "cms_id": "CMS-2026-0004",
+      "delivery_risk_score": 0.37,
+      "delivery_at_risk": false,
+      "contact_name": "Rhein Procurement Desk",
+      "contact_email": "contact004@rhein.example",
+      "contact_phone": "+1-555-1004"
     },
     {
       "id": "SUP-005",
@@ -44,7 +76,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1005",
+      "mes_id": "M-005",
+      "cms_id": "CMS-2026-0005",
+      "delivery_risk_score": 0.45,
+      "delivery_at_risk": false,
+      "contact_name": "Iberia Procurement Desk",
+      "contact_email": "contact005@iberia.example",
+      "contact_phone": "+1-555-1005"
     },
     {
       "id": "SUP-006",
@@ -53,7 +93,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "expired",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1006",
+      "mes_id": "M-006",
+      "cms_id": "CMS-2026-0006",
+      "delivery_risk_score": 0.54,
+      "delivery_at_risk": false,
+      "contact_name": "Baltic Procurement Desk",
+      "contact_email": "contact006@baltic.example",
+      "contact_phone": "+1-555-1006"
     },
     {
       "id": "SUP-007",
@@ -62,7 +110,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "expired",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1007",
+      "mes_id": "M-007",
+      "cms_id": "CMS-2026-0007",
+      "delivery_risk_score": 0.22,
+      "delivery_at_risk": false,
+      "contact_name": "Gallia Procurement Desk",
+      "contact_email": "contact007@gallia.example",
+      "contact_phone": "+1-555-1007"
     },
     {
       "id": "SUP-008",
@@ -71,7 +127,15 @@
       "geo": "EMEA",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1008",
+      "mes_id": "M-008",
+      "cms_id": "CMS-2026-0008",
+      "delivery_risk_score": 0.39,
+      "delivery_at_risk": false,
+      "contact_name": "Albion Procurement Desk",
+      "contact_email": "contact008@albion.example",
+      "contact_phone": "+1-555-1008"
     },
     {
       "id": "SUP-009",
@@ -80,7 +144,15 @@
       "geo": "APAC",
       "data_residency": "APAC",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1009",
+      "mes_id": "M-009",
+      "cms_id": "CMS-2026-0009",
+      "delivery_risk_score": 0.72,
+      "delivery_at_risk": true,
+      "contact_name": "Acme Procurement Desk",
+      "contact_email": "contact009@acme.example",
+      "contact_phone": "+1-555-1009"
     },
     {
       "id": "SUP-010",
@@ -89,7 +161,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1010",
+      "mes_id": "M-010",
+      "cms_id": "CMS-2026-0010",
+      "delivery_risk_score": 0.68,
+      "delivery_at_risk": true,
+      "contact_name": "Orion Procurement Desk",
+      "contact_email": "contact010@orion.example",
+      "contact_phone": "+1-555-1010"
     },
     {
       "id": "SUP-011",
@@ -98,7 +178,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "medium"
+      "risk_tier": "medium",
+      "erp_id": "E1011",
+      "mes_id": "M-011",
+      "cms_id": "CMS-2026-0011",
+      "delivery_risk_score": 0.8,
+      "delivery_at_risk": true,
+      "contact_name": "Vertex Procurement Desk",
+      "contact_email": "contact011@vertex.example",
+      "contact_phone": "+1-555-1011"
     },
     {
       "id": "SUP-012",
@@ -107,7 +195,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1012",
+      "mes_id": "M-012",
+      "cms_id": "CMS-2026-0012",
+      "delivery_risk_score": 0.66,
+      "delivery_at_risk": true,
+      "contact_name": "Summit Procurement Desk",
+      "contact_email": "contact012@summit.example",
+      "contact_phone": "+1-555-1012"
     },
     {
       "id": "SUP-013",
@@ -116,7 +212,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1013",
+      "mes_id": "M-013",
+      "cms_id": "CMS-2026-0013",
+      "delivery_risk_score": 0.85,
+      "delivery_at_risk": true,
+      "contact_name": "Cobalt Procurement Desk",
+      "contact_email": "contact013@cobalt.example",
+      "contact_phone": "+1-555-1013"
     },
     {
       "id": "SUP-014",
@@ -125,7 +229,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "expired",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1014",
+      "mes_id": "M-014",
+      "cms_id": "CMS-2026-0014",
+      "delivery_risk_score": 0.35,
+      "delivery_at_risk": false,
+      "contact_name": "Delta Procurement Desk",
+      "contact_email": "contact014@delta.example",
+      "contact_phone": "+1-555-1014"
     },
     {
       "id": "SUP-015",
@@ -134,7 +246,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "low"
+      "risk_tier": "low",
+      "erp_id": "E1015",
+      "mes_id": "M-015",
+      "cms_id": "CMS-2026-0015",
+      "delivery_risk_score": 0.4,
+      "delivery_at_risk": false,
+      "contact_name": "Pioneer Procurement Desk",
+      "contact_email": "contact015@pioneer.example",
+      "contact_phone": "+1-555-1015"
     },
     {
       "id": "SUP-016",
@@ -143,7 +263,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1016",
+      "mes_id": "M-016",
+      "cms_id": "CMS-2026-0016",
+      "delivery_risk_score": 0.7,
+      "delivery_at_risk": true,
+      "contact_name": "Meridian Procurement Desk",
+      "contact_email": "contact016@meridian.example",
+      "contact_phone": "+1-555-1016"
     },
     {
       "id": "SUP-017",
@@ -152,7 +280,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "medium"
+      "risk_tier": "medium",
+      "erp_id": "E1017",
+      "mes_id": "M-017",
+      "cms_id": "CMS-2026-0017",
+      "delivery_risk_score": 0.26,
+      "delivery_at_risk": false,
+      "contact_name": "Aurora Procurement Desk",
+      "contact_email": "contact017@aurora.example",
+      "contact_phone": "+1-555-1017"
     },
     {
       "id": "SUP-018",
@@ -161,7 +297,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "expired",
-      "risk_tier": "low"
+      "risk_tier": "low",
+      "erp_id": "E1018",
+      "mes_id": "M-018",
+      "cms_id": "CMS-2026-0018",
+      "delivery_risk_score": 0.13,
+      "delivery_at_risk": false,
+      "contact_name": "Quantum Procurement Desk",
+      "contact_email": "contact018@quantum.example",
+      "contact_phone": "+1-555-1018"
     },
     {
       "id": "SUP-019",
@@ -170,7 +314,15 @@
       "geo": "APAC",
       "data_residency": "APAC",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1019",
+      "mes_id": "M-019",
+      "cms_id": "CMS-2026-0019",
+      "delivery_risk_score": 0.47,
+      "delivery_at_risk": false,
+      "contact_name": "Cedar Procurement Desk",
+      "contact_email": "contact019@cedar.example",
+      "contact_phone": "+1-555-1019"
     },
     {
       "id": "SUP-020",
@@ -179,7 +331,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1020",
+      "mes_id": "M-020",
+      "cms_id": "CMS-2026-0020",
+      "delivery_risk_score": 0.4,
+      "delivery_at_risk": false,
+      "contact_name": "Horizon Procurement Desk",
+      "contact_email": "contact020@horizon.example",
+      "contact_phone": "+1-555-1020"
     },
     {
       "id": "SUP-021",
@@ -188,7 +348,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1021",
+      "mes_id": "M-021",
+      "cms_id": "CMS-2026-0021",
+      "delivery_risk_score": 0.13,
+      "delivery_at_risk": false,
+      "contact_name": "Atlas Procurement Desk",
+      "contact_email": "contact021@atlas.example",
+      "contact_phone": "+1-555-1021"
     },
     {
       "id": "SUP-022",
@@ -197,7 +365,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "low"
+      "risk_tier": "low",
+      "erp_id": "E1022",
+      "mes_id": "M-022",
+      "cms_id": "CMS-2026-0022",
+      "delivery_risk_score": 0.3,
+      "delivery_at_risk": false,
+      "contact_name": "Lumen Procurement Desk",
+      "contact_email": "contact022@lumen.example",
+      "contact_phone": "+1-555-1022"
     },
     {
       "id": "SUP-023",
@@ -206,7 +382,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1023",
+      "mes_id": "M-023",
+      "cms_id": "CMS-2026-0023",
+      "delivery_risk_score": 0.13,
+      "delivery_at_risk": false,
+      "contact_name": "Pacific Procurement Desk",
+      "contact_email": "contact023@pacific.example",
+      "contact_phone": "+1-555-1023"
     },
     {
       "id": "SUP-024",
@@ -215,7 +399,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "low"
+      "risk_tier": "low",
+      "erp_id": "E1024",
+      "mes_id": "M-024",
+      "cms_id": "CMS-2026-0024",
+      "delivery_risk_score": 0.54,
+      "delivery_at_risk": false,
+      "contact_name": "Granite Procurement Desk",
+      "contact_email": "contact024@granite.example",
+      "contact_phone": "+1-555-1024"
     },
     {
       "id": "SUP-025",
@@ -224,7 +416,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1025",
+      "mes_id": "M-025",
+      "cms_id": "CMS-2026-0025",
+      "delivery_risk_score": 0.4,
+      "delivery_at_risk": false,
+      "contact_name": "Sierra Procurement Desk",
+      "contact_email": "contact025@sierra.example",
+      "contact_phone": "+1-555-1025"
     },
     {
       "id": "SUP-026",
@@ -233,7 +433,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "expired",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1026",
+      "mes_id": "M-026",
+      "cms_id": "CMS-2026-0026",
+      "delivery_risk_score": 0.27,
+      "delivery_at_risk": false,
+      "contact_name": "Nimbus Procurement Desk",
+      "contact_email": "contact026@nimbus.example",
+      "contact_phone": "+1-555-1026"
     },
     {
       "id": "SUP-027",
@@ -242,7 +450,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "expired",
-      "risk_tier": "low"
+      "risk_tier": "low",
+      "erp_id": "E1027",
+      "mes_id": "M-027",
+      "cms_id": "CMS-2026-0027",
+      "delivery_risk_score": 0.14,
+      "delivery_at_risk": false,
+      "contact_name": "Pinnacle Procurement Desk",
+      "contact_email": "contact027@pinnacle.example",
+      "contact_phone": "+1-555-1027"
     },
     {
       "id": "SUP-028",
@@ -251,7 +467,15 @@
       "geo": "EMEA",
       "data_residency": "EU",
       "gdpr_consent_status": "valid",
-      "risk_tier": "high"
+      "risk_tier": "high",
+      "erp_id": "E1028",
+      "mes_id": "M-028",
+      "cms_id": "CMS-2026-0028",
+      "delivery_risk_score": 0.36,
+      "delivery_at_risk": false,
+      "contact_name": "Beacon Procurement Desk",
+      "contact_email": "contact028@beacon.example",
+      "contact_phone": "+1-555-1028"
     },
     {
       "id": "SUP-029",
@@ -260,7 +484,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "medium"
+      "risk_tier": "medium",
+      "erp_id": "E1029",
+      "mes_id": "M-029",
+      "cms_id": "CMS-2026-0029",
+      "delivery_risk_score": 0.1,
+      "delivery_at_risk": false,
+      "contact_name": "Forge Procurement Desk",
+      "contact_email": "contact029@forge.example",
+      "contact_phone": "+1-555-1029"
     },
     {
       "id": "SUP-030",
@@ -269,7 +501,15 @@
       "geo": "AMER",
       "data_residency": "US",
       "gdpr_consent_status": "valid",
-      "risk_tier": "critical"
+      "risk_tier": "critical",
+      "erp_id": "E1030",
+      "mes_id": "M-030",
+      "cms_id": "CMS-2026-0030",
+      "delivery_risk_score": 0.25,
+      "delivery_at_risk": false,
+      "contact_name": "Harbor Procurement Desk",
+      "contact_email": "contact030@harbor.example",
+      "contact_phone": "+1-555-1030"
     }
   ],
   "contracts": [
@@ -280,7 +520,12 @@
       "end_date": "2026-06-30",
       "value_usd": 9800000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-002",
@@ -289,7 +534,12 @@
       "end_date": "2026-09-15",
       "value_usd": 7400000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-003",
@@ -298,7 +548,12 @@
       "end_date": "2026-03-01",
       "value_usd": 6100000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-004",
@@ -307,7 +562,12 @@
       "end_date": "2026-11-20",
       "value_usd": 5250000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-005",
@@ -316,7 +576,12 @@
       "end_date": "2026-08-10",
       "value_usd": 4900000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-006",
@@ -325,7 +590,12 @@
       "end_date": "2026-05-05",
       "value_usd": 8300000,
       "contains_pii": true,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY26-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-007",
@@ -334,7 +604,12 @@
       "end_date": "2026-07-07",
       "value_usd": 6750000,
       "contains_pii": true,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-008",
@@ -343,7 +618,12 @@
       "end_date": "2026-04-04",
       "value_usd": 7900000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-009",
@@ -352,7 +632,12 @@
       "end_date": "2028-03-07",
       "value_usd": 2600000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-010",
@@ -361,7 +646,12 @@
       "end_date": "2027-05-13",
       "value_usd": 4900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-011",
@@ -370,7 +660,12 @@
       "end_date": "2029-09-02",
       "value_usd": 1900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-012",
@@ -379,7 +674,12 @@
       "end_date": "2028-12-31",
       "value_usd": 2600000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-013",
@@ -388,7 +688,12 @@
       "end_date": "2028-09-17",
       "value_usd": 9300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-014",
@@ -397,7 +702,12 @@
       "end_date": "2028-04-01",
       "value_usd": 3500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-015",
@@ -406,7 +716,12 @@
       "end_date": "2026-08-12",
       "value_usd": 2500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-016",
@@ -415,7 +730,12 @@
       "end_date": "2027-10-14",
       "value_usd": 4900000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-017",
@@ -424,7 +744,12 @@
       "end_date": "2027-02-07",
       "value_usd": 5800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-018",
@@ -433,7 +758,12 @@
       "end_date": "2028-10-04",
       "value_usd": 7400000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-019",
@@ -442,7 +772,12 @@
       "end_date": "2028-02-15",
       "value_usd": 8000000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-020",
@@ -451,7 +786,12 @@
       "end_date": "2026-10-05",
       "value_usd": 8300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-021",
@@ -460,7 +800,12 @@
       "end_date": "2030-03-30",
       "value_usd": 2800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-022",
@@ -469,7 +814,12 @@
       "end_date": "2027-06-28",
       "value_usd": 5200000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-023",
@@ -478,7 +828,12 @@
       "end_date": "2029-11-09",
       "value_usd": 200000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-024",
@@ -487,7 +842,12 @@
       "end_date": "2026-08-02",
       "value_usd": 8700000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-025",
@@ -496,7 +856,12 @@
       "end_date": "2026-08-21",
       "value_usd": 2300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-026",
@@ -505,7 +870,12 @@
       "end_date": "2027-01-19",
       "value_usd": 6200000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-027",
@@ -514,7 +884,12 @@
       "end_date": "2028-06-30",
       "value_usd": 9000000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-028",
@@ -523,7 +898,12 @@
       "end_date": "2026-10-11",
       "value_usd": 5600000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-029",
@@ -532,7 +912,12 @@
       "end_date": "2028-07-09",
       "value_usd": 8500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-030",
@@ -541,7 +926,12 @@
       "end_date": "2028-02-17",
       "value_usd": 300000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-031",
@@ -550,7 +940,12 @@
       "end_date": "2030-02-06",
       "value_usd": 5900000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-032",
@@ -559,7 +954,12 @@
       "end_date": "2028-04-07",
       "value_usd": 2500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-033",
@@ -568,7 +968,12 @@
       "end_date": "2026-11-18",
       "value_usd": 5300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-034",
@@ -577,7 +982,12 @@
       "end_date": "2027-01-13",
       "value_usd": 4700000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-035",
@@ -586,7 +996,12 @@
       "end_date": "2030-02-14",
       "value_usd": 1300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-036",
@@ -595,7 +1010,12 @@
       "end_date": "2028-08-18",
       "value_usd": 7100000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-037",
@@ -604,7 +1024,12 @@
       "end_date": "2027-11-11",
       "value_usd": 2700000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-038",
@@ -613,7 +1038,12 @@
       "end_date": "2028-01-22",
       "value_usd": 6100000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-039",
@@ -622,7 +1052,12 @@
       "end_date": "2030-02-05",
       "value_usd": 5600000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-040",
@@ -631,7 +1066,12 @@
       "end_date": "2027-06-16",
       "value_usd": 7700000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-041",
@@ -640,7 +1080,12 @@
       "end_date": "2030-02-10",
       "value_usd": 300000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-042",
@@ -649,7 +1094,12 @@
       "end_date": "2029-04-10",
       "value_usd": 5100000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-043",
@@ -658,7 +1108,12 @@
       "end_date": "2029-05-02",
       "value_usd": 3200000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-044",
@@ -667,7 +1122,12 @@
       "end_date": "2029-11-17",
       "value_usd": 4100000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-045",
@@ -676,7 +1136,12 @@
       "end_date": "2027-09-15",
       "value_usd": 4700000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-046",
@@ -685,7 +1150,12 @@
       "end_date": "2030-02-11",
       "value_usd": 7800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-047",
@@ -694,7 +1164,12 @@
       "end_date": "2028-10-31",
       "value_usd": 3300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-048",
@@ -703,7 +1178,12 @@
       "end_date": "2028-06-18",
       "value_usd": 4800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-049",
@@ -712,7 +1192,12 @@
       "end_date": "2029-04-09",
       "value_usd": 4700000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-050",
@@ -721,7 +1206,12 @@
       "end_date": "2029-03-20",
       "value_usd": 1700000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-051",
@@ -730,7 +1220,12 @@
       "end_date": "2028-03-09",
       "value_usd": 4400000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-052",
@@ -739,7 +1234,12 @@
       "end_date": "2029-10-06",
       "value_usd": 9000000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY29-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-053",
@@ -748,7 +1248,12 @@
       "end_date": "2026-10-06",
       "value_usd": 6900000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY26-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-054",
@@ -757,7 +1262,12 @@
       "end_date": "2029-05-08",
       "value_usd": 8200000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-055",
@@ -766,7 +1276,12 @@
       "end_date": "2030-04-18",
       "value_usd": 1000000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY30-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-056",
@@ -775,7 +1290,12 @@
       "end_date": "2027-04-08",
       "value_usd": 3900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-057",
@@ -784,7 +1304,12 @@
       "end_date": "2028-07-25",
       "value_usd": 1700000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-058",
@@ -793,7 +1318,12 @@
       "end_date": "2029-01-09",
       "value_usd": 500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-059",
@@ -802,7 +1332,12 @@
       "end_date": "2029-01-12",
       "value_usd": 5300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-060",
@@ -811,7 +1346,12 @@
       "end_date": "2027-02-28",
       "value_usd": 4100000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-061",
@@ -820,7 +1360,12 @@
       "end_date": "2028-02-13",
       "value_usd": 3300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-062",
@@ -829,7 +1374,12 @@
       "end_date": "2028-07-20",
       "value_usd": 1900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-063",
@@ -838,7 +1388,12 @@
       "end_date": "2028-04-10",
       "value_usd": 8600000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-064",
@@ -847,7 +1402,12 @@
       "end_date": "2027-09-04",
       "value_usd": 7000000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-065",
@@ -856,7 +1416,12 @@
       "end_date": "2027-08-19",
       "value_usd": 2900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-066",
@@ -865,7 +1430,12 @@
       "end_date": "2027-06-23",
       "value_usd": 4400000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-067",
@@ -874,7 +1444,12 @@
       "end_date": "2027-08-07",
       "value_usd": 3500000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-068",
@@ -883,7 +1458,12 @@
       "end_date": "2027-02-23",
       "value_usd": 6900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-069",
@@ -892,7 +1472,12 @@
       "end_date": "2028-02-04",
       "value_usd": 6200000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-070",
@@ -901,7 +1486,12 @@
       "end_date": "2028-11-25",
       "value_usd": 7000000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-071",
@@ -910,7 +1500,12 @@
       "end_date": "2027-10-10",
       "value_usd": 4300000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-072",
@@ -919,7 +1514,12 @@
       "end_date": "2027-06-14",
       "value_usd": 3600000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-073",
@@ -928,7 +1528,12 @@
       "end_date": "2028-10-12",
       "value_usd": 7300000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-074",
@@ -937,7 +1542,12 @@
       "end_date": "2029-11-17",
       "value_usd": 8900000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-075",
@@ -946,7 +1556,12 @@
       "end_date": "2028-06-25",
       "value_usd": 7400000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-076",
@@ -955,7 +1570,12 @@
       "end_date": "2029-10-26",
       "value_usd": 6800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-077",
@@ -964,7 +1584,12 @@
       "end_date": "2029-05-26",
       "value_usd": 6600000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-078",
@@ -973,7 +1598,12 @@
       "end_date": "2028-11-05",
       "value_usd": 800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-079",
@@ -982,7 +1612,12 @@
       "end_date": "2027-01-31",
       "value_usd": 6600000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-080",
@@ -991,7 +1626,12 @@
       "end_date": "2029-08-14",
       "value_usd": 3000000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-081",
@@ -1000,7 +1640,12 @@
       "end_date": "2029-03-08",
       "value_usd": 3500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY29-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-082",
@@ -1009,7 +1654,12 @@
       "end_date": "2027-09-09",
       "value_usd": 9100000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q3",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-083",
@@ -1018,7 +1668,12 @@
       "end_date": "2026-12-24",
       "value_usd": 8500000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY26-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-084",
@@ -1027,7 +1682,12 @@
       "end_date": "2028-06-09",
       "value_usd": 3500000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY28-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-085",
@@ -1036,7 +1696,12 @@
       "end_date": "2028-01-14",
       "value_usd": 500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-086",
@@ -1045,7 +1710,12 @@
       "end_date": "2027-05-24",
       "value_usd": 6800000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q2",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-087",
@@ -1054,7 +1724,12 @@
       "end_date": "2027-03-28",
       "value_usd": 500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-088",
@@ -1063,7 +1738,12 @@
       "end_date": "2028-10-31",
       "value_usd": 1500000,
       "contains_pii": false,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY28-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-089",
@@ -1072,7 +1752,12 @@
       "end_date": "2028-02-18",
       "value_usd": 9500000,
       "contains_pii": false,
-      "contains_secrets": true
+      "contains_secrets": true,
+      "quarter": "FY28-Q1",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
     },
     {
       "id": "CON-090",
@@ -1081,7 +1766,124 @@
       "end_date": "2027-11-21",
       "value_usd": 7900000,
       "contains_pii": true,
-      "contains_secrets": false
+      "contains_secrets": false,
+      "quarter": "FY27-Q4",
+      "penalty_amount": 0,
+      "penalty_probability": 0.0,
+      "penalty_exposure": 0,
+      "commercial_confidential": false
+    },
+    {
+      "id": "CON-091",
+      "supplier_id": "SUP-009",
+      "start_date": "2025-05-01",
+      "end_date": "2026-08-15",
+      "value_usd": 6300000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 4000000,
+      "penalty_probability": 0.4,
+      "penalty_exposure": 1600000,
+      "commercial_confidential": false
+    },
+    {
+      "id": "CON-092",
+      "supplier_id": "SUP-010",
+      "start_date": "2025-04-29",
+      "end_date": "2026-08-15",
+      "value_usd": 8900000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 3000000,
+      "penalty_probability": 0.5,
+      "penalty_exposure": 1500000,
+      "commercial_confidential": false
+    },
+    {
+      "id": "CON-093",
+      "supplier_id": "SUP-011",
+      "start_date": "2024-12-17",
+      "end_date": "2026-08-15",
+      "value_usd": 7600000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 6000000,
+      "penalty_probability": 0.3,
+      "penalty_exposure": 1800000,
+      "commercial_confidential": true
+    },
+    {
+      "id": "CON-094",
+      "supplier_id": "SUP-012",
+      "start_date": "2025-08-15",
+      "end_date": "2026-08-15",
+      "value_usd": 8000000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 2500000,
+      "penalty_probability": 0.6,
+      "penalty_exposure": 1500000,
+      "commercial_confidential": false
+    },
+    {
+      "id": "CON-095",
+      "supplier_id": "SUP-013",
+      "start_date": "2024-10-15",
+      "end_date": "2026-08-15",
+      "value_usd": 7900000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 5000000,
+      "penalty_probability": 0.45,
+      "penalty_exposure": 2250000,
+      "commercial_confidential": true
+    },
+    {
+      "id": "CON-096",
+      "supplier_id": "SUP-014",
+      "start_date": "2023-08-22",
+      "end_date": "2026-08-15",
+      "value_usd": 2900000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 8000000,
+      "penalty_probability": 0.3,
+      "penalty_exposure": 2400000,
+      "commercial_confidential": false
+    },
+    {
+      "id": "CON-097",
+      "supplier_id": "SUP-015",
+      "start_date": "2024-04-01",
+      "end_date": "2026-08-15",
+      "value_usd": 5100000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 3000000,
+      "penalty_probability": 0.5,
+      "penalty_exposure": 1500000,
+      "commercial_confidential": false
+    },
+    {
+      "id": "CON-098",
+      "supplier_id": "SUP-016",
+      "start_date": "2024-03-11",
+      "end_date": "2026-08-15",
+      "value_usd": 6400000,
+      "contains_pii": false,
+      "contains_secrets": false,
+      "quarter": "FY26-Q3",
+      "penalty_amount": 1000000,
+      "penalty_probability": 0.2,
+      "penalty_exposure": 200000,
+      "commercial_confidential": false
     }
   ],
   "contract_clauses": [
@@ -1834,6 +2636,102 @@
       "contract_id": "CON-090",
       "clause_type": "pii",
       "text": "Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+    },
+    {
+      "id": "CLA-126",
+      "contract_id": "CON-091",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-127",
+      "contract_id": "CON-091",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $4,000,000 applies, triggered with probability 40%."
+    },
+    {
+      "id": "CLA-128",
+      "contract_id": "CON-092",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-129",
+      "contract_id": "CON-092",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $3,000,000 applies, triggered with probability 50%."
+    },
+    {
+      "id": "CLA-130",
+      "contract_id": "CON-093",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-131",
+      "contract_id": "CON-093",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $6,000,000 applies, triggered with probability 30%."
+    },
+    {
+      "id": "CLA-132",
+      "contract_id": "CON-094",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-133",
+      "contract_id": "CON-094",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $2,500,000 applies, triggered with probability 60%."
+    },
+    {
+      "id": "CLA-134",
+      "contract_id": "CON-095",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-135",
+      "contract_id": "CON-095",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $5,000,000 applies, triggered with probability 45%."
+    },
+    {
+      "id": "CLA-136",
+      "contract_id": "CON-096",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-137",
+      "contract_id": "CON-096",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $8,000,000 applies, triggered with probability 30%."
+    },
+    {
+      "id": "CLA-138",
+      "contract_id": "CON-097",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-139",
+      "contract_id": "CON-097",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $3,000,000 applies, triggered with probability 50%."
+    },
+    {
+      "id": "CLA-140",
+      "contract_id": "CON-098",
+      "clause_type": "standard",
+      "text": "Standard master services agreement terms and conditions apply."
+    },
+    {
+      "id": "CLA-141",
+      "contract_id": "CON-098",
+      "clause_type": "penalty",
+      "text": "Late-delivery penalty of up to $1,000,000 applies, triggered with probability 20%."
     }
   ],
   "consents": [
@@ -2221,6 +3119,1268 @@
       "outcome": "deny",
       "contract_id": "CON-008",
       "reason": "data hosted outside EU"
+    }
+  ],
+  "telemetry": [
+    {
+      "id": "TLM-001-2026-01",
+      "supplier_id": "SUP-001",
+      "month": "2026-01",
+      "on_time_rate": 0.722,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-001-2026-02",
+      "supplier_id": "SUP-001",
+      "month": "2026-02",
+      "on_time_rate": 0.657,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-001-2026-03",
+      "supplier_id": "SUP-001",
+      "month": "2026-03",
+      "on_time_rate": 0.657,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-001-2026-04",
+      "supplier_id": "SUP-001",
+      "month": "2026-04",
+      "on_time_rate": 0.682,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-001-2026-05",
+      "supplier_id": "SUP-001",
+      "month": "2026-05",
+      "on_time_rate": 0.692,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-001-2026-06",
+      "supplier_id": "SUP-001",
+      "month": "2026-06",
+      "on_time_rate": 0.706,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-002-2026-01",
+      "supplier_id": "SUP-002",
+      "month": "2026-01",
+      "on_time_rate": 0.888,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-002-2026-02",
+      "supplier_id": "SUP-002",
+      "month": "2026-02",
+      "on_time_rate": 0.869,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-002-2026-03",
+      "supplier_id": "SUP-002",
+      "month": "2026-03",
+      "on_time_rate": 0.907,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-002-2026-04",
+      "supplier_id": "SUP-002",
+      "month": "2026-04",
+      "on_time_rate": 0.815,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-002-2026-05",
+      "supplier_id": "SUP-002",
+      "month": "2026-05",
+      "on_time_rate": 0.866,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-002-2026-06",
+      "supplier_id": "SUP-002",
+      "month": "2026-06",
+      "on_time_rate": 0.906,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-003-2026-01",
+      "supplier_id": "SUP-003",
+      "month": "2026-01",
+      "on_time_rate": 0.849,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-003-2026-02",
+      "supplier_id": "SUP-003",
+      "month": "2026-02",
+      "on_time_rate": 0.796,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-003-2026-03",
+      "supplier_id": "SUP-003",
+      "month": "2026-03",
+      "on_time_rate": 0.826,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-003-2026-04",
+      "supplier_id": "SUP-003",
+      "month": "2026-04",
+      "on_time_rate": 0.804,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-003-2026-05",
+      "supplier_id": "SUP-003",
+      "month": "2026-05",
+      "on_time_rate": 0.756,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-003-2026-06",
+      "supplier_id": "SUP-003",
+      "month": "2026-06",
+      "on_time_rate": 0.754,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-004-2026-01",
+      "supplier_id": "SUP-004",
+      "month": "2026-01",
+      "on_time_rate": 0.594,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-004-2026-02",
+      "supplier_id": "SUP-004",
+      "month": "2026-02",
+      "on_time_rate": 0.653,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-004-2026-03",
+      "supplier_id": "SUP-004",
+      "month": "2026-03",
+      "on_time_rate": 0.658,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-004-2026-04",
+      "supplier_id": "SUP-004",
+      "month": "2026-04",
+      "on_time_rate": 0.636,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-004-2026-05",
+      "supplier_id": "SUP-004",
+      "month": "2026-05",
+      "on_time_rate": 0.644,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-004-2026-06",
+      "supplier_id": "SUP-004",
+      "month": "2026-06",
+      "on_time_rate": 0.595,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-005-2026-01",
+      "supplier_id": "SUP-005",
+      "month": "2026-01",
+      "on_time_rate": 0.576,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-005-2026-02",
+      "supplier_id": "SUP-005",
+      "month": "2026-02",
+      "on_time_rate": 0.57,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-005-2026-03",
+      "supplier_id": "SUP-005",
+      "month": "2026-03",
+      "on_time_rate": 0.513,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-005-2026-04",
+      "supplier_id": "SUP-005",
+      "month": "2026-04",
+      "on_time_rate": 0.535,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-005-2026-05",
+      "supplier_id": "SUP-005",
+      "month": "2026-05",
+      "on_time_rate": 0.555,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-005-2026-06",
+      "supplier_id": "SUP-005",
+      "month": "2026-06",
+      "on_time_rate": 0.566,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-006-2026-01",
+      "supplier_id": "SUP-006",
+      "month": "2026-01",
+      "on_time_rate": 0.493,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-006-2026-02",
+      "supplier_id": "SUP-006",
+      "month": "2026-02",
+      "on_time_rate": 0.43,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-006-2026-03",
+      "supplier_id": "SUP-006",
+      "month": "2026-03",
+      "on_time_rate": 0.489,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-006-2026-04",
+      "supplier_id": "SUP-006",
+      "month": "2026-04",
+      "on_time_rate": 0.465,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-006-2026-05",
+      "supplier_id": "SUP-006",
+      "month": "2026-05",
+      "on_time_rate": 0.471,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-006-2026-06",
+      "supplier_id": "SUP-006",
+      "month": "2026-06",
+      "on_time_rate": 0.44,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-007-2026-01",
+      "supplier_id": "SUP-007",
+      "month": "2026-01",
+      "on_time_rate": 0.736,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-007-2026-02",
+      "supplier_id": "SUP-007",
+      "month": "2026-02",
+      "on_time_rate": 0.804,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-007-2026-03",
+      "supplier_id": "SUP-007",
+      "month": "2026-03",
+      "on_time_rate": 0.789,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-007-2026-04",
+      "supplier_id": "SUP-007",
+      "month": "2026-04",
+      "on_time_rate": 0.797,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-007-2026-05",
+      "supplier_id": "SUP-007",
+      "month": "2026-05",
+      "on_time_rate": 0.819,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-007-2026-06",
+      "supplier_id": "SUP-007",
+      "month": "2026-06",
+      "on_time_rate": 0.757,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-008-2026-01",
+      "supplier_id": "SUP-008",
+      "month": "2026-01",
+      "on_time_rate": 0.652,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-008-2026-02",
+      "supplier_id": "SUP-008",
+      "month": "2026-02",
+      "on_time_rate": 0.572,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-008-2026-03",
+      "supplier_id": "SUP-008",
+      "month": "2026-03",
+      "on_time_rate": 0.591,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-008-2026-04",
+      "supplier_id": "SUP-008",
+      "month": "2026-04",
+      "on_time_rate": 0.571,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-008-2026-05",
+      "supplier_id": "SUP-008",
+      "month": "2026-05",
+      "on_time_rate": 0.564,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-008-2026-06",
+      "supplier_id": "SUP-008",
+      "month": "2026-06",
+      "on_time_rate": 0.602,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-009-2026-01",
+      "supplier_id": "SUP-009",
+      "month": "2026-01",
+      "on_time_rate": 0.244,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-009-2026-02",
+      "supplier_id": "SUP-009",
+      "month": "2026-02",
+      "on_time_rate": 0.274,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-009-2026-03",
+      "supplier_id": "SUP-009",
+      "month": "2026-03",
+      "on_time_rate": 0.269,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-009-2026-04",
+      "supplier_id": "SUP-009",
+      "month": "2026-04",
+      "on_time_rate": 0.303,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-009-2026-05",
+      "supplier_id": "SUP-009",
+      "month": "2026-05",
+      "on_time_rate": 0.269,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-009-2026-06",
+      "supplier_id": "SUP-009",
+      "month": "2026-06",
+      "on_time_rate": 0.251,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-010-2026-01",
+      "supplier_id": "SUP-010",
+      "month": "2026-01",
+      "on_time_rate": 0.3,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-010-2026-02",
+      "supplier_id": "SUP-010",
+      "month": "2026-02",
+      "on_time_rate": 0.283,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-010-2026-03",
+      "supplier_id": "SUP-010",
+      "month": "2026-03",
+      "on_time_rate": 0.282,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-010-2026-04",
+      "supplier_id": "SUP-010",
+      "month": "2026-04",
+      "on_time_rate": 0.31,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-010-2026-05",
+      "supplier_id": "SUP-010",
+      "month": "2026-05",
+      "on_time_rate": 0.359,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-010-2026-06",
+      "supplier_id": "SUP-010",
+      "month": "2026-06",
+      "on_time_rate": 0.293,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-011-2026-01",
+      "supplier_id": "SUP-011",
+      "month": "2026-01",
+      "on_time_rate": 0.154,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-011-2026-02",
+      "supplier_id": "SUP-011",
+      "month": "2026-02",
+      "on_time_rate": 0.227,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-011-2026-03",
+      "supplier_id": "SUP-011",
+      "month": "2026-03",
+      "on_time_rate": 0.206,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-011-2026-04",
+      "supplier_id": "SUP-011",
+      "month": "2026-04",
+      "on_time_rate": 0.224,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-011-2026-05",
+      "supplier_id": "SUP-011",
+      "month": "2026-05",
+      "on_time_rate": 0.235,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-011-2026-06",
+      "supplier_id": "SUP-011",
+      "month": "2026-06",
+      "on_time_rate": 0.177,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-012-2026-01",
+      "supplier_id": "SUP-012",
+      "month": "2026-01",
+      "on_time_rate": 0.371,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-012-2026-02",
+      "supplier_id": "SUP-012",
+      "month": "2026-02",
+      "on_time_rate": 0.326,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-012-2026-03",
+      "supplier_id": "SUP-012",
+      "month": "2026-03",
+      "on_time_rate": 0.37,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-012-2026-04",
+      "supplier_id": "SUP-012",
+      "month": "2026-04",
+      "on_time_rate": 0.341,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-012-2026-05",
+      "supplier_id": "SUP-012",
+      "month": "2026-05",
+      "on_time_rate": 0.368,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-012-2026-06",
+      "supplier_id": "SUP-012",
+      "month": "2026-06",
+      "on_time_rate": 0.382,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-013-2026-01",
+      "supplier_id": "SUP-013",
+      "month": "2026-01",
+      "on_time_rate": 0.16,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-013-2026-02",
+      "supplier_id": "SUP-013",
+      "month": "2026-02",
+      "on_time_rate": 0.164,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-013-2026-03",
+      "supplier_id": "SUP-013",
+      "month": "2026-03",
+      "on_time_rate": 0.116,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-013-2026-04",
+      "supplier_id": "SUP-013",
+      "month": "2026-04",
+      "on_time_rate": 0.154,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-013-2026-05",
+      "supplier_id": "SUP-013",
+      "month": "2026-05",
+      "on_time_rate": 0.168,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-013-2026-06",
+      "supplier_id": "SUP-013",
+      "month": "2026-06",
+      "on_time_rate": 0.139,
+      "incidents": 9
+    },
+    {
+      "id": "TLM-014-2026-01",
+      "supplier_id": "SUP-014",
+      "month": "2026-01",
+      "on_time_rate": 0.635,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-014-2026-02",
+      "supplier_id": "SUP-014",
+      "month": "2026-02",
+      "on_time_rate": 0.62,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-014-2026-03",
+      "supplier_id": "SUP-014",
+      "month": "2026-03",
+      "on_time_rate": 0.65,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-014-2026-04",
+      "supplier_id": "SUP-014",
+      "month": "2026-04",
+      "on_time_rate": 0.607,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-014-2026-05",
+      "supplier_id": "SUP-014",
+      "month": "2026-05",
+      "on_time_rate": 0.616,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-014-2026-06",
+      "supplier_id": "SUP-014",
+      "month": "2026-06",
+      "on_time_rate": 0.671,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-015-2026-01",
+      "supplier_id": "SUP-015",
+      "month": "2026-01",
+      "on_time_rate": 0.552,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-015-2026-02",
+      "supplier_id": "SUP-015",
+      "month": "2026-02",
+      "on_time_rate": 0.563,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-015-2026-03",
+      "supplier_id": "SUP-015",
+      "month": "2026-03",
+      "on_time_rate": 0.584,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-015-2026-04",
+      "supplier_id": "SUP-015",
+      "month": "2026-04",
+      "on_time_rate": 0.597,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-015-2026-05",
+      "supplier_id": "SUP-015",
+      "month": "2026-05",
+      "on_time_rate": 0.572,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-015-2026-06",
+      "supplier_id": "SUP-015",
+      "month": "2026-06",
+      "on_time_rate": 0.579,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-016-2026-01",
+      "supplier_id": "SUP-016",
+      "month": "2026-01",
+      "on_time_rate": 0.261,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-016-2026-02",
+      "supplier_id": "SUP-016",
+      "month": "2026-02",
+      "on_time_rate": 0.269,
+      "incidents": 7
+    },
+    {
+      "id": "TLM-016-2026-03",
+      "supplier_id": "SUP-016",
+      "month": "2026-03",
+      "on_time_rate": 0.255,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-016-2026-04",
+      "supplier_id": "SUP-016",
+      "month": "2026-04",
+      "on_time_rate": 0.297,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-016-2026-05",
+      "supplier_id": "SUP-016",
+      "month": "2026-05",
+      "on_time_rate": 0.326,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-016-2026-06",
+      "supplier_id": "SUP-016",
+      "month": "2026-06",
+      "on_time_rate": 0.345,
+      "incidents": 8
+    },
+    {
+      "id": "TLM-017-2026-01",
+      "supplier_id": "SUP-017",
+      "month": "2026-01",
+      "on_time_rate": 0.759,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-017-2026-02",
+      "supplier_id": "SUP-017",
+      "month": "2026-02",
+      "on_time_rate": 0.772,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-017-2026-03",
+      "supplier_id": "SUP-017",
+      "month": "2026-03",
+      "on_time_rate": 0.745,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-017-2026-04",
+      "supplier_id": "SUP-017",
+      "month": "2026-04",
+      "on_time_rate": 0.691,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-017-2026-05",
+      "supplier_id": "SUP-017",
+      "month": "2026-05",
+      "on_time_rate": 0.787,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-017-2026-06",
+      "supplier_id": "SUP-017",
+      "month": "2026-06",
+      "on_time_rate": 0.759,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-018-2026-01",
+      "supplier_id": "SUP-018",
+      "month": "2026-01",
+      "on_time_rate": 0.86,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-018-2026-02",
+      "supplier_id": "SUP-018",
+      "month": "2026-02",
+      "on_time_rate": 0.83,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-018-2026-03",
+      "supplier_id": "SUP-018",
+      "month": "2026-03",
+      "on_time_rate": 0.904,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-018-2026-04",
+      "supplier_id": "SUP-018",
+      "month": "2026-04",
+      "on_time_rate": 0.906,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-018-2026-05",
+      "supplier_id": "SUP-018",
+      "month": "2026-05",
+      "on_time_rate": 0.882,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-018-2026-06",
+      "supplier_id": "SUP-018",
+      "month": "2026-06",
+      "on_time_rate": 0.85,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-019-2026-01",
+      "supplier_id": "SUP-019",
+      "month": "2026-01",
+      "on_time_rate": 0.547,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-019-2026-02",
+      "supplier_id": "SUP-019",
+      "month": "2026-02",
+      "on_time_rate": 0.482,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-019-2026-03",
+      "supplier_id": "SUP-019",
+      "month": "2026-03",
+      "on_time_rate": 0.505,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-019-2026-04",
+      "supplier_id": "SUP-019",
+      "month": "2026-04",
+      "on_time_rate": 0.499,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-019-2026-05",
+      "supplier_id": "SUP-019",
+      "month": "2026-05",
+      "on_time_rate": 0.503,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-019-2026-06",
+      "supplier_id": "SUP-019",
+      "month": "2026-06",
+      "on_time_rate": 0.571,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-020-2026-01",
+      "supplier_id": "SUP-020",
+      "month": "2026-01",
+      "on_time_rate": 0.629,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-020-2026-02",
+      "supplier_id": "SUP-020",
+      "month": "2026-02",
+      "on_time_rate": 0.612,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-020-2026-03",
+      "supplier_id": "SUP-020",
+      "month": "2026-03",
+      "on_time_rate": 0.64,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-020-2026-04",
+      "supplier_id": "SUP-020",
+      "month": "2026-04",
+      "on_time_rate": 0.575,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-020-2026-05",
+      "supplier_id": "SUP-020",
+      "month": "2026-05",
+      "on_time_rate": 0.572,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-020-2026-06",
+      "supplier_id": "SUP-020",
+      "month": "2026-06",
+      "on_time_rate": 0.622,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-021-2026-01",
+      "supplier_id": "SUP-021",
+      "month": "2026-01",
+      "on_time_rate": 0.836,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-021-2026-02",
+      "supplier_id": "SUP-021",
+      "month": "2026-02",
+      "on_time_rate": 0.893,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-021-2026-03",
+      "supplier_id": "SUP-021",
+      "month": "2026-03",
+      "on_time_rate": 0.828,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-021-2026-04",
+      "supplier_id": "SUP-021",
+      "month": "2026-04",
+      "on_time_rate": 0.821,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-021-2026-05",
+      "supplier_id": "SUP-021",
+      "month": "2026-05",
+      "on_time_rate": 0.877,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-021-2026-06",
+      "supplier_id": "SUP-021",
+      "month": "2026-06",
+      "on_time_rate": 0.873,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-022-2026-01",
+      "supplier_id": "SUP-022",
+      "month": "2026-01",
+      "on_time_rate": 0.724,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-022-2026-02",
+      "supplier_id": "SUP-022",
+      "month": "2026-02",
+      "on_time_rate": 0.684,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-022-2026-03",
+      "supplier_id": "SUP-022",
+      "month": "2026-03",
+      "on_time_rate": 0.717,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-022-2026-04",
+      "supplier_id": "SUP-022",
+      "month": "2026-04",
+      "on_time_rate": 0.67,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-022-2026-05",
+      "supplier_id": "SUP-022",
+      "month": "2026-05",
+      "on_time_rate": 0.706,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-022-2026-06",
+      "supplier_id": "SUP-022",
+      "month": "2026-06",
+      "on_time_rate": 0.717,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-023-2026-01",
+      "supplier_id": "SUP-023",
+      "month": "2026-01",
+      "on_time_rate": 0.901,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-023-2026-02",
+      "supplier_id": "SUP-023",
+      "month": "2026-02",
+      "on_time_rate": 0.849,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-023-2026-03",
+      "supplier_id": "SUP-023",
+      "month": "2026-03",
+      "on_time_rate": 0.845,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-023-2026-04",
+      "supplier_id": "SUP-023",
+      "month": "2026-04",
+      "on_time_rate": 0.875,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-023-2026-05",
+      "supplier_id": "SUP-023",
+      "month": "2026-05",
+      "on_time_rate": 0.906,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-023-2026-06",
+      "supplier_id": "SUP-023",
+      "month": "2026-06",
+      "on_time_rate": 0.882,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-024-2026-01",
+      "supplier_id": "SUP-024",
+      "month": "2026-01",
+      "on_time_rate": 0.437,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-024-2026-02",
+      "supplier_id": "SUP-024",
+      "month": "2026-02",
+      "on_time_rate": 0.422,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-024-2026-03",
+      "supplier_id": "SUP-024",
+      "month": "2026-03",
+      "on_time_rate": 0.417,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-024-2026-04",
+      "supplier_id": "SUP-024",
+      "month": "2026-04",
+      "on_time_rate": 0.42,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-024-2026-05",
+      "supplier_id": "SUP-024",
+      "month": "2026-05",
+      "on_time_rate": 0.443,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-024-2026-06",
+      "supplier_id": "SUP-024",
+      "month": "2026-06",
+      "on_time_rate": 0.475,
+      "incidents": 6
+    },
+    {
+      "id": "TLM-025-2026-01",
+      "supplier_id": "SUP-025",
+      "month": "2026-01",
+      "on_time_rate": 0.636,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-025-2026-02",
+      "supplier_id": "SUP-025",
+      "month": "2026-02",
+      "on_time_rate": 0.553,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-025-2026-03",
+      "supplier_id": "SUP-025",
+      "month": "2026-03",
+      "on_time_rate": 0.641,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-025-2026-04",
+      "supplier_id": "SUP-025",
+      "month": "2026-04",
+      "on_time_rate": 0.628,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-025-2026-05",
+      "supplier_id": "SUP-025",
+      "month": "2026-05",
+      "on_time_rate": 0.624,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-025-2026-06",
+      "supplier_id": "SUP-025",
+      "month": "2026-06",
+      "on_time_rate": 0.551,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-026-2026-01",
+      "supplier_id": "SUP-026",
+      "month": "2026-01",
+      "on_time_rate": 0.774,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-026-2026-02",
+      "supplier_id": "SUP-026",
+      "month": "2026-02",
+      "on_time_rate": 0.735,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-026-2026-03",
+      "supplier_id": "SUP-026",
+      "month": "2026-03",
+      "on_time_rate": 0.737,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-026-2026-04",
+      "supplier_id": "SUP-026",
+      "month": "2026-04",
+      "on_time_rate": 0.694,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-026-2026-05",
+      "supplier_id": "SUP-026",
+      "month": "2026-05",
+      "on_time_rate": 0.736,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-026-2026-06",
+      "supplier_id": "SUP-026",
+      "month": "2026-06",
+      "on_time_rate": 0.71,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-027-2026-01",
+      "supplier_id": "SUP-027",
+      "month": "2026-01",
+      "on_time_rate": 0.833,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-027-2026-02",
+      "supplier_id": "SUP-027",
+      "month": "2026-02",
+      "on_time_rate": 0.903,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-027-2026-03",
+      "supplier_id": "SUP-027",
+      "month": "2026-03",
+      "on_time_rate": 0.836,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-027-2026-04",
+      "supplier_id": "SUP-027",
+      "month": "2026-04",
+      "on_time_rate": 0.813,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-027-2026-05",
+      "supplier_id": "SUP-027",
+      "month": "2026-05",
+      "on_time_rate": 0.861,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-027-2026-06",
+      "supplier_id": "SUP-027",
+      "month": "2026-06",
+      "on_time_rate": 0.829,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-028-2026-01",
+      "supplier_id": "SUP-028",
+      "month": "2026-01",
+      "on_time_rate": 0.628,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-028-2026-02",
+      "supplier_id": "SUP-028",
+      "month": "2026-02",
+      "on_time_rate": 0.68,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-028-2026-03",
+      "supplier_id": "SUP-028",
+      "month": "2026-03",
+      "on_time_rate": 0.678,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-028-2026-04",
+      "supplier_id": "SUP-028",
+      "month": "2026-04",
+      "on_time_rate": 0.604,
+      "incidents": 5
+    },
+    {
+      "id": "TLM-028-2026-05",
+      "supplier_id": "SUP-028",
+      "month": "2026-05",
+      "on_time_rate": 0.672,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-028-2026-06",
+      "supplier_id": "SUP-028",
+      "month": "2026-06",
+      "on_time_rate": 0.607,
+      "incidents": 4
+    },
+    {
+      "id": "TLM-029-2026-01",
+      "supplier_id": "SUP-029",
+      "month": "2026-01",
+      "on_time_rate": 0.909,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-029-2026-02",
+      "supplier_id": "SUP-029",
+      "month": "2026-02",
+      "on_time_rate": 0.874,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-029-2026-03",
+      "supplier_id": "SUP-029",
+      "month": "2026-03",
+      "on_time_rate": 0.882,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-029-2026-04",
+      "supplier_id": "SUP-029",
+      "month": "2026-04",
+      "on_time_rate": 0.858,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-029-2026-05",
+      "supplier_id": "SUP-029",
+      "month": "2026-05",
+      "on_time_rate": 0.87,
+      "incidents": 1
+    },
+    {
+      "id": "TLM-029-2026-06",
+      "supplier_id": "SUP-029",
+      "month": "2026-06",
+      "on_time_rate": 0.859,
+      "incidents": 0
+    },
+    {
+      "id": "TLM-030-2026-01",
+      "supplier_id": "SUP-030",
+      "month": "2026-01",
+      "on_time_rate": 0.784,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-030-2026-02",
+      "supplier_id": "SUP-030",
+      "month": "2026-02",
+      "on_time_rate": 0.762,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-030-2026-03",
+      "supplier_id": "SUP-030",
+      "month": "2026-03",
+      "on_time_rate": 0.715,
+      "incidents": 3
+    },
+    {
+      "id": "TLM-030-2026-04",
+      "supplier_id": "SUP-030",
+      "month": "2026-04",
+      "on_time_rate": 0.779,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-030-2026-05",
+      "supplier_id": "SUP-030",
+      "month": "2026-05",
+      "on_time_rate": 0.784,
+      "incidents": 2
+    },
+    {
+      "id": "TLM-030-2026-06",
+      "supplier_id": "SUP-030",
+      "month": "2026-06",
+      "on_time_rate": 0.79,
+      "incidents": 2
     }
   ]
 }

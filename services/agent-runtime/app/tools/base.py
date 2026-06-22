@@ -66,11 +66,29 @@ def parse_intent(query: str) -> dict:
         word = {"three": 3, "five": 5, "ten": 10}.get(m.group(1))
         intent["limit"] = word if word else int(m.group(1))
 
+    # paper §5 scenario: penalty-clause exposure + delivery risk. [paper §5.1]
+    if re.search(r"penalt|exposure|delivery|telemetry|at[ -]risk", q):
+        intent["scenario"] = "penalty_delivery"
+        intent["rank_by"] = "penalty_exposure"
+        mq = re.search(r"\bq([1-4])\b|quarter\s*([1-4])", q)
+        if mq:
+            intent["quarter"] = f"FY26-Q{mq.group(1) or mq.group(2)}"
+        me = re.search(r"\$?\s*(\d+(?:\.\d+)?)\s*(million|m|billion|bn)\b", q)
+        if me:
+            mult = 1_000_000 if me.group(2) in ("million", "m") else 1_000_000_000
+            intent["penalty_exposure_min"] = int(float(me.group(1)) * mult)
+        elif "million" in q or "exposure" in q:
+            intent["penalty_exposure_min"] = 1_000_000  # "one million dollars"
+        if re.search(r"at[ -]risk|delivery", q):
+            intent["delivery_at_risk"] = True
+    else:
+        intent["scenario"] = "supplier_pii"
+
     # in_domain: did we recognise any supplier/contract signal? Lets the pipeline reply
     # gracefully to off-topic questions instead of mis-running them.
     signals = any(intent.get(k) is not None for k in
                   ("geo", "end_before", "contains_pii", "contains_secrets",
-                   "require_valid_consent", "limit"))
+                   "require_valid_consent", "limit", "quarter", "penalty_exposure_min"))
     intent["in_domain"] = bool(signals) or bool(
         re.search(r"supplier|contract|vendor|consent|clause", q))
     return intent
@@ -117,9 +135,50 @@ class Toolbox(ABC):
     def policy_filter(self, rows: list[dict], principal: dict, intent: dict, as_of: str) -> dict:
         """policy_engine.filter — per-row allow / mask / exclude with redactions.
 
-        Applies require_residency_match (exclude), allow_pii_field_access (mask on expired
-        consent) and mask_secrets_in_response (mask secret clauses) to every row. [spec §6]
+        Dispatches by scenario: the build-spec §6 supplier-PII flow, or the paper §5
+        penalty-exposure + delivery-risk flow.
         """
+        if intent.get("scenario") == "penalty_delivery":
+            return self._filter_penalty_delivery(rows, principal, intent)
+        return self._filter_supplier_pii(rows, principal, intent, as_of)
+
+    def _filter_penalty_delivery(self, rows: list[dict], principal: dict, intent: dict) -> dict:
+        """Paper §5: keep at-risk suppliers (data filter), redact specific commercial terms
+        (redact_commercial_terms) and mask supplier-contact PII (mask_supplier_contact_pii)."""
+        want_at_risk = intent.get("delivery_at_risk", True)
+        allowed: list[dict] = []
+        excluded: list[dict] = []
+        decisions: list[dict] = []
+        for row in rows:
+            sid = row.get("supplier_id")
+            if want_at_risk and not row.get("delivery_at_risk"):
+                excluded.append({**row, "excluded_by": "delivery_within_tolerance",
+                                 "reasons": ["penalty exposure flagged but delivery "
+                                             "performance within tolerance"]})
+                continue
+            commercial = self._decide("redact_commercial_terms", {
+                "principal": {"clearance": principal.get("clearance", [])},
+                "resource": {"commercial_confidential": bool(row.get("commercial_confidential"))}})
+            decisions.append({**commercial, "supplier_id": sid})
+            contact = self._decide("mask_supplier_contact_pii",
+                                   {"resource": {"has_contact_pii": bool(row.get("contact_email"))}})
+            decisions.append({**contact, "supplier_id": sid})
+
+            redactions: list[dict] = []
+            if commercial.get("outcome") == "mask":
+                decisions.append({**self._decide("audit_required_on_decline",
+                                                 {"decision": {"outcome": "mask"}}), "supplier_id": sid})
+                redactions.append({"field": "penalty_amount", "policy": "redact_commercial_terms",
+                                   "reasons": commercial.get("reasons", [])})
+            if contact.get("outcome") == "mask":
+                redactions.append({"field": "supplier_contact", "policy": "mask_supplier_contact_pii",
+                                   "reasons": contact.get("reasons", [])})
+            allowed.append({**row, "redactions": redactions})
+
+        allowed.sort(key=lambda r: r.get("penalty_exposure", 0), reverse=True)
+        return {"allowed": allowed, "masked": [], "excluded": excluded, "decisions": decisions}
+
+    def _filter_supplier_pii(self, rows: list[dict], principal: dict, intent: dict, as_of: str) -> dict:
         residency_scope = intent.get("residency_scope", "GLOBAL")
         purpose = principal.get("purpose", "")
         allowed: list[dict] = []

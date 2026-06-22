@@ -30,6 +30,21 @@ cubes:
       - name: contains_secrets
         sql: contains_secrets
         type: boolean
+      - name: quarter
+        sql: quarter
+        type: string
+      - name: penalty_amount
+        sql: penalty_amount
+        type: number
+      - name: penalty_probability
+        sql: penalty_probability
+        type: number
+      - name: penalty_exposure
+        sql: penalty_exposure
+        type: number
+      - name: commercial_confidential
+        sql: commercial_confidential
+        type: boolean
     measures:
       - name: count
         type: count
@@ -39,3 +54,6 @@ cubes:
       - name: avg_value_usd
         sql: value_usd
         type: avg
+      - name: total_penalty_exposure
+        sql: penalty_exposure
+        type: sum

@@ -1,0 +1,25 @@
+# Operational telemetry cube — 6 months of delivery performance per supplier. [paper §5.2]
+cubes:
+  - name: telemetry
+    sql: >
+      SELECT * FROM read_csv_auto('/data/telemetry.csv', header=true)
+    dimensions:
+      - name: id
+        sql: id
+        type: string
+        primary_key: true
+      - name: supplier_id
+        sql: supplier_id
+        type: string
+      - name: month
+        sql: month
+        type: string
+    measures:
+      - name: count
+        type: count
+      - name: avg_on_time_rate
+        sql: on_time_rate
+        type: avg
+      - name: total_incidents
+        sql: incidents
+        type: sum

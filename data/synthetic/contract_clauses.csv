@@ -124,3 +124,19 @@ CLA-122,CON-089,standard,Standard master services agreement terms and conditions
 CLA-123,CON-089,secret,CONFIDENTIAL: encryption key escrow procedure and root credential rotation schedule (restricted).
 CLA-124,CON-090,standard,Standard master services agreement terms and conditions apply.
 CLA-125,CON-090,pii,"Processor handles personal data of EU data subjects including names, contact details and payroll identifiers."
+CLA-126,CON-091,standard,Standard master services agreement terms and conditions apply.
+CLA-127,CON-091,penalty,"Late-delivery penalty of up to $4,000,000 applies, triggered with probability 40%."
+CLA-128,CON-092,standard,Standard master services agreement terms and conditions apply.
+CLA-129,CON-092,penalty,"Late-delivery penalty of up to $3,000,000 applies, triggered with probability 50%."
+CLA-130,CON-093,standard,Standard master services agreement terms and conditions apply.
+CLA-131,CON-093,penalty,"Late-delivery penalty of up to $6,000,000 applies, triggered with probability 30%."
+CLA-132,CON-094,standard,Standard master services agreement terms and conditions apply.
+CLA-133,CON-094,penalty,"Late-delivery penalty of up to $2,500,000 applies, triggered with probability 60%."
+CLA-134,CON-095,standard,Standard master services agreement terms and conditions apply.
+CLA-135,CON-095,penalty,"Late-delivery penalty of up to $5,000,000 applies, triggered with probability 45%."
+CLA-136,CON-096,standard,Standard master services agreement terms and conditions apply.
+CLA-137,CON-096,penalty,"Late-delivery penalty of up to $8,000,000 applies, triggered with probability 30%."
+CLA-138,CON-097,standard,Standard master services agreement terms and conditions apply.
+CLA-139,CON-097,penalty,"Late-delivery penalty of up to $3,000,000 applies, triggered with probability 50%."
+CLA-140,CON-098,standard,Standard master services agreement terms and conditions apply.
+CLA-141,CON-098,penalty,"Late-delivery penalty of up to $1,000,000 applies, triggered with probability 20%."

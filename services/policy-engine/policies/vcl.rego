@@ -124,3 +124,44 @@ audit_required_on_decline := {
 
 audit_reasons := ["a decline/mask outcome must emit a structured audit event with reason"] if audit_req
 audit_reasons := ["no audit obligation for an allow outcome"] if not audit_req
+
+# --------------------------------------- 6. redact_commercial_terms [paper §5.2]
+# Aggregate penalty exposure is disclosable, but a specific commercial term is redacted
+# unless the principal holds contract-detail clearance.
+has_contract_detail_clearance if input.principal.clearance[_] == "contract_detail"
+
+default commercial_redact := false
+commercial_redact if {
+	input.resource.commercial_confidential == true
+	not has_contract_detail_clearance
+}
+
+commercial_outcome := "mask" if commercial_redact
+commercial_outcome := "allow" if not commercial_redact
+
+redact_commercial_terms := {
+	"policy": "redact_commercial_terms",
+	"allow": commercial_outcome == "allow",
+	"outcome": commercial_outcome,
+	"reasons": commercial_reasons,
+}
+
+commercial_reasons := ["specific commercial term redacted; aggregate exposure disclosable"] if commercial_redact
+commercial_reasons := ["principal cleared for contract-level detail, or term not confidential"] if not commercial_redact
+
+# --------------------------------------- 7. mask_supplier_contact_pii [paper §5.2]
+default contact_pii_present := false
+contact_pii_present if input.resource.has_contact_pii == true
+
+contact_outcome := "mask" if contact_pii_present
+contact_outcome := "allow" if not contact_pii_present
+
+mask_supplier_contact_pii := {
+	"policy": "mask_supplier_contact_pii",
+	"allow": contact_outcome == "allow",
+	"outcome": contact_outcome,
+	"reasons": contact_reasons,
+}
+
+contact_reasons := ["supplier-contact PII (email/phone) masked for this role"] if contact_pii_present
+contact_reasons := ["no supplier-contact PII present"] if not contact_pii_present

@@ -37,6 +37,11 @@ Source of truth: [`services/agent-runtime/app/audit.py`](../services/agent-runti
 | `require_residency_match` | Data residency — EU-subject data stays in EU regions | Art. 10 |
 | `mask_secrets_in_response` | Confidentiality — secrets summarised, never quoted | Art. 9 |
 | `audit_required_on_decline` | Logging duty — every decline emits a structured, reasoned audit event | Art. 12 |
+| `redact_commercial_terms` (§5) | Aggregate exposure disclosable; specific commercial term redacted without clearance | Art. 13 / Art. 14 |
+| `mask_supplier_contact_pii` (§5) | Supplier-contact PII (email/phone) masked for the analyst role | Art. 10 |
+
+> The paper's §5 trace additionally evidences **EU AI Act Art. 14 (human oversight)** —
+> the analyst is shown a complete, redacted, replayable decision path they can act on.
 
 ## What the worked use case demonstrates
 

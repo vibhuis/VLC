@@ -1,31 +1,31 @@
-id,name,region,geo,data_residency,gdpr_consent_status,risk_tier
-SUP-001,Helvetia Pharma AG,EMEA-West,EMEA,EU,valid,high
-SUP-002,Nordic DataWorks AB,EMEA-North,EMEA,EU,valid,high
-SUP-003,Britannia Logistics Ltd,UK,EMEA,EU,valid,medium
-SUP-004,Rhein Components GmbH,EMEA-West,EMEA,EU,valid,medium
-SUP-005,Iberia Analytics SL,EMEA-West,EMEA,EU,valid,critical
-SUP-006,Baltic Cloud OU,EMEA-North,EMEA,EU,expired,high
-SUP-007,Gallia Secure SAS,EMEA-West,EMEA,EU,expired,critical
-SUP-008,Albion Offshore Data Ltd,UK,EMEA,US,valid,high
-SUP-009,Acme Networks,APAC,APAC,APAC,valid,critical
-SUP-010,Orion Systems,UK,EMEA,EU,valid,critical
-SUP-011,Vertex Systems,EMEA-West,EMEA,EU,valid,medium
-SUP-012,Summit Partners,US-West,AMER,US,valid,critical
-SUP-013,Cobalt Industries,UK,EMEA,EU,valid,high
-SUP-014,Delta Group,US-East,AMER,US,expired,high
-SUP-015,Pioneer Industries,UK,EMEA,EU,valid,low
-SUP-016,Meridian Networks,UK,EMEA,EU,valid,critical
-SUP-017,Aurora Group,EMEA-West,EMEA,EU,valid,medium
-SUP-018,Quantum Solutions,US-West,AMER,US,expired,low
-SUP-019,Cedar Networks,APAC,APAC,APAC,valid,critical
-SUP-020,Horizon Systems,US-East,AMER,US,valid,critical
-SUP-021,Atlas Solutions,US-East,AMER,US,valid,high
-SUP-022,Lumen Industries,US-West,AMER,US,valid,low
-SUP-023,Pacific Industries,US-East,AMER,US,valid,high
-SUP-024,Granite Industries,EMEA-North,EMEA,EU,valid,low
-SUP-025,Sierra Partners,US-East,AMER,US,valid,high
-SUP-026,Nimbus Networks,US-West,AMER,US,expired,critical
-SUP-027,Pinnacle Partners,EMEA-North,EMEA,EU,expired,low
-SUP-028,Beacon Networks,EMEA-West,EMEA,EU,valid,high
-SUP-029,Forge Systems,US-East,AMER,US,valid,medium
-SUP-030,Harbor Partners,US-East,AMER,US,valid,critical
+id,name,region,geo,data_residency,gdpr_consent_status,risk_tier,erp_id,mes_id,cms_id,delivery_risk_score,delivery_at_risk,contact_name,contact_email,contact_phone
+SUP-001,Helvetia Pharma AG,EMEA-West,EMEA,EU,valid,high,E1001,M-001,CMS-2026-0001,0.3,False,Helvetia Procurement Desk,contact001@helvetia.example,+1-555-1001
+SUP-002,Nordic DataWorks AB,EMEA-North,EMEA,EU,valid,high,E1002,M-002,CMS-2026-0002,0.14,False,Nordic Procurement Desk,contact002@nordic.example,+1-555-1002
+SUP-003,Britannia Logistics Ltd,UK,EMEA,EU,valid,medium,E1003,M-003,CMS-2026-0003,0.2,False,Britannia Procurement Desk,contact003@britannia.example,+1-555-1003
+SUP-004,Rhein Components GmbH,EMEA-West,EMEA,EU,valid,medium,E1004,M-004,CMS-2026-0004,0.37,False,Rhein Procurement Desk,contact004@rhein.example,+1-555-1004
+SUP-005,Iberia Analytics SL,EMEA-West,EMEA,EU,valid,critical,E1005,M-005,CMS-2026-0005,0.45,False,Iberia Procurement Desk,contact005@iberia.example,+1-555-1005
+SUP-006,Baltic Cloud OU,EMEA-North,EMEA,EU,expired,high,E1006,M-006,CMS-2026-0006,0.54,False,Baltic Procurement Desk,contact006@baltic.example,+1-555-1006
+SUP-007,Gallia Secure SAS,EMEA-West,EMEA,EU,expired,critical,E1007,M-007,CMS-2026-0007,0.22,False,Gallia Procurement Desk,contact007@gallia.example,+1-555-1007
+SUP-008,Albion Offshore Data Ltd,UK,EMEA,US,valid,high,E1008,M-008,CMS-2026-0008,0.39,False,Albion Procurement Desk,contact008@albion.example,+1-555-1008
+SUP-009,Acme Networks,APAC,APAC,APAC,valid,critical,E1009,M-009,CMS-2026-0009,0.72,True,Acme Procurement Desk,contact009@acme.example,+1-555-1009
+SUP-010,Orion Systems,UK,EMEA,EU,valid,critical,E1010,M-010,CMS-2026-0010,0.68,True,Orion Procurement Desk,contact010@orion.example,+1-555-1010
+SUP-011,Vertex Systems,EMEA-West,EMEA,EU,valid,medium,E1011,M-011,CMS-2026-0011,0.8,True,Vertex Procurement Desk,contact011@vertex.example,+1-555-1011
+SUP-012,Summit Partners,US-West,AMER,US,valid,critical,E1012,M-012,CMS-2026-0012,0.66,True,Summit Procurement Desk,contact012@summit.example,+1-555-1012
+SUP-013,Cobalt Industries,UK,EMEA,EU,valid,high,E1013,M-013,CMS-2026-0013,0.85,True,Cobalt Procurement Desk,contact013@cobalt.example,+1-555-1013
+SUP-014,Delta Group,US-East,AMER,US,expired,high,E1014,M-014,CMS-2026-0014,0.35,False,Delta Procurement Desk,contact014@delta.example,+1-555-1014
+SUP-015,Pioneer Industries,UK,EMEA,EU,valid,low,E1015,M-015,CMS-2026-0015,0.4,False,Pioneer Procurement Desk,contact015@pioneer.example,+1-555-1015
+SUP-016,Meridian Networks,UK,EMEA,EU,valid,critical,E1016,M-016,CMS-2026-0016,0.7,True,Meridian Procurement Desk,contact016@meridian.example,+1-555-1016
+SUP-017,Aurora Group,EMEA-West,EMEA,EU,valid,medium,E1017,M-017,CMS-2026-0017,0.26,False,Aurora Procurement Desk,contact017@aurora.example,+1-555-1017
+SUP-018,Quantum Solutions,US-West,AMER,US,expired,low,E1018,M-018,CMS-2026-0018,0.13,False,Quantum Procurement Desk,contact018@quantum.example,+1-555-1018
+SUP-019,Cedar Networks,APAC,APAC,APAC,valid,critical,E1019,M-019,CMS-2026-0019,0.47,False,Cedar Procurement Desk,contact019@cedar.example,+1-555-1019
+SUP-020,Horizon Systems,US-East,AMER,US,valid,critical,E1020,M-020,CMS-2026-0020,0.4,False,Horizon Procurement Desk,contact020@horizon.example,+1-555-1020
+SUP-021,Atlas Solutions,US-East,AMER,US,valid,high,E1021,M-021,CMS-2026-0021,0.13,False,Atlas Procurement Desk,contact021@atlas.example,+1-555-1021
+SUP-022,Lumen Industries,US-West,AMER,US,valid,low,E1022,M-022,CMS-2026-0022,0.3,False,Lumen Procurement Desk,contact022@lumen.example,+1-555-1022
+SUP-023,Pacific Industries,US-East,AMER,US,valid,high,E1023,M-023,CMS-2026-0023,0.13,False,Pacific Procurement Desk,contact023@pacific.example,+1-555-1023
+SUP-024,Granite Industries,EMEA-North,EMEA,EU,valid,low,E1024,M-024,CMS-2026-0024,0.54,False,Granite Procurement Desk,contact024@granite.example,+1-555-1024
+SUP-025,Sierra Partners,US-East,AMER,US,valid,high,E1025,M-025,CMS-2026-0025,0.4,False,Sierra Procurement Desk,contact025@sierra.example,+1-555-1025
+SUP-026,Nimbus Networks,US-West,AMER,US,expired,critical,E1026,M-026,CMS-2026-0026,0.27,False,Nimbus Procurement Desk,contact026@nimbus.example,+1-555-1026
+SUP-027,Pinnacle Partners,EMEA-North,EMEA,EU,expired,low,E1027,M-027,CMS-2026-0027,0.14,False,Pinnacle Procurement Desk,contact027@pinnacle.example,+1-555-1027
+SUP-028,Beacon Networks,EMEA-West,EMEA,EU,valid,high,E1028,M-028,CMS-2026-0028,0.36,False,Beacon Procurement Desk,contact028@beacon.example,+1-555-1028
+SUP-029,Forge Systems,US-East,AMER,US,valid,medium,E1029,M-029,CMS-2026-0029,0.1,False,Forge Procurement Desk,contact029@forge.example,+1-555-1029
+SUP-030,Harbor Partners,US-East,AMER,US,valid,critical,E1030,M-030,CMS-2026-0030,0.25,False,Harbor Procurement Desk,contact030@harbor.example,+1-555-1030

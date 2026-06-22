@@ -28,6 +28,11 @@ CASES = [
     ("mask_secrets_in_response", {"resource": {"contains_secrets": False}}),
     ("audit_required_on_decline", {"decision": {"outcome": "deny"}}),
     ("audit_required_on_decline", {"decision": {"outcome": "allow"}}),
+    ("redact_commercial_terms", {"principal": {"clearance": []}, "resource": {"commercial_confidential": True}}),
+    ("redact_commercial_terms", {"principal": {"clearance": ["contract_detail"]}, "resource": {"commercial_confidential": True}}),
+    ("redact_commercial_terms", {"principal": {"clearance": []}, "resource": {"commercial_confidential": False}}),
+    ("mask_supplier_contact_pii", {"resource": {"has_contact_pii": True}}),
+    ("mask_supplier_contact_pii", {"resource": {"has_contact_pii": False}}),
 ]
 
 

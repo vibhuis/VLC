@@ -70,6 +70,20 @@ class FixtureToolbox(Toolbox):
                     "reasons": ["secret clauses must be summarised, not quoted — content masked"] if secrets
                     else ["no secret clauses present"]}
 
+        if rule == "redact_commercial_terms":
+            confidential = (payload.get("resource") or {}).get("commercial_confidential") is True
+            cleared = "contract_detail" in (payload.get("principal") or {}).get("clearance", [])
+            redact = confidential and not cleared
+            return {"policy": rule, "allow": not redact, "outcome": "mask" if redact else "allow",
+                    "reasons": ["specific commercial term redacted; aggregate exposure disclosable"] if redact
+                    else ["principal cleared for contract-level detail, or term not confidential"]}
+
+        if rule == "mask_supplier_contact_pii":
+            present = (payload.get("resource") or {}).get("has_contact_pii") is True
+            return {"policy": rule, "allow": not present, "outcome": "mask" if present else "allow",
+                    "reasons": ["supplier-contact PII (email/phone) masked for this role"] if present
+                    else ["no supplier-contact PII present"]}
+
         if rule == "audit_required_on_decline":
             outcome = (payload.get("decision") or {}).get("outcome", "unknown")
             req = outcome in {"deny", "mask"}
@@ -93,6 +107,8 @@ class FixtureToolbox(Toolbox):
 
     # ---- context graph ----
     def graph_query(self, intent: dict) -> list[dict]:
+        if intent.get("scenario") == "penalty_delivery":
+            return self._graph_query_penalty(intent)
         geo = intent.get("geo")
         want_pii = intent.get("contains_pii")
         want_secrets = intent.get("contains_secrets")
@@ -118,6 +134,30 @@ class FixtureToolbox(Toolbox):
                 "consent_retention_until": cn["retention_until"] if cn else None,
             })
         rows.sort(key=lambda r: r["value_usd"], reverse=True)
+        return rows
+
+    def _graph_query_penalty(self, intent: dict) -> list[dict]:
+        quarter = intent.get("quarter")
+        minexp = intent.get("penalty_exposure_min", 1_000_000)
+        rows: list[dict] = []
+        for c in self.data["contracts"]:
+            if c["penalty_exposure"] <= minexp:
+                continue
+            if quarter is not None and c["quarter"] != quarter:
+                continue
+            s = self._by_supplier[c["supplier_id"]]
+            rows.append({
+                "supplier_id": s["id"], "name": s["name"], "region": s["region"], "geo": s["geo"],
+                "risk_tier": s["risk_tier"], "delivery_risk_score": s["delivery_risk_score"],
+                "delivery_at_risk": bool(s["delivery_at_risk"]),
+                "contact_name": s["contact_name"], "contact_email": s["contact_email"],
+                "contact_phone": s["contact_phone"], "contract_id": c["id"], "quarter": c["quarter"],
+                "penalty_amount": c["penalty_amount"], "penalty_probability": c["penalty_probability"],
+                "penalty_exposure": c["penalty_exposure"],
+                "commercial_confidential": bool(c["commercial_confidential"]),
+                "system_refs": [f"ERP:{s['erp_id']}", f"MES:{s['mes_id']}", f"CMS:{s['cms_id']}"],
+            })
+        rows.sort(key=lambda r: r["penalty_exposure"], reverse=True)
         return rows
 
     # ---- feedback loop ----

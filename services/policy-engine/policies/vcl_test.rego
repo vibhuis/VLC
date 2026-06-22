@@ -88,3 +88,32 @@ test_audit_required_on_mask if {
 test_audit_not_required_on_allow if {
 	not audit_required_on_decline.audit_required with input as {"decision": {"outcome": "allow"}}
 }
+
+# 6. redact_commercial_terms ----------------------------------------------------
+test_commercial_redacted_when_confidential_and_uncleared if {
+	d := redact_commercial_terms with input as {"principal": {"clearance": []}, "resource": {"commercial_confidential": true}}
+	d.outcome == "mask"
+	not d.allow
+}
+
+test_commercial_allowed_with_clearance if {
+	d := redact_commercial_terms with input as {"principal": {"clearance": ["contract_detail"]}, "resource": {"commercial_confidential": true}}
+	d.outcome == "allow"
+}
+
+test_commercial_allowed_when_not_confidential if {
+	d := redact_commercial_terms with input as {"principal": {"clearance": []}, "resource": {"commercial_confidential": false}}
+	d.outcome == "allow"
+}
+
+# 7. mask_supplier_contact_pii --------------------------------------------------
+test_contact_masked_when_pii_present if {
+	d := mask_supplier_contact_pii with input as {"resource": {"has_contact_pii": true}}
+	d.outcome == "mask"
+	not d.allow
+}
+
+test_contact_allowed_when_absent if {
+	d := mask_supplier_contact_pii with input as {"resource": {"has_contact_pii": false}}
+	d.outcome == "allow"
+}

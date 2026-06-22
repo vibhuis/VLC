@@ -33,6 +33,24 @@ cubes:
       - name: risk_tier
         sql: risk_tier
         type: string
+      - name: delivery_risk_score
+        sql: delivery_risk_score
+        type: number
+      - name: delivery_at_risk
+        sql: delivery_at_risk
+        type: boolean
+      - name: erp_id
+        sql: erp_id
+        type: string
+      - name: mes_id
+        sql: mes_id
+        type: string
+      - name: cms_id
+        sql: cms_id
+        type: string
     measures:
       - name: count
         type: count
+      - name: avg_delivery_risk_score
+        sql: delivery_risk_score
+        type: avg

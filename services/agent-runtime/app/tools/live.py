@@ -27,6 +27,24 @@ RETURN s.id AS supplier_id, s.name AS name, s.region AS region, s.geo AS geo,
 ORDER BY c.value_usd DESC
 """
 
+# Paper §5: Q3 contracts with penalty exposure over a threshold, joined to the supplier's
+# delivery telemetry and cross-system identity refs (provenance). [paper §5.2]
+PENALTY_QUERY = """
+MATCH (c:Contract)-[:BELONGS_TO]->(s:Supplier)
+WHERE ($quarter IS NULL OR c.quarter = $quarter)
+  AND c.penalty_exposure > $min
+OPTIONAL MATCH (x:SystemRef)-[:RESOLVES_TO]->(s)
+RETURN s.id AS supplier_id, s.name AS name, s.region AS region, s.geo AS geo,
+       s.risk_tier AS risk_tier, s.delivery_risk_score AS delivery_risk_score,
+       s.delivery_at_risk AS delivery_at_risk, s.contact_name AS contact_name,
+       s.contact_email AS contact_email, s.contact_phone AS contact_phone,
+       c.id AS contract_id, c.quarter AS quarter, c.penalty_amount AS penalty_amount,
+       c.penalty_probability AS penalty_probability, c.penalty_exposure AS penalty_exposure,
+       c.commercial_confidential AS commercial_confidential,
+       collect(DISTINCT x.system + ':' + x.ext_id) AS system_refs
+ORDER BY c.penalty_exposure DESC
+"""
+
 
 class LiveToolbox(Toolbox):
     def __init__(self) -> None:
@@ -71,6 +89,11 @@ class LiveToolbox(Toolbox):
 
     # ---- context graph (Neo4j) ----
     def graph_query(self, intent: dict) -> list[dict]:
+        if intent.get("scenario") == "penalty_delivery":
+            params = {"quarter": intent.get("quarter"),
+                      "min": intent.get("penalty_exposure_min", 1_000_000)}
+            with self._driver.session() as session:
+                return [dict(r) for r in session.run(PENALTY_QUERY, **params)]
         params = {
             "geo": intent.get("geo"),
             "contains_pii": intent.get("contains_pii"),

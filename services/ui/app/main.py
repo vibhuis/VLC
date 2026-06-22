@@ -22,6 +22,17 @@ WORKED_QUERY = (
     "have valid GDPR consent."
 )
 
+PAPER_QUERY = (
+    "Which Q3 supplier contracts have penalty-clause exposure greater than one million "
+    "dollars, and which of those suppliers have at-risk delivery performance based on the "
+    "last six months of operational telemetry?"
+)
+
+SCENARIOS = {
+    "Paper §5 — penalty exposure & at-risk delivery": PAPER_QUERY,
+    "Build-spec §6 — PII contracts & GDPR consent": WORKED_QUERY,
+}
+
 COMPONENT_BADGE = {
     "semantic_layer": "🟦 semantic layer", "context_graph": "🟩 context graph",
     "policy_engine": "🟧 policy engine", "agent": "🟪 agent", "response": "🟨 response",
@@ -41,8 +52,9 @@ def _highlight(answer: str) -> str:
 
 
 # --------------------------------------------------------------- query screen
+choice = st.radio("Worked use case", list(SCENARIOS), horizontal=True)
 with st.form("query_form"):
-    query = st.text_area("Enterprise question", value=WORKED_QUERY, height=110)
+    query = st.text_area("Enterprise question", value=SCENARIOS[choice], height=120, key=f"q::{choice}")
     submitted = st.form_submit_button("Run query", type="primary")
 
 if submitted:

@@ -19,7 +19,7 @@ REGULATORY_MAP: dict[str, dict[str, list[str]]] = {
     "semantic_layer": {"eu_ai_act_articles": ["12"], "nist_rmf_functions": ["MAP-3.4"]},
     "context_graph": {"eu_ai_act_articles": ["10", "12"], "nist_rmf_functions": ["MAP-2.3"]},
     "policy_engine": {"eu_ai_act_articles": ["9", "12"], "nist_rmf_functions": ["MEASURE-2.7", "GOVERN-1.2"]},
-    "agent": {"eu_ai_act_articles": ["12", "13"], "nist_rmf_functions": ["MANAGE-2.2"]},
+    "agent": {"eu_ai_act_articles": ["12", "13", "14"], "nist_rmf_functions": ["MANAGE-2.2"]},
     "response": {"eu_ai_act_articles": ["12", "13"], "nist_rmf_functions": ["MEASURE-2.7"]},
 }
 

@@ -33,10 +33,11 @@ def get_toolbox() -> Toolbox:
 
 
 def demo_principal() -> dict:
-    # Single demo user (no auth in this MVP — spec §9). Has org access to all geos; the
-    # residency and consent policies still constrain individual rows.
+    # Single demo user (no auth in this MVP — spec §9). Global org access ("*"); the
+    # residency/consent/commercial/contact policies still constrain individual rows/fields.
+    # No "contract_detail" clearance → confidential commercial terms are redacted (paper §5).
     return {"user": settings.demo_user, "purpose": settings.demo_purpose,
-            "org_access": ["EMEA", "AMER", "APAC"]}
+            "org_access": ["*"], "clearance": []}
 
 
 class QueryRequest(BaseModel):

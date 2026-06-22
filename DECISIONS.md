@@ -117,6 +117,31 @@ speed and zero extra moving parts, but the MCP surface is always running and the
 `test_mcp_live` suite proves the full worked use case runs end-to-end over MCP. The build
 spec's six-service diagram is kept; the gateway is an additive 5b sharing the agent image.
 
+## D12 — Both worked use cases: build-spec §6 and paper §5
+**Paper ref:** §5 (worked use case) · **Build-spec ref:** §6 · **Date:** 2026-06-22
+
+The build spec's §6 worked case (EMEA / PII / GDPR consent) differs from the companion
+paper's §5 (Q3 penalty-clause exposure > $1M + at-risk delivery from 6 months of
+telemetry, across contract-management / ERP / MES). Since the repo is published next to
+the paper, both are supported:
+
+- The generator adds penalty clauses, 6-month operational telemetry → a DeliveryRiskScore,
+  cross-system identity ids (ERP/MES/CMS) resolved to canonical Supplier nodes via
+  `SystemRef -[:RESOLVES_TO]->`, and supplier contacts — layered on the §6 data with a
+  separate RNG so §6 anchors/counts are unchanged.
+- The agent is scenario-aware: `parse` tags the intent `supplier_pii` (§6) or
+  `penalty_delivery` (§5); graph query, policy filter and synthesis branch accordingly.
+- Two new policies enforce §5 governance: `redact_commercial_terms` (aggregate exposure
+  disclosable, specific term redacted without contract-detail clearance) and
+  `mask_supplier_contact_pii`. The trace adds EU AI Act Art. 14 (human oversight) per §5.3.
+- The UI offers a scenario selector; both produce a tamper-evident, regulator-addressable
+  trace. The §5 result: 5 at-risk high-exposure suppliers (2 with commercial terms
+  redacted, all with contact PII masked), 2 flagged-but-within-tolerance, 1 below threshold.
+
+Simplifications (laptop-runnable): telemetry is synthetic monthly summary rows rather than
+a streaming feed; DeliveryRiskScore is precomputed; the three systems of record are
+represented by id schemes + resolution nodes rather than three live source databases.
+
 ---
 
 ## Deferred to v0.2 (out-of-scope per spec §9)

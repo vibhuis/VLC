@@ -68,6 +68,25 @@ uv run pytest -q               # 37 passed, 2 skipped (live-stack opt-in)
 VCL_LIVE=1 uv run pytest services/agent-runtime/tests/test_live_stack.py -q   # vs running stack
 ```
 
+## 6. The paper's §5 scenario (penalty exposure + delivery risk)
+
+In the UI, switch the **Worked use case** selector to **"Paper §5 — penalty exposure &
+at-risk delivery"** (pre-fills the paper's query), then **Run query**. You should see:
+
+- **5 at-risk suppliers** ranked by **penalty exposure** (Q3 contracts, exposure > $1M,
+  *and* at-risk delivery from 6 months of telemetry).
+- **2 of them** show `[redacted: policy redact_commercial_terms]` instead of the specific
+  penalty amount — the aggregate exposure is still disclosed (analyst lacks contract-detail
+  clearance).
+- **All shown** show `[redacted: policy mask_supplier_contact_pii]` for the contact.
+- Each supplier line shows **cross-system identity resolution** (ERP / MES / CMS ids
+  resolved to one canonical supplier).
+- **2 suppliers** flagged for exposure > $1M but **delivery within tolerance** are listed
+  separately (not at-risk); one more is below the $1M threshold and filtered out.
+
+The trace, integrity check and PDF export work identically; the §5 trace additionally maps
+to **EU AI Act Art. 14** (human oversight, paper §5.3).
+
 ## Tear down
 
 ```bash

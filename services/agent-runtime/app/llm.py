@@ -21,6 +21,8 @@ from .config import settings
 
 PII_MARKER = "[redacted: policy allow_pii_field_access]"
 SECRET_MARKER = "[redacted: policy mask_secrets_in_response]"
+COMMERCIAL_MARKER = "[redacted: policy redact_commercial_terms]"
+CONTACT_MARKER = "[redacted: policy mask_supplier_contact_pii]"
 
 # model-string prefix → required provider env var (None = local, no key needed)
 _PROVIDER_ENV = {
@@ -96,6 +98,14 @@ def _money(v: int) -> str:
 
 
 def describe(intent: dict) -> str:
+    if intent.get("scenario") == "penalty_delivery":
+        parts = []
+        if intent.get("quarter"):
+            parts.append(intent["quarter"])
+        parts.append(f"penalty exposure > {_money(intent.get('penalty_exposure_min', 1_000_000))}")
+        if intent.get("delivery_at_risk"):
+            parts.append("at-risk delivery")
+        return " · ".join(parts)
     parts = []
     if intent.get("geo"):
         parts.append(intent["geo"])
@@ -132,17 +142,50 @@ def _deterministic(intent: dict, allowed: list, masked: list, excluded: list, li
     return "\n".join(lines)
 
 
+def _has(row: dict, policy: str) -> bool:
+    return any(x["policy"] == policy for x in row.get("redactions", []))
+
+
+def _deterministic_penalty(intent: dict, allowed: list, excluded: list) -> str:
+    lines = [f"Suppliers matching {describe(intent)}, ranked by penalty exposure:", ""]
+    for i, r in enumerate(allowed, 1):
+        term = COMMERCIAL_MARKER if _has(r, "redact_commercial_terms") else _money(r["penalty_amount"])
+        contact = CONTACT_MARKER if _has(r, "mask_supplier_contact_pii") else r.get("contact_email", "")
+        refs = ", ".join(r.get("system_refs", []))
+        lines.append(f"{i}. {r['name']} ({r['region']}) — contract {r['contract_id']} ({r['quarter']}), "
+                     f"penalty exposure {_money(r['penalty_exposure'])} (specific penalty term: {term}), "
+                     f"delivery-risk {r['delivery_risk_score']:.2f} [at-risk]")
+        lines.append(f"     contact: {contact} · resolved across {refs}")
+    if excluded:
+        lines += ["", "Flagged exposure over threshold but delivery within tolerance (not at-risk):"]
+        for r in excluded:
+            lines.append(f"  • {r['name']} ({r['region']}) — penalty exposure "
+                         f"{_money(r['penalty_exposure'])}, delivery-risk {r['delivery_risk_score']:.2f}")
+    return "\n".join(lines)
+
+
 def _llm(query: str, intent: dict, allowed: list, masked: list, excluded: list, limit: int) -> str:
     payload = {"allowed": allowed[:limit] if limit else allowed, "masked": masked, "excluded": excluded}
-    system = (
-        "You are the response-synthesis node of a governed enterprise AI system. Write a "
-        "concise analyst answer to the user's question using ONLY the supplied data. Do not "
-        "invent suppliers or values. List allowed suppliers as a ranked top-N. For each "
-        f"masked supplier show the marker '{PII_MARKER}' and the reason. For each excluded "
-        "supplier state it was excluded by policy require_residency_match. If an allowed "
-        f"supplier's redactions include mask_secrets_in_response, append '{SECRET_MARKER}'. "
-        "Keep it factual and regulator-readable."
-    )
+    if intent.get("scenario") == "penalty_delivery":
+        system = (
+            "You are the response-synthesis node of a governed enterprise AI system. Write a "
+            "concise analyst answer using ONLY the supplied data; do not invent values. List the "
+            "allowed suppliers ranked by penalty exposure; show the aggregate penalty exposure. "
+            f"Where a supplier's redactions include redact_commercial_terms, show '{COMMERCIAL_MARKER}' "
+            f"instead of the specific penalty amount. Where they include mask_supplier_contact_pii, "
+            f"show '{CONTACT_MARKER}' instead of the contact. Note the 'excluded' suppliers were "
+            "flagged for exposure but had delivery within tolerance. Keep it regulator-readable."
+        )
+    else:
+        system = (
+            "You are the response-synthesis node of a governed enterprise AI system. Write a "
+            "concise analyst answer to the user's question using ONLY the supplied data. Do not "
+            "invent suppliers or values. List allowed suppliers as a ranked top-N. For each "
+            f"masked supplier show the marker '{PII_MARKER}' and the reason. For each excluded "
+            "supplier state it was excluded by policy require_residency_match. If an allowed "
+            f"supplier's redactions include mask_secrets_in_response, append '{SECRET_MARKER}'. "
+            "Keep it factual and regulator-readable."
+        )
     return _complete(system,
                      f"Question: {query}\n\nGoverned data (JSON):\n{json.dumps(payload, indent=2)}",
                      max_tokens=1200)
@@ -156,4 +199,6 @@ def synthesize(query: str, intent: dict, allowed: list, masked: list,
             return _llm(query, intent, allowed, masked, excluded, limit), settings.llm_model
         except Exception:
             pass  # fall back so the demo never hard-fails on an LLM error
+    if intent.get("scenario") == "penalty_delivery":
+        return _deterministic_penalty(intent, allowed[:limit] if limit else allowed, excluded), "deterministic"
     return _deterministic(intent, allowed, masked, excluded, limit), "deterministic"
