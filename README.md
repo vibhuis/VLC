@@ -106,11 +106,24 @@ vcl-ref-impl/
 └── docs/                     architecture · demo-script · EU AI Act mapping
 ```
 
+## Status & scope
+
+This is a **reference implementation** — a runnable proof of the VCL pattern and a starting
+point you fork, **not** a turnkey product. It has no auth, no multi-tenancy, and uses
+synthetic data by default (spec §9). The engine (pipeline, tamper-evident audit, MCP,
+policy, feedback) is domain-agnostic; the business logic lives behind a small
+[`Scenario`](services/agent-runtime/app/scenarios/) extension point. To point it at your own
+data, follow [docs/adapting-to-your-domain.md](docs/adapting-to-your-domain.md). What's done
+and what's next is in [docs/roadmap.md](docs/roadmap.md).
+
 ## Documentation
 
 - [docs/architecture.md](docs/architecture.md) — component map and the governed request flow
 - [docs/demo-script.md](docs/demo-script.md) — exact 10-minute walkthrough (commands + clicks)
 - [docs/eu-ai-act-mapping.md](docs/eu-ai-act-mapping.md) — which trace field satisfies which obligation
+- [docs/adapting-to-your-domain.md](docs/adapting-to-your-domain.md) — fork it onto your own data
+- [docs/roadmap.md](docs/roadmap.md) — what's done and what's next
+- [CONTRIBUTING.md](CONTRIBUTING.md) — dev setup, code map, conventions
 - [DECISIONS.md](DECISIONS.md) — architecture decisions and deviations from the spec
 
 ## Build phases
