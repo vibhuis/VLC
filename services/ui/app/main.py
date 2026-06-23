@@ -16,22 +16,11 @@ from report import build_report
 AGENT_URL = os.environ.get("VCL_AGENT_URL", "http://localhost:8000")
 FEEDBACK_URL = os.environ.get("VCL_FEEDBACK_URL", "http://localhost:8200")
 
-WORKED_QUERY = (
-    "Show me the top five suppliers in EMEA with contracts expiring before December 2026, "
-    "where the contracts contain PII clauses. Only include suppliers whose data subjects "
-    "have valid GDPR consent."
-)
-
 PAPER_QUERY = (
     "Which Q3 supplier contracts have penalty-clause exposure greater than one million "
     "dollars, and which of those suppliers have at-risk delivery performance based on the "
     "last six months of operational telemetry?"
 )
-
-SCENARIOS = {
-    "Paper §5 — penalty exposure & at-risk delivery": PAPER_QUERY,
-    "Build-spec §6 — PII contracts & GDPR consent": WORKED_QUERY,
-}
 
 COMPONENT_BADGE = {
     "semantic_layer": "🟦 semantic layer", "context_graph": "🟩 context graph",
@@ -52,9 +41,9 @@ def _highlight(answer: str) -> str:
 
 
 # --------------------------------------------------------------- query screen
-choice = st.radio("Worked use case", list(SCENARIOS), horizontal=True)
+st.caption("Worked use case — paper §5: penalty-clause exposure & at-risk delivery.")
 with st.form("query_form"):
-    query = st.text_area("Enterprise question", value=SCENARIOS[choice], height=120, key=f"q::{choice}")
+    query = st.text_area("Enterprise question", value=PAPER_QUERY, height=120)
     submitted = st.form_submit_button("Run query", type="primary")
 
 if submitted:

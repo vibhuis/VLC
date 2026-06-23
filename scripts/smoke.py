@@ -13,10 +13,10 @@ import time
 import httpx
 
 AGENT = "http://localhost:8000"
-WORKED_QUERY = (
-    "Show me the top five suppliers in EMEA with contracts expiring before December 2026, "
-    "where the contracts contain PII clauses. Only include suppliers whose data subjects "
-    "have valid GDPR consent."
+WORKED_QUERY = (  # paper §5 worked use case
+    "Which Q3 supplier contracts have penalty-clause exposure greater than one million "
+    "dollars, and which of those suppliers have at-risk delivery performance based on the "
+    "last six months of operational telemetry?"
 )
 
 
@@ -39,13 +39,19 @@ def main() -> None:
     d = r.json()
     answer = d["answer"]
 
+    policies = {x.get("policy") for x in d["decisions"]}
     checks = {
-        "answer lists Helvetia (top supplier)": "Helvetia" in answer,
-        "PII redaction marker present": "[redacted: policy allow_pii_field_access]" in answer,
-        "residency exclusion present": "require_residency_match" in answer,
+        "penalty-exposure answer": "penalty exposure" in answer.lower(),
+        "commercial-term redaction marker": "[redacted: policy redact_commercial_terms]" in answer,
+        "supplier-contact PII mask marker": "[redacted: policy mask_supplier_contact_pii]" in answer,
+        "data-residency exclusion present": "require_residency_match" in answer,
+        "cross-system identity resolution shown": "ERP:" in answer and "MES:" in answer,
         "trace id returned": bool(d["trace_id"]),
         "at least 2 deny/mask decisions":
             sum(1 for x in d["decisions"] if x.get("outcome") in ("deny", "mask")) >= 2,
+        "multiple governance policies exercised": len(policies & {
+            "require_residency_match", "redact_commercial_terms",
+            "mask_supplier_contact_pii", "audit_required_on_decline"}) >= 3,
     }
 
     trace = httpx.get(f"{AGENT}/trace/{d['trace_id']}", timeout=15).json()

@@ -35,6 +35,7 @@ WHERE ($quarter IS NULL OR c.quarter = $quarter)
   AND c.penalty_exposure > $min
 OPTIONAL MATCH (x:SystemRef)-[:RESOLVES_TO]->(s)
 RETURN s.id AS supplier_id, s.name AS name, s.region AS region, s.geo AS geo,
+       s.data_residency AS data_residency,
        s.risk_tier AS risk_tier, s.delivery_risk_score AS delivery_risk_score,
        s.delivery_at_risk AS delivery_at_risk, s.contact_name AS contact_name,
        s.contact_email AS contact_email, s.contact_phone AS contact_phone,

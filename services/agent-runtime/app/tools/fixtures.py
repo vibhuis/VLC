@@ -148,6 +148,7 @@ class FixtureToolbox(Toolbox):
             s = self._by_supplier[c["supplier_id"]]
             rows.append({
                 "supplier_id": s["id"], "name": s["name"], "region": s["region"], "geo": s["geo"],
+                "data_residency": s["data_residency"],
                 "risk_tier": s["risk_tier"], "delivery_risk_score": s["delivery_risk_score"],
                 "delivery_at_risk": bool(s["delivery_at_risk"]),
                 "contact_name": s["contact_name"], "contact_email": s["contact_email"],

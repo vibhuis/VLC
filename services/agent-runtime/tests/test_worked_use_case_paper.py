@@ -32,20 +32,34 @@ def test_intent_is_penalty_delivery(result):
     assert intent["delivery_at_risk"] is True
 
 
-def test_at_risk_high_exposure_suppliers_shown(result):
-    # Q3, exposure > $1M, AND at-risk delivery → SUP-009..013
-    assert {r["supplier_id"] for r in result["filtered"]["allowed"]} == {f"SUP-0{i:02d}" for i in range(9, 14)}
+def test_at_risk_eu_high_exposure_suppliers_shown(result):
+    # Q3, exposure > $1M, at-risk delivery, AND EU-resident → SUP-009..012
+    assert {r["supplier_id"] for r in result["filtered"]["allowed"]} == {f"SUP-0{i:02d}" for i in range(9, 13)}
 
 
-def test_exposed_but_not_at_risk_excluded(result):
-    # exposure > $1M but delivery within tolerance → SUP-014, SUP-015
-    assert {r["supplier_id"] for r in result["filtered"]["excluded"]} == {"SUP-014", "SUP-015"}
+def test_non_eu_supplier_excluded_by_residency(result):
+    residency = {r["supplier_id"] for r in result["filtered"]["excluded"]
+                 if r["excluded_by"] == "require_residency_match"}
+    assert residency == {"SUP-013"}  # at-risk + high-exposure but data hosted in the US
+
+
+def test_exposed_but_not_at_risk_flagged(result):
+    delivery = {r["supplier_id"] for r in result["filtered"]["excluded"]
+                if r["excluded_by"] == "delivery_within_tolerance"}
+    assert delivery == {"SUP-014", "SUP-015"}
 
 
 def test_commercial_terms_redacted(result):
     redacted = {r["supplier_id"] for r in result["filtered"]["allowed"]
                 if any(x["policy"] == "redact_commercial_terms" for x in r["redactions"])}
-    assert redacted == {"SUP-011", "SUP-013"}
+    assert redacted == {"SUP-011", "SUP-012"}
+
+
+def test_five_of_seven_policies_exercised(result):
+    # precheck + per-row policies across the pipeline
+    policies = {d.get("policy") for e in result["events"] for d in e.get("policy_decisions", [])}
+    assert {"allow_supplier_query", "require_residency_match", "redact_commercial_terms",
+            "mask_supplier_contact_pii", "audit_required_on_decline"} <= policies
 
 
 def test_supplier_contact_pii_masked_for_all_shown(result):

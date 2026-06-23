@@ -81,6 +81,8 @@ def parse_intent(query: str) -> dict:
             intent["penalty_exposure_min"] = 1_000_000  # "one million dollars"
         if re.search(r"at[ -]risk|delivery", q):
             intent["delivery_at_risk"] = True
+        # cross-border procurement query → EU data-residency governs (paper §4.3)
+        intent["residency_scope"] = "EU"
     else:
         intent["scenario"] = "supplier_pii"
 
@@ -143,14 +145,26 @@ class Toolbox(ABC):
         return self._filter_supplier_pii(rows, principal, intent, as_of)
 
     def _filter_penalty_delivery(self, rows: list[dict], principal: dict, intent: dict) -> dict:
-        """Paper §5: keep at-risk suppliers (data filter), redact specific commercial terms
-        (redact_commercial_terms) and mask supplier-contact PII (mask_supplier_contact_pii)."""
+        """Paper §5: exclude suppliers whose data is hosted outside the EU
+        (require_residency_match), keep at-risk suppliers (data filter), then redact specific
+        commercial terms (redact_commercial_terms) and mask supplier-contact PII."""
         want_at_risk = intent.get("delivery_at_risk", True)
+        residency_scope = intent.get("residency_scope", "EU")
         allowed: list[dict] = []
         excluded: list[dict] = []
         decisions: list[dict] = []
         for row in rows:
             sid = row.get("supplier_id")
+            residency = self._decide("require_residency_match", {
+                "context": {"residency_scope": residency_scope},
+                "resource": {"data_residency": row.get("data_residency")}})
+            decisions.append({**residency, "supplier_id": sid})
+            if residency.get("outcome") == "deny":
+                decisions.append({**self._decide("audit_required_on_decline",
+                                                 {"decision": {"outcome": "deny"}}), "supplier_id": sid})
+                excluded.append({**row, "excluded_by": "require_residency_match",
+                                 "reasons": residency.get("reasons", [])})
+                continue
             if want_at_risk and not row.get("delivery_at_risk"):
                 excluded.append({**row, "excluded_by": "delivery_within_tolerance",
                                  "reasons": ["penalty exposure flagged but delivery "

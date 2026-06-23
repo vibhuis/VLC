@@ -9,12 +9,18 @@ at runtime**, **tracing every decision**, and producing a **regulator-addressabl
 trail** that maps to EU AI Act Articles 9/12/13 and the NIST AI RMF.
 
 > **The worked use case** (paper §5):
-> *"Show me the top five suppliers in EMEA with contracts expiring before December 2026,
-> where the contracts contain PII clauses. Only include suppliers whose data subjects
-> have valid GDPR consent."*
+> *"Which Q3 supplier contracts have penalty-clause exposure greater than one million
+> dollars, and which of those suppliers have at-risk delivery performance based on the
+> last six months of operational telemetry?"*
 >
-> The agent answers it, masks rows with expired consent, excludes rows whose data sits
-> outside the EU, and shows you exactly why — step by step.
+> The agent resolves the penalty-exposure metric and the delivery-risk score across three
+> systems of record (contract management / ERP / MES), **excludes** a supplier whose data
+> is hosted outside the EU, **redacts** specific commercial terms, **masks** supplier
+> contact PII, and shows you exactly why — step by step, in a tamper-evident audit trail.
+>
+> *(A second governance scenario — EMEA / PII / GDPR consent, from the build spec §6 —
+> remains in the codebase and test suite to exercise the residency/consent/secrets
+> policies, but the demo leads with the paper's §5 query.)*
 
 ---
 

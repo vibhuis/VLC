@@ -7,12 +7,12 @@ SUP-005,Iberia Analytics SL,EMEA-West,EMEA,EU,valid,critical,E1005,M-005,CMS-202
 SUP-006,Baltic Cloud OU,EMEA-North,EMEA,EU,expired,high,E1006,M-006,CMS-2026-0006,0.54,False,Baltic Procurement Desk,contact006@baltic.example,+1-555-1006
 SUP-007,Gallia Secure SAS,EMEA-West,EMEA,EU,expired,critical,E1007,M-007,CMS-2026-0007,0.22,False,Gallia Procurement Desk,contact007@gallia.example,+1-555-1007
 SUP-008,Albion Offshore Data Ltd,UK,EMEA,US,valid,high,E1008,M-008,CMS-2026-0008,0.39,False,Albion Procurement Desk,contact008@albion.example,+1-555-1008
-SUP-009,Acme Networks,APAC,APAC,APAC,valid,critical,E1009,M-009,CMS-2026-0009,0.72,True,Acme Procurement Desk,contact009@acme.example,+1-555-1009
+SUP-009,Acme Networks,APAC,APAC,EU,valid,critical,E1009,M-009,CMS-2026-0009,0.72,True,Acme Procurement Desk,contact009@acme.example,+1-555-1009
 SUP-010,Orion Systems,UK,EMEA,EU,valid,critical,E1010,M-010,CMS-2026-0010,0.68,True,Orion Procurement Desk,contact010@orion.example,+1-555-1010
 SUP-011,Vertex Systems,EMEA-West,EMEA,EU,valid,medium,E1011,M-011,CMS-2026-0011,0.8,True,Vertex Procurement Desk,contact011@vertex.example,+1-555-1011
-SUP-012,Summit Partners,US-West,AMER,US,valid,critical,E1012,M-012,CMS-2026-0012,0.66,True,Summit Procurement Desk,contact012@summit.example,+1-555-1012
-SUP-013,Cobalt Industries,UK,EMEA,EU,valid,high,E1013,M-013,CMS-2026-0013,0.85,True,Cobalt Procurement Desk,contact013@cobalt.example,+1-555-1013
-SUP-014,Delta Group,US-East,AMER,US,expired,high,E1014,M-014,CMS-2026-0014,0.35,False,Delta Procurement Desk,contact014@delta.example,+1-555-1014
+SUP-012,Summit Partners,US-West,AMER,EU,valid,critical,E1012,M-012,CMS-2026-0012,0.66,True,Summit Procurement Desk,contact012@summit.example,+1-555-1012
+SUP-013,Cobalt Industries,UK,EMEA,US,valid,high,E1013,M-013,CMS-2026-0013,0.85,True,Cobalt Procurement Desk,contact013@cobalt.example,+1-555-1013
+SUP-014,Delta Group,US-East,AMER,EU,expired,high,E1014,M-014,CMS-2026-0014,0.35,False,Delta Procurement Desk,contact014@delta.example,+1-555-1014
 SUP-015,Pioneer Industries,UK,EMEA,EU,valid,low,E1015,M-015,CMS-2026-0015,0.4,False,Pioneer Procurement Desk,contact015@pioneer.example,+1-555-1015
 SUP-016,Meridian Networks,UK,EMEA,EU,valid,critical,E1016,M-016,CMS-2026-0016,0.7,True,Meridian Procurement Desk,contact016@meridian.example,+1-555-1016
 SUP-017,Aurora Group,EMEA-West,EMEA,EU,valid,medium,E1017,M-017,CMS-2026-0017,0.26,False,Aurora Procurement Desk,contact017@aurora.example,+1-555-1017

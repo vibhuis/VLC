@@ -142,7 +142,7 @@
       "name": "Acme Networks",
       "region": "APAC",
       "geo": "APAC",
-      "data_residency": "APAC",
+      "data_residency": "EU",
       "gdpr_consent_status": "valid",
       "risk_tier": "critical",
       "erp_id": "E1009",
@@ -193,7 +193,7 @@
       "name": "Summit Partners",
       "region": "US-West",
       "geo": "AMER",
-      "data_residency": "US",
+      "data_residency": "EU",
       "gdpr_consent_status": "valid",
       "risk_tier": "critical",
       "erp_id": "E1012",
@@ -210,7 +210,7 @@
       "name": "Cobalt Industries",
       "region": "UK",
       "geo": "EMEA",
-      "data_residency": "EU",
+      "data_residency": "US",
       "gdpr_consent_status": "valid",
       "risk_tier": "high",
       "erp_id": "E1013",
@@ -227,7 +227,7 @@
       "name": "Delta Group",
       "region": "US-East",
       "geo": "AMER",
-      "data_residency": "US",
+      "data_residency": "EU",
       "gdpr_consent_status": "expired",
       "risk_tier": "high",
       "erp_id": "E1014",
@@ -1827,7 +1827,7 @@
       "penalty_amount": 2500000,
       "penalty_probability": 0.6,
       "penalty_exposure": 1500000,
-      "commercial_confidential": false
+      "commercial_confidential": true
     },
     {
       "id": "CON-095",
@@ -1841,7 +1841,7 @@
       "penalty_amount": 5000000,
       "penalty_probability": 0.45,
       "penalty_exposure": 2250000,
-      "commercial_confidential": true
+      "commercial_confidential": false
     },
     {
       "id": "CON-096",

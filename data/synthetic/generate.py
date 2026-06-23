@@ -42,16 +42,20 @@ REGIONS = {
 }
 RISK_TIERS = ["low", "medium", "high", "critical"]
 
-# paper §5 anchors: penalty exposure (amount × probability) and delivery at-risk flag.
+# paper §5 anchors: penalty exposure (amount × probability), delivery at-risk flag, the
+# data-residency of the supplier's operational data, and whether the penalty term is a
+# confidential commercial term. One at-risk high-exposure supplier (SUP-013) is hosted
+# outside the EU → excluded by require_residency_match, so a single §5 query exercises
+# allow / residency-exclude / commercial-redact / contact-mask / audit (5 of 7 policies).
 PAPER_ANCHORS = {
-    "SUP-009": dict(amount=4_000_000, prob=0.40, at_risk=True, confidential=False),   # exp 1.60M
-    "SUP-010": dict(amount=3_000_000, prob=0.50, at_risk=True, confidential=False),   # exp 1.50M
-    "SUP-011": dict(amount=6_000_000, prob=0.30, at_risk=True, confidential=True),    # exp 1.80M
-    "SUP-012": dict(amount=2_500_000, prob=0.60, at_risk=True, confidential=False),   # exp 1.50M
-    "SUP-013": dict(amount=5_000_000, prob=0.45, at_risk=True, confidential=True),    # exp 2.25M
-    "SUP-014": dict(amount=8_000_000, prob=0.30, at_risk=False, confidential=False),  # exp 2.40M, not at-risk
-    "SUP-015": dict(amount=3_000_000, prob=0.50, at_risk=False, confidential=False),  # exp 1.50M, not at-risk
-    "SUP-016": dict(amount=1_000_000, prob=0.20, at_risk=True, confidential=False),   # exp 0.20M < $1M
+    "SUP-009": dict(amount=4_000_000, prob=0.40, at_risk=True, confidential=False, residency="EU"),  # exp 1.60M shown
+    "SUP-010": dict(amount=3_000_000, prob=0.50, at_risk=True, confidential=False, residency="EU"),  # exp 1.50M shown
+    "SUP-011": dict(amount=6_000_000, prob=0.30, at_risk=True, confidential=True, residency="EU"),   # exp 1.80M shown (term redacted)
+    "SUP-012": dict(amount=2_500_000, prob=0.60, at_risk=True, confidential=True, residency="EU"),   # exp 1.50M shown (term redacted)
+    "SUP-013": dict(amount=5_000_000, prob=0.45, at_risk=True, confidential=False, residency="US"),  # exp 2.25M EXCLUDED (non-EU)
+    "SUP-014": dict(amount=8_000_000, prob=0.30, at_risk=False, confidential=False, residency="EU"), # exp 2.40M flagged (not at-risk)
+    "SUP-015": dict(amount=3_000_000, prob=0.50, at_risk=False, confidential=False, residency="EU"), # exp 1.50M flagged (not at-risk)
+    "SUP-016": dict(amount=1_000_000, prob=0.20, at_risk=True, confidential=False, residency="EU"),  # exp 0.20M < $1M filtered
 }
 
 
@@ -226,10 +230,13 @@ def _apply_paper_scenario(data: dict, add_contract) -> None:
                 "incidents": max(0, round(base * 10 + rng.uniform(-1, 1))),
             })
 
-    # Add one Q3 penalty contract per paper anchor (non-PII so it never enters the §6 query).
+    # Add one Q3 penalty contract per paper anchor (non-PII so it never enters the §6 query),
+    # and pin the supplier's data-residency for the §5 residency check. These are §6 filler
+    # suppliers, so overriding their residency does not affect the §6 worked case.
     for sid, a in PAPER_ANCHORS.items():
         if sid not in by_id:
             continue
+        by_id[sid]["data_residency"] = a["residency"]
         add_contract(sid, date(2026, 8, 15), rng.randint(20, 90) * 100_000,
                      pii=False, secrets=False, penalty_amount=a["amount"],
                      penalty_probability=a["prob"], confidential=a["confidential"])

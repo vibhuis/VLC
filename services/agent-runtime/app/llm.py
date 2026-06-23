@@ -156,9 +156,18 @@ def _deterministic_penalty(intent: dict, allowed: list, excluded: list) -> str:
                      f"penalty exposure {_money(r['penalty_exposure'])} (specific penalty term: {term}), "
                      f"delivery-risk {r['delivery_risk_score']:.2f} [at-risk]")
         lines.append(f"     contact: {contact} · resolved across {refs}")
-    if excluded:
-        lines += ["", "Flagged exposure over threshold but delivery within tolerance (not at-risk):"]
-        for r in excluded:
+    residency_excl = [r for r in excluded if r.get("excluded_by") == "require_residency_match"]
+    delivery_excl = [r for r in excluded if r.get("excluded_by") == "delivery_within_tolerance"]
+    if residency_excl:
+        lines += ["", "Excluded — operational data hosted outside the EU "
+                  "(policy require_residency_match):"]
+        for r in residency_excl:
+            lines.append(f"  • {r['name']} ({r['region']}) — penalty exposure "
+                         f"{_money(r['penalty_exposure'])}, data residency {r.get('data_residency')}")
+    if delivery_excl:
+        lines += ["", "Flagged — penalty exposure over threshold but delivery within tolerance "
+                  "(not at-risk):"]
+        for r in delivery_excl:
             lines.append(f"  • {r['name']} ({r['region']}) — penalty exposure "
                          f"{_money(r['penalty_exposure'])}, delivery-risk {r['delivery_risk_score']:.2f}")
     return "\n".join(lines)

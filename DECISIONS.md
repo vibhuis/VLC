@@ -117,30 +117,41 @@ speed and zero extra moving parts, but the MCP surface is always running and the
 `test_mcp_live` suite proves the full worked use case runs end-to-end over MCP. The build
 spec's six-service diagram is kept; the gateway is an additive 5b sharing the agent image.
 
-## D12 — Both worked use cases: build-spec §6 and paper §5
-**Paper ref:** §5 (worked use case) · **Build-spec ref:** §6 · **Date:** 2026-06-22
+## D12 — The paper's §5 is THE worked use case; §6 retained as a tested governance scenario
+**Paper ref:** §5 (worked use case), §4.2/§4.3 (governance library) · **Build-spec ref:** §6 · **Date:** 2026-06-23
 
-The build spec's §6 worked case (EMEA / PII / GDPR consent) differs from the companion
-paper's §5 (Q3 penalty-clause exposure > $1M + at-risk delivery from 6 months of
-telemetry, across contract-management / ERP / MES). Since the repo is published next to
-the paper, both are supported:
+The companion paper has exactly one worked use case (§5): *Q3 contracts with penalty-clause
+exposure > $1M, and which of those suppliers have at-risk delivery from 6 months of
+operational telemetry.* The build spec's §6 (EMEA / PII / GDPR consent) was a different,
+simpler example chosen by the brief. Since the repo publishes next to the paper, the demo
+leads with **§5 as the single worked use case**; §6 remains a fully-functional, unit-tested
+governance scenario (not surfaced in the UI) so the residency/consent/secrets policies it
+exercises stay validated.
 
-- The generator adds penalty clauses, 6-month operational telemetry → a DeliveryRiskScore,
-  cross-system identity ids (ERP/MES/CMS) resolved to canonical Supplier nodes via
-  `SystemRef -[:RESOLVES_TO]->`, and supplier contacts — layered on the §6 data with a
-  separate RNG so §6 anchors/counts are unchanged.
-- The agent is scenario-aware: `parse` tags the intent `supplier_pii` (§6) or
-  `penalty_delivery` (§5); graph query, policy filter and synthesis branch accordingly.
-- Two new policies enforce §5 governance: `redact_commercial_terms` (aggregate exposure
-  disclosable, specific term redacted without contract-detail clearance) and
-  `mask_supplier_contact_pii`. The trace adds EU AI Act Art. 14 (human oversight) per §5.3.
-- The UI offers a scenario selector; both produce a tamper-evident, regulator-addressable
-  trace. The §5 result: 5 at-risk high-exposure suppliers (2 with commercial terms
-  redacted, all with contact PII masked), 2 flagged-but-within-tolerance, 1 below threshold.
+A single query cannot fire every policy, so §5 is **enriched** to exercise as much of the
+governance library as fits its narrative — it now demonstrates 5 of the 7 policies live:
+`allow_supplier_query` (precheck), `require_residency_match` (one at-risk, high-exposure
+supplier whose operational data is hosted in the US is **excluded** — data residency,
+paper §4.3), `redact_commercial_terms`, `mask_supplier_contact_pii`, and
+`audit_required_on_decline`. The remaining two (`allow_pii_field_access` GDPR-consent
+expiry, `mask_secrets_in_response` secret clauses) don't fit the §5 penalty/delivery
+narrative; they're validated by the OPA unit tests, the policy-parity tests, and the §6
+scenario test.
 
-Simplifications (laptop-runnable): telemetry is synthetic monthly summary rows rather than
-a streaming feed; DeliveryRiskScore is precomputed; the three systems of record are
-represented by id schemes + resolution nodes rather than three live source databases.
+Implementation: the generator adds penalty clauses, 6-month telemetry → DeliveryRiskScore,
+cross-system ids (ERP/MES/CMS) resolved to canonical Supplier nodes via
+`SystemRef -[:RESOLVES_TO]->`, and supplier contacts — layered on §6 data with a separate
+RNG so §6 anchors/counts are unchanged. The agent is scenario-aware (`parse` tags
+`penalty_delivery` vs `supplier_pii`; graph query / policy filter / synthesis branch). The
+§5 trace adds EU AI Act Art. 14 (human oversight, §5.3).
+
+**§5 result:** 4 at-risk, EU-resident, high-exposure suppliers shown (2 with commercial
+terms redacted, all with contact PII masked, each resolved across ERP/MES/CMS); 1 excluded
+by data residency; 2 flagged exposure-but-within-tolerance; 1 below the $1M threshold.
+
+Simplifications (laptop-runnable): telemetry is synthetic monthly summary rows, not a live
+stream; DeliveryRiskScore is precomputed; the three systems of record are represented by id
+schemes + resolution nodes rather than three live source databases.
 
 ---
 
