@@ -11,7 +11,7 @@ import asyncio
 import json
 
 from ..config import settings
-from ..llm import llm_parse_intent
+from ..llm import llm_parse_fields, llm_ready
 from .base import Toolbox, parse_intent
 
 
@@ -32,13 +32,13 @@ class MCPToolbox(Toolbox):
                     return json.loads(text)
         return asyncio.run(go())
 
-    # understanding stays local (LLM or regex)
+    # understanding stays local; data access goes over MCP
     def parse(self, query: str) -> dict:
-        intent = llm_parse_intent(query) or parse_intent(query)
-        if intent.get("geo") == "EMEA" and not intent.get("residency_scope"):
-            intent["residency_scope"] = "EU"
-        intent.setdefault("in_domain", True)
-        intent.setdefault("rank_by", "value_usd")
+        intent = parse_intent(query)
+        if intent.get("in_domain") and llm_ready():
+            fields = llm_parse_fields(query)
+            if fields:
+                intent.update(fields)
         return intent
 
     # everything that consumes enterprise context goes over MCP

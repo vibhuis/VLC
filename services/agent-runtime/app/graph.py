@@ -16,9 +16,9 @@ from typing import TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
+from . import scenarios
 from .audit import AuditEmitter
 from .config import settings
-from .llm import synthesize
 from .tools.base import Toolbox
 
 
@@ -98,10 +98,10 @@ def build_graph(toolbox: Toolbox, audit: AuditEmitter):
         return {"filtered": result, "decisions": result["decisions"]}
 
     def synth(state: VclState) -> VclState:
+        intent = state["intent"]
         f = state["filtered"]
-        limit = state["intent"].get("limit") or 5
-        answer, mode = synthesize(state["query"], state["intent"],
-                                  f["allowed"], f["masked"], f["excluded"], limit)
+        scen = scenarios.get(intent.get("scenario"))
+        answer, mode = scen.synthesize(intent, f, intent.get("limit"))
         audit.emit("response", "synthesise_response",
                    input={"allowed": len(f["allowed"]), "masked": len(f["masked"]),
                           "excluded": len(f["excluded"]), "llm_mode": mode},

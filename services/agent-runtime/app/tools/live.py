@@ -7,7 +7,7 @@ from __future__ import annotations
 import httpx
 
 from ..config import settings
-from ..llm import llm_parse_intent
+from ..llm import llm_parse_fields, llm_ready
 from .base import Toolbox, parse_intent
 
 # The verified worked-use-case query: WHERE binds to the main MATCH (not the OPTIONAL
@@ -57,13 +57,13 @@ class LiveToolbox(Toolbox):
 
     # ---- semantic layer (parse) ----
     def parse(self, query: str) -> dict:
-        """LLM-driven understanding when a provider key is set; regex fallback otherwise."""
-        intent = llm_parse_intent(query) or parse_intent(query)
-        # Reconcile: EU/EMEA/GDPR always implies EU residency scope.
-        if intent.get("geo") == "EMEA" and not intent.get("residency_scope"):
-            intent["residency_scope"] = "EU"
-        intent.setdefault("in_domain", True)
-        intent.setdefault("rank_by", "value_usd")
+        """Scenario detection (regex) sets the scenario + fields; the LLM refines field
+        values for free-form questions when a provider key is configured."""
+        intent = parse_intent(query)
+        if intent.get("in_domain") and llm_ready():
+            fields = llm_parse_fields(query)
+            if fields:
+                intent.update(fields)
         return intent
 
     # ---- policy engine (OPA) ----
