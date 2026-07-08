@@ -1,7 +1,7 @@
 # Contributing
 
 Thanks for your interest. This repo is the reference implementation accompanying the paper
-*The Verifiable Context Layer* (Zenodo DOI `10.5281/zenodo.20599942`). It is a
+*The Verifiable Context Layer* (on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918)). It is a
 demonstrator / starting point, not a production system — see [DECISIONS.md](DECISIONS.md).
 
 ## Development setup

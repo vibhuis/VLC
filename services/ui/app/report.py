@@ -48,7 +48,7 @@ def build_report(trace_id: str, answer: str, events: list[dict], principal: dict
     story.append(Paragraph("VCL Compliance Report", h1))
     story.append(Paragraph(
         "Verifiable Context Layer — regulator-addressable audit trail<br/>"
-        "Companion paper: Zenodo DOI 10.5281/zenodo.20599942", small))
+        "Companion paper: SSRN https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918", small))
     story.append(Spacer(1, 6))
 
     integ = integrity or {}

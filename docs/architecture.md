@@ -1,7 +1,6 @@
 # Architecture
 
-This implements **Figure 3** of *The Verifiable Context Layer* (Zenodo DOI
-[`10.5281/zenodo.20599942`](https://doi.org/10.5281/zenodo.20599942)) — the five-component
+This implements **Figure 3** of *The Verifiable Context Layer* (on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918)) — the five-component
 VCL reference architecture — as six Docker Compose services.
 
 ## Component map

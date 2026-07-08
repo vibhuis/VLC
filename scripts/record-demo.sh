@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 echo "▶ VCL reference implementation — one-shot demo"
-echo "▶ Companion paper: Zenodo DOI 10.5281/zenodo.20599942"
+echo "▶ Companion paper: SSRN https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918"
 echo
 
 echo "\$ docker compose up -d --build"

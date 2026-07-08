@@ -31,7 +31,7 @@ OUTCOME_EMOJI = {"allow": "✅ allow", "deny": "⛔ deny", "mask": "🟠 mask"}
 st.set_page_config(page_title="VCL Reference Implementation", page_icon="🔍", layout="wide")
 st.title("🔍 Verifiable Context Layer — demo")
 st.caption("Governed enterprise AI with a regulator-addressable audit trail · "
-           "companion paper Zenodo DOI 10.5281/zenodo.20599942")
+           "companion paper SSRN https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918")
 
 
 def _highlight(answer: str) -> str:

@@ -1,13 +1,12 @@
 # Architecture Decisions Log
 
 This file records every deviation from `00-VCL-Prototype-Build-Spec.md` together with
-its rationale, per the handoff instruction in spec §10. Each entry is dated and
-references the relevant spec section.
+its rationale. Each entry is dated and references the relevant spec section.
 
 > The build spec (§10) states it is "the complete brief" and reproduces the worked
 > use case (paper §5) in spec §6 and the reference architecture (paper Figure 3) in
 > spec §2. Those reproductions are treated as authoritative; the companion paper
-> (Zenodo DOI `10.5281/zenodo.20599942`) is cited in the docs.
+> (on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918)) is cited in the docs.
 
 ---
 
@@ -47,9 +46,9 @@ single Neo4j container (custom image that self-seeds on start), keeping the six-
 count.
 
 ## D5 — Deterministic fallback when no LLM provider key is configured
-**Spec ref:** §3 (Claude as LLM), §1.3 (clone-and-run) · **Date:** 2026-06-18
+**Spec ref:** §3 (LLM backbone), §1.3 (clone-and-run) · **Date:** 2026-06-18
 
-An LLM (default `claude-sonnet-4-6`) drives both *understanding* (question → governed
+An LLM (default `gpt-4o`) drives both *understanding* (question → governed
 intent) and *synthesis* (final answer) when a provider key is set. To keep the
 open-source demo and the test suite runnable **without** any key, both fall back to
 deterministic logic (regex intent parser + template synthesiser) that produces the same
@@ -79,13 +78,13 @@ Port **8200** is assigned (avoids the other services' ports) and recorded in
 `.env.example` and `docker-compose.yml`.
 
 ## D9 — Provider-agnostic LLM via LiteLLM (user chooses the model)
-**Spec ref:** §3 (Claude as LLM; "optional OPENAI_API_KEY for cross-LLM comparison") · **Date:** 2026-06-18
+**Spec ref:** §3 (LLM backbone; "optional keys for cross-LLM comparison") · **Date:** 2026-06-18
 
 Rather than bind directly to one vendor SDK, the agent calls the LLM through **LiteLLM**,
 a unified gateway. The model is selected with `VCL_LLM_MODEL` and the user supplies the
 matching provider key (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`,
 `GROQ_API_KEY`, … or a local `ollama/` model with no key). The default remains
-`claude-sonnet-4-6` (spec §3). This honours the spec's cross-LLM intent and lets a
+`gpt-4o` (spec §3). This honours the spec's cross-LLM intent and lets a
 public-repo user run the demo on whatever model they have access to. The deterministic
 fallback (D5) still applies when no key is set.
 

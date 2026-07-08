@@ -2,7 +2,7 @@
 
 A working, local, end-to-end demonstration of the **Verifiable Context Layer (VCL)**
 pattern — the five-component architecture from the companion paper
-*The Verifiable Context Layer* (Zenodo DOI [`10.5281/zenodo.20599942`](https://doi.org/10.5281/zenodo.20599942)).
+*The Verifiable Context Layer* (on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918)).
 
 It answers a real enterprise question with an LLM agent while **enforcing written policy
 at runtime**, **tracing every decision**, and producing a **regulator-addressable audit
@@ -63,8 +63,8 @@ Then in the browser:
 4. Click **Export compliance report (PDF)** to download the regulator-addressable report.
 
 > **Bring your own LLM.** The agent uses [LiteLLM](https://docs.litellm.ai), so you pick
-> the model with `VCL_LLM_MODEL` and supply the matching provider key — Anthropic
-> (`claude-sonnet-4-6`, default), OpenAI (`gpt-4o`), Google (`gemini/…`), Groq, a local
+> the model with `VCL_LLM_MODEL` and supply the matching provider key —
+> OpenAI (`gpt-4o`, default), Anthropic, Google (`gemini/…`), Groq, a local
 > `ollama/…` model, etc. The LLM both *understands* the question and *writes* the answer.
 > **No key at all?** The demo still runs end-to-end via a deterministic fallback; the
 > governance path (semantic → graph → policy → trace) is identical either way. See

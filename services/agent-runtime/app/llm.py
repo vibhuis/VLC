@@ -24,7 +24,7 @@ CONTACT_MARKER = "[redacted: policy mask_supplier_contact_pii]"
 
 # model-string prefix → required provider env var (None = local, no key needed)
 _PROVIDER_ENV = {
-    "claude": "ANTHROPIC_API_KEY", "anthropic": "ANTHROPIC_API_KEY",
+    "anthropic": "ANTHROPIC_API_KEY",
     "gpt": "OPENAI_API_KEY", "o1": "OPENAI_API_KEY", "o3": "OPENAI_API_KEY", "openai": "OPENAI_API_KEY",
     "gemini": "GEMINI_API_KEY", "groq": "GROQ_API_KEY", "mistral": "MISTRAL_API_KEY",
     "cohere": "COHERE_API_KEY", "deepseek": "DEEPSEEK_API_KEY",

@@ -1,5 +1,5 @@
 # VCL Reference Implementation — single-command stack bring-up.
-# Implements Figure 3 of the companion paper (Zenodo DOI 10.5281/zenodo.20599942):
+# Implements Figure 3 of the companion paper (SSRN https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918):
 # five VCL components (semantic layer, context graph, policy engine, agent runtime,
 # feedback loop) plus a Streamlit demo UI.
 #
@@ -87,7 +87,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      VCL_LLM_MODEL: ${VCL_LLM_MODEL:-claude-sonnet-4-6}
+      VCL_LLM_MODEL: ${VCL_LLM_MODEL:-gpt-4o}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}

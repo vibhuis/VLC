@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class Settings:
-    llm_model: str = os.environ.get("VCL_LLM_MODEL", "claude-sonnet-4-6")
+    llm_model: str = os.environ.get("VCL_LLM_MODEL", "gpt-4o")
     anthropic_api_key: str = os.environ.get("ANTHROPIC_API_KEY", "")
     semantic_url: str = os.environ.get("VCL_SEMANTIC_URL", "http://localhost:4000")
     graph_bolt_uri: str = os.environ.get("VCL_GRAPH_BOLT_URI", "bolt://localhost:7687")

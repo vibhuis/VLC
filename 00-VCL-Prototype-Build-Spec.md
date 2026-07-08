@@ -4,7 +4,7 @@
 **Author of spec:** Vibhuraja Bhutani
 **Date:** 8 June 2026
 **Intended builder:** engineering team
-**Companion paper:** *The Verifiable Context Layer*, Zenodo DOI `10.5281/zenodo.20599942`
+**Companion paper:** *The Verifiable Context Layer*, on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918)
 **Target outcome:** A working end-to-end demonstration of the five-component VCL pattern, runnable locally via Docker Compose, that produces a regulator-addressable audit trail for the worked use case in Section 5 of the paper.
 
 ---
@@ -63,7 +63,7 @@ The prototype implements Figure 3 of the paper (the VCL reference architecture).
 │  ┌────────────────────────────────────────────────────────────────┐  │
 │  │  Agent Runtime  (FastAPI, port 8000)                            │  │
 │  │  LangGraph-based reasoning loop                                 │  │
-│  │  an LLM API as the reasoning backbone                       │  │
+│  │  an LLM API as the reasoning backbone                           │  │
 │  └────────────────────────────────────────────────────────────────┘  │
 │           │                  │                 │             │        │
 │           ▼                  ▼                 ▼             ▼        │
@@ -427,14 +427,4 @@ If any of these come up during the build, defer them to v0.2 and add a TODO to `
 
 ---
 
-## 10. Handoff to the builder
-
-This document is the complete brief. Give the builder the following framing prompt:
-
-> *"Build the VCL Reference Implementation as specified in `00-VCL-Prototype-Build-Spec.md`. Work through Phases 1–8 in order. After each phase, commit, push, and write a one-paragraph status update. Do not skip phases. If you need to deviate from the spec, document the decision in `DECISIONS.md` with rationale before deviating. The companion paper is at https://doi.org/10.5281/zenodo.20599942 — reference Section 5 of the paper for the worked use case and Figure 3 for the architecture diagram."*
-
-That prompt + this spec should be sufficient for autonomous execution.
-
----
-
-*End of build spec. Total prototype scope: ~10 working days. Companion paper: Zenodo DOI 10.5281/zenodo.20599942.*
+*End of build spec. Companion paper: [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6900918). Deviations from this spec are recorded in `DECISIONS.md`.*
