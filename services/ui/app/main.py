@@ -41,7 +41,7 @@ def _highlight(answer: str) -> str:
 
 
 # --------------------------------------------------------------- query screen
-st.caption("Worked use case — paper §5: penalty-clause exposure & at-risk delivery.")
+st.caption("Worked use case (paper, Section 5): penalty-clause exposure & at-risk delivery.")
 with st.form("query_form"):
     query = st.text_area("Enterprise question", value=PAPER_QUERY, height=120)
     submitted = st.form_submit_button("Run query", type="primary")
@@ -135,4 +135,4 @@ if result:
             st.error(f"Report generation failed: {e}")
 else:
     st.info("Enter a question and click **Run query**. The box is pre-filled with the "
-            "worked use case from the paper (§5).")
+            "worked use case from the paper (Section 5).")

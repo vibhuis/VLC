@@ -8,7 +8,7 @@ It answers a real enterprise question with an LLM agent while **enforcing writte
 at runtime**, **tracing every decision**, and producing a **regulator-addressable audit
 trail** that maps to EU AI Act Articles 9/12/13 and the NIST AI RMF.
 
-> **The worked use case** (paper §5):
+> **The worked use case** (from Section 5 of the paper):
 > *"Which Q3 supplier contracts have penalty-clause exposure greater than one million
 > dollars, and which of those suppliers have at-risk delivery performance based on the
 > last six months of operational telemetry?"*
@@ -20,7 +20,7 @@ trail** that maps to EU AI Act Articles 9/12/13 and the NIST AI RMF.
 >
 > *(A second governance scenario — EMEA / PII / GDPR consent, from the build spec §6 —
 > remains in the codebase and test suite to exercise the residency/consent/secrets
-> policies, but the demo leads with the paper's §5 query.)*
+> policies, but the demo leads with the paper's Section 5 query.)*
 
 ---
 
