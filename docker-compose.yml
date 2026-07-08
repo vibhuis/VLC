@@ -44,11 +44,13 @@ services:
       NEO4J_PLUGINS: '[]'
       NEO4J_server_memory_heap_max__size: 512m
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 >/dev/null 2>&1 || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 18
-      start_period: 20s
+      # Healthy only once the background seed has finished (the VclSeedMarker node exists),
+      # so dependents never race an unseeded graph (the browser port comes up first).
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p vcldemopassword --format plain 'MATCH (m:VclSeedMarker) RETURN count(m)' 2>/dev/null | tail -1 | grep -qx 1 || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 40
+      start_period: 30s
 
   # 3. Policy engine — Open Policy Agent serving vcl.rego. [spec §5.3]
   policy-engine:
